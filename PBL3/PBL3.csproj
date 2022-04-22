@@ -46,14 +46,122 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AccountSettings_Account.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AccountSettings_Account.Designer.cs">
+      <DependentUpon>AccountSettings_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSettings_UserMnaging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSettings_UserMnaging.Designer.cs">
+      <DependentUpon>AccountSettings_UserMnaging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CitizenAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CitizenAddEdit.Designer.cs">
+      <DependentUpon>CitizenAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CitizenData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CitizenData.Designer.cs">
+      <DependentUpon>CitizenData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword_step1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword_step1.Designer.cs">
+      <DependentUpon>ForgotPassword_step1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassWord_step2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassWord_step2.Designer.cs">
+      <DependentUpon>ForgotPassWord_step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMenu.Designer.cs">
+      <DependentUpon>UserMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VaccineAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VaccineAddEdit.Designer.cs">
+      <DependentUpon>VaccineAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VaccineRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VaccineRegistration.Designer.cs">
+      <DependentUpon>VaccineRegistration.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountSettings_Account.resx">
+      <DependentUpon>AccountSettings_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSettings_UserMnaging.resx">
+      <DependentUpon>AccountSettings_UserMnaging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CitizenAddEdit.resx">
+      <DependentUpon>CitizenAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CitizenData.resx">
+      <DependentUpon>CitizenData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword_step1.resx">
+      <DependentUpon>ForgotPassword_step1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassWord_step2.resx">
+      <DependentUpon>ForgotPassWord_step2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +170,20 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMenu.resx">
+      <DependentUpon>UserMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VaccineAddEdit.resx">
+      <DependentUpon>VaccineAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VaccineRegistration.resx">
+      <DependentUpon>VaccineRegistration.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +196,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\pass.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
