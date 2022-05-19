@@ -102,7 +102,7 @@ namespace PBL3
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(566, 582);
+            this.button1.Location = new System.Drawing.Point(337, 582);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(323, 44);
             this.button1.TabIndex = 65;
@@ -128,7 +128,7 @@ namespace PBL3
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label1.Location = new System.Drawing.Point(561, 541);
+            this.label1.Location = new System.Drawing.Point(179, 594);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 27);
             this.label1.TabIndex = 69;
@@ -140,19 +140,19 @@ namespace PBL3
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label3.Location = new System.Drawing.Point(68, 541);
+            this.label3.Location = new System.Drawing.Point(179, 541);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 27);
+            this.label3.Size = new System.Drawing.Size(108, 27);
             this.label3.TabIndex = 70;
-            this.label3.Text = "Phone";
+            this.label3.Text = "Username";
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(71, 582);
+            this.textBox1.Location = new System.Drawing.Point(337, 538);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(317, 34);
+            this.textBox1.Size = new System.Drawing.Size(323, 34);
             this.textBox1.TabIndex = 71;
             this.textBox1.Text = "     ";
             // 
@@ -289,7 +289,7 @@ namespace PBL3
             this.comboBox1.Size = new System.Drawing.Size(317, 34);
             this.comboBox1.TabIndex = 84;
             // 
-            // AccountSettings
+            // AccountSettings_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -315,7 +315,7 @@ namespace PBL3
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AccountSettings";
+            this.Name = "AccountSettings_Account";
             this.Text = "AccountSettings";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

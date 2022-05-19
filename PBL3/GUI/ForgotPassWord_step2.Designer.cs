@@ -96,7 +96,7 @@ namespace PBL3
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Image = global::PBL3.Properties.Resources.pass;
+            this.label1.Image = global::PBL3.Properties.Resources.password;
             this.label1.Location = new System.Drawing.Point(88, 163);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(19, 20);
@@ -108,7 +108,7 @@ namespace PBL3
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Image = global::PBL3.Properties.Resources.pass;
+            this.label6.Image = global::PBL3.Properties.Resources.password;
             this.label6.Location = new System.Drawing.Point(88, 81);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(19, 20);

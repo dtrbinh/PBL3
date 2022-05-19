@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,124 +61,125 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountSettings_Account.cs">
+    <Compile Include="DAL\DBHelper.cs" />
+    <Compile Include="GUI\AccountSettings_Account.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AccountSettings_Account.Designer.cs">
+    <Compile Include="GUI\AccountSettings_Account.Designer.cs">
       <DependentUpon>AccountSettings_Account.cs</DependentUpon>
     </Compile>
-    <Compile Include="AccountSettings_UserMnaging.cs">
+    <Compile Include="GUI\AccountSettings_UserMnaging.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AccountSettings_UserMnaging.Designer.cs">
+    <Compile Include="GUI\AccountSettings_UserMnaging.Designer.cs">
       <DependentUpon>AccountSettings_UserMnaging.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminMenu.cs">
+    <Compile Include="GUI\AdminMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminMenu.Designer.cs">
+    <Compile Include="GUI\AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="CitizenAddEdit.cs">
+    <Compile Include="GUI\CitizenAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CitizenAddEdit.Designer.cs">
+    <Compile Include="GUI\CitizenAddEdit.Designer.cs">
       <DependentUpon>CitizenAddEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="CitizenData.cs">
+    <Compile Include="GUI\CitizenData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CitizenData.Designer.cs">
+    <Compile Include="GUI\CitizenData.Designer.cs">
       <DependentUpon>CitizenData.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForgotPassword_step1.cs">
+    <Compile Include="GUI\ForgotPassword_step1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgotPassword_step1.Designer.cs">
+    <Compile Include="GUI\ForgotPassword_step1.Designer.cs">
       <DependentUpon>ForgotPassword_step1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForgotPassWord_step2.cs">
+    <Compile Include="GUI\ForgotPassWord_step2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgotPassWord_step2.Designer.cs">
+    <Compile Include="GUI\ForgotPassWord_step2.Designer.cs">
       <DependentUpon>ForgotPassWord_step2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
+    <Compile Include="GUI\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
+    <Compile Include="GUI\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignIn.cs">
+    <Compile Include="GUI\SignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignIn.Designer.cs">
+    <Compile Include="GUI\SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignUp.cs">
+    <Compile Include="GUI\SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUp.Designer.cs">
+    <Compile Include="GUI\SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="GUI\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Statistics.cs">
+    <Compile Include="GUI\Statistics.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Statistics.Designer.cs">
+    <Compile Include="GUI\Statistics.Designer.cs">
       <DependentUpon>Statistics.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserMenu.cs">
+    <Compile Include="GUI\UserMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserMenu.Designer.cs">
+    <Compile Include="GUI\UserMenu.Designer.cs">
       <DependentUpon>UserMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="VaccineAddEdit.cs">
+    <Compile Include="GUI\VaccineAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VaccineAddEdit.Designer.cs">
+    <Compile Include="GUI\VaccineAddEdit.Designer.cs">
       <DependentUpon>VaccineAddEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="VaccineRegistration.cs">
+    <Compile Include="GUI\VaccineRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VaccineRegistration.Designer.cs">
+    <Compile Include="GUI\VaccineRegistration.Designer.cs">
       <DependentUpon>VaccineRegistration.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AccountSettings_Account.resx">
+    <EmbeddedResource Include="GUI\AccountSettings_Account.resx">
       <DependentUpon>AccountSettings_Account.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AccountSettings_UserMnaging.resx">
+    <EmbeddedResource Include="GUI\AccountSettings_UserMnaging.resx">
       <DependentUpon>AccountSettings_UserMnaging.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminMenu.resx">
+    <EmbeddedResource Include="GUI\AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CitizenAddEdit.resx">
+    <EmbeddedResource Include="GUI\CitizenAddEdit.resx">
       <DependentUpon>CitizenAddEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CitizenData.resx">
+    <EmbeddedResource Include="GUI\CitizenData.resx">
       <DependentUpon>CitizenData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForgotPassword_step1.resx">
+    <EmbeddedResource Include="GUI\ForgotPassword_step1.resx">
       <DependentUpon>ForgotPassword_step1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForgotPassWord_step2.resx">
+    <EmbeddedResource Include="GUI\ForgotPassWord_step2.resx">
       <DependentUpon>ForgotPassWord_step2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
+    <EmbeddedResource Include="GUI\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignIn.resx">
+    <EmbeddedResource Include="GUI\SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUp.resx">
+    <EmbeddedResource Include="GUI\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -172,16 +188,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Statistics.resx">
+    <EmbeddedResource Include="GUI\Statistics.resx">
       <DependentUpon>Statistics.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserMenu.resx">
+    <EmbeddedResource Include="GUI\UserMenu.resx">
       <DependentUpon>UserMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VaccineAddEdit.resx">
+    <EmbeddedResource Include="GUI\VaccineAddEdit.resx">
       <DependentUpon>VaccineAddEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VaccineRegistration.resx">
+    <EmbeddedResource Include="GUI\VaccineRegistration.resx">
       <DependentUpon>VaccineRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -195,13 +211,28 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="GUI\App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="icon\user1.png" />
+    <Folder Include="BLL\" />
+    <Folder Include="DTO\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="icon\pass.png" />
+    <Content Include="assets\password.png" />
+    <Content Include="assets\show_password.png" />
+    <Content Include="assets\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,5 +28,20 @@ namespace PBL3
             SignUp signup = new SignUp();
             signup.Show();
         }
+
+        private void btn_showPassword_MouseDown(object sender, MouseEventArgs e)
+        {
+            txt_password.PasswordChar = '\0';
+        }
+
+        private void btn_showPassword_MouseUp(object sender, MouseEventArgs e)
+        {
+            txt_password.PasswordChar = '*';
+        }
+
+        private void btn_signIn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

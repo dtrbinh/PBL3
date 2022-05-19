@@ -106,5 +106,10 @@ namespace PBL3
         {
             openChildForm(new AccountSettings_UserMnaging());
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

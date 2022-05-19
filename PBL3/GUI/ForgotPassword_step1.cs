@@ -22,5 +22,10 @@ namespace PBL3
             ForgotPassWord_step2 fg_2 = new ForgotPassWord_step2();
             fg_2.Show();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
