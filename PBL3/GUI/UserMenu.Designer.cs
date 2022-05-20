@@ -60,16 +60,16 @@ namespace PBL3
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 222);
+            this.button2.Location = new System.Drawing.Point(0, 242);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(333, 70);
+            this.button2.Size = new System.Drawing.Size(333, 80);
             this.button2.TabIndex = 5;
             this.button2.Text = "Account Settings";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -78,16 +78,16 @@ namespace PBL3
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 152);
+            this.button3.Location = new System.Drawing.Point(0, 162);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(333, 70);
+            this.button3.Size = new System.Drawing.Size(333, 80);
             this.button3.TabIndex = 4;
             this.button3.Text = "Vaccine Registration";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -96,7 +96,7 @@ namespace PBL3
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -105,7 +105,7 @@ namespace PBL3
             this.button1.Location = new System.Drawing.Point(0, 82);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(333, 70);
+            this.button1.Size = new System.Drawing.Size(333, 80);
             this.button1.TabIndex = 2;
             this.button1.Text = "Home";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,7 +151,7 @@ namespace PBL3
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);

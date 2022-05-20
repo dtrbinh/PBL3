@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace PBL3
         {
             InitializeComponent();
             customizeDesing();
+            lb_adMenu_username.Text = Provider.Instance.currentUser.Fullname;
         }
 
         private Form acctiveForm = null;
@@ -109,7 +111,9 @@ namespace PBL3
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            this.Dispose();
+            SignIn signIn = new SignIn();
+            signIn.Show();
         }
     }
 }

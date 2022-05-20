@@ -19,22 +19,35 @@ namespace PBL3
 
         private void btn_showPassword_MouseDown(object sender, MouseEventArgs e)
         {
-            txt_password.PasswordChar = '\0';
+            Button B = (Button)sender;
+            switch (B.Name)
+            {
+                case "btn_showPassword":
+                    txt_password.PasswordChar = '\0';
+                    break;
+                case "btn_reShowPassword":
+                    txt_rePassword.PasswordChar = '\0';
+                    break;
+                default:
+                    break;
+            }
+           
         }
 
         private void btn_showPassword_MouseUp(object sender, MouseEventArgs e)
         {
-            txt_password.PasswordChar = '*';
-        }
-
-        private void btn_reShowPassword2_MouseDown(object sender, MouseEventArgs e)
-        {
-            txt_rePassword.PasswordChar = '\0';
-        }
-
-        private void btn_reShowPassword2_MouseUp(object sender, MouseEventArgs e)
-        {
-            txt_rePassword.PasswordChar = '*';
+            Button B = (Button)sender;
+            switch (B.Name)
+            {
+                case "btn_showPassword":
+                    txt_password.PasswordChar = '*';
+                    break;
+                case "btn_reShowPassword":
+                    txt_rePassword.PasswordChar = '*';
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

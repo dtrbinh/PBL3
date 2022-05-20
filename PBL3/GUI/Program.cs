@@ -16,7 +16,11 @@ namespace PBL3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignIn());
+            try
+            {
+                Application.Run(new SignIn());
+            }
+            catch (Exception e) { Console.WriteLine("Error: " + e.ToString()); }
         }
     }
 }
