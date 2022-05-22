@@ -1,6 +1,4 @@
-﻿using PBL3.BLL;
-using PBL3.Entity_Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +15,7 @@ namespace PBL3
         public SignIn()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(55, 54, 92);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -43,47 +42,7 @@ namespace PBL3
 
         private void btn_signIn_Click(object sender, EventArgs e)
         {
-            if (txt_password.Text != "" && txt_userName.Text != "")
-            {
-                string username = txt_userName.Text;
-                string password = txt_password.Text;
-                foreach (Account i in Provider.Instance.database.Accounts)
-                {
-                    if (username == i.Username && password == i.Password)
-                    {
-                        Provider.Instance.currentUser = i;
-                        break;
-                    }
-                    else
-                    {
-                        Provider.Instance.currentUser = null;
-                    }
-                }
-                if (Provider.Instance.currentUser != null)
-                {
-                    //Nếu có quyền admin, mở menu Admin
-                    if (Provider.Instance.currentUser.Permission)
-                    {
-                        this.Hide();
-                        AdminMenu adminMenu = new AdminMenu();
-                        adminMenu.Show();
-                    }
-                    else
-                    {
-                        this.Hide();
-                        UserMenu userMenu = new UserMenu();
-                        userMenu.Show();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Username or password incorrect.", "NOTICE");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Username or password incorrect.", "NOTICE");
-            }
+
         }
     }
 }

@@ -15,6 +15,7 @@ namespace PBL3
         public CitizenData()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(55, 54, 92);
         }
 
         private void button2_Click(object sender, EventArgs e)

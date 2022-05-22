@@ -15,6 +15,17 @@ namespace PBL3
         public VaccineAddEdit()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(55, 54, 92);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
