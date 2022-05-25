@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace PBL3
         public UserMenu()
         {
             InitializeComponent();
+            lb_username.Text = Provider.Instance.currentUser.Fullname;
         }
 
 
@@ -46,6 +48,13 @@ namespace PBL3
         private void button2_Click(object sender, EventArgs e)
         {
             openChildForm(new AccountSettings_Account());
+        }
+
+        private void btn_signOut_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            SignIn signIn = new SignIn();
+            signIn.Show();
         }
     }
 }

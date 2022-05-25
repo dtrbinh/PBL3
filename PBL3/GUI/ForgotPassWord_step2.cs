@@ -29,19 +29,10 @@ namespace PBL3
         {
             if (txt_password.Text == txt_rePassword.Text)
             {
-                foreach (Account i in Provider.Instance.database.Accounts)
-                {
-                    if (userForgotten.Username == i.Username)
-                    {
-                        i.Password = txt_password.Text;
-                        MessageBox.Show("Password changed!", "NOTICE");
-                        this.Close();
-                        break;
-                    }
-                    else
-                    {
-                    }
-                }
+                Provider.Instance.database.Accounts.Where(a => a.Username == userForgotten.Username).FirstOrDefault().Password = txt_password.Text;
+                Provider.Instance.database.SaveChanges();
+                MessageBox.Show("Password changed!", "NOTICE");
+                this.Close();
             }
             else
             {

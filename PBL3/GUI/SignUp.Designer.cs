@@ -31,13 +31,13 @@ namespace PBL3
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_createAccount = new System.Windows.Forms.Button();
             this.txt_rePassword = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_username = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_password = new System.Windows.Forms.TextBox();
-            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
+            this.txt_cmnd = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_showPassword = new System.Windows.Forms.Button();
@@ -59,19 +59,20 @@ namespace PBL3
             this.linkLabel2.Text = "Return to Sign In";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // button2
+            // btn_createAccount
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(91, 415);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(317, 65);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Create";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_createAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btn_createAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_createAccount.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_createAccount.ForeColor = System.Drawing.Color.White;
+            this.btn_createAccount.Location = new System.Drawing.Point(91, 415);
+            this.btn_createAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_createAccount.Name = "btn_createAccount";
+            this.btn_createAccount.Size = new System.Drawing.Size(317, 65);
+            this.btn_createAccount.TabIndex = 31;
+            this.btn_createAccount.Text = "Create";
+            this.btn_createAccount.UseVisualStyleBackColor = false;
+            this.btn_createAccount.Click += new System.EventHandler(this.btn_createAccount_Click);
             // 
             // txt_rePassword
             // 
@@ -83,15 +84,15 @@ namespace PBL3
             this.txt_rePassword.Size = new System.Drawing.Size(269, 34);
             this.txt_rePassword.TabIndex = 30;
             // 
-            // textBox2
+            // txt_username
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(91, 177);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(317, 34);
-            this.textBox2.TabIndex = 28;
+            this.txt_username.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_username.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_username.Location = new System.Drawing.Point(91, 177);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(317, 34);
+            this.txt_username.TabIndex = 28;
             // 
             // label7
             // 
@@ -126,15 +127,15 @@ namespace PBL3
             this.txt_password.Size = new System.Drawing.Size(269, 34);
             this.txt_password.TabIndex = 29;
             // 
-            // txtTenDangNhap
+            // txt_cmnd
             // 
-            this.txtTenDangNhap.BackColor = System.Drawing.SystemColors.Window;
-            this.txtTenDangNhap.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDangNhap.Location = new System.Drawing.Point(93, 81);
-            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(316, 34);
-            this.txtTenDangNhap.TabIndex = 27;
+            this.txt_cmnd.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_cmnd.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cmnd.Location = new System.Drawing.Point(93, 81);
+            this.txt_cmnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_cmnd.Name = "txt_cmnd";
+            this.txt_cmnd.Size = new System.Drawing.Size(316, 34);
+            this.txt_cmnd.TabIndex = 27;
             // 
             // label3
             // 
@@ -191,13 +192,13 @@ namespace PBL3
             this.Controls.Add(this.btn_reShowPassword);
             this.Controls.Add(this.btn_showPassword);
             this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_createAccount);
             this.Controls.Add(this.txt_rePassword);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_username);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_password);
-            this.Controls.Add(this.txtTenDangNhap);
+            this.Controls.Add(this.txt_cmnd);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -211,13 +212,13 @@ namespace PBL3
         #endregion
 
         private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_createAccount;
         private System.Windows.Forms.TextBox txt_rePassword;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_username;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_password;
-        private System.Windows.Forms.TextBox txtTenDangNhap;
+        private System.Windows.Forms.TextBox txt_cmnd;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_showPassword;

@@ -108,8 +108,7 @@ namespace PBL3
         {
             openChildForm(new AccountSettings_UserMnaging());
         }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void btn_logOut_Click(object sender, EventArgs e)
         {
             this.Dispose();
             SignIn signIn = new SignIn();

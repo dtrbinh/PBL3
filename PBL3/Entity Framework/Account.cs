@@ -14,6 +14,14 @@ namespace PBL3.Entity_Framework
     
     public partial class Account
     {
+        public Account() { }
+        public Account(string fullName, string username, string password, bool permission)
+        {
+            this.Fullname = fullName;
+            this.Username = username;
+            this.Password = password;
+            this.Permission = permission;
+        }
         public string Username { get; set; }
         public string Fullname { get; set; }
         public string Password { get; set; }

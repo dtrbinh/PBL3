@@ -304,7 +304,7 @@ namespace PBL3
             this.btn_logOut.Text = "Log out";
             this.btn_logOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_logOut.UseVisualStyleBackColor = false;
-            this.btn_logOut.Click += new System.EventHandler(this.button4_Click);
+            this.btn_logOut.Click += new System.EventHandler(this.btn_logOut_Click);
             // 
             // lb_adMenu_username
             // 

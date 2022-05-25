@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PBL3.BLL;
+using PBL3.Entity_Framework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,7 +33,7 @@ namespace PBL3
                 default:
                     break;
             }
-           
+
         }
 
         private void btn_showPassword_MouseUp(object sender, MouseEventArgs e)
@@ -53,6 +55,47 @@ namespace PBL3
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btn_createAccount_Click(object sender, EventArgs e)
+        {
+            if (txt_username.Text != "" && txt_cmnd.Text != "")
+            {
+                if (txt_password.Text == txt_rePassword.Text && txt_password.Text != "")
+                {
+                    string cmnd = txt_cmnd.Text;
+                    string username = txt_username.Text;
+                    string password = txt_password.Text;
+                    bool flag = true;
+                    foreach (Account i in Provider.Instance.database.Accounts)
+                    {
+                        if (i.Username == username)
+                        {
+                            flag = false;
+                            MessageBox.Show("Username or CMND/CCCD already exist.", "NOTICE");
+                            break;
+                        }
+                    }
+                    if (flag)
+                    {
+                        Account newAccount = new Account(cmnd, username, password, false);
+                        Provider.Instance.database.Accounts.Add(newAccount);
+                        Provider.Instance.database.SaveChanges();
+                        MessageBox.Show("Create account successfully.", "NOTICE");
+                        this.Close();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Password does not match!", "NOTICE");
+                }
+            }
+            else
+            {
+                MessageBox.Show("CMND/CCCD or Username can not blank!", "NOTICE");
+            }
+
         }
     }
 }

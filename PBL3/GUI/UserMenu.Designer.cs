@@ -34,8 +34,8 @@ namespace PBL3
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btn_signOut = new System.Windows.Forms.Button();
+            this.lb_username = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
@@ -115,39 +115,40 @@ namespace PBL3
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.btn_signOut);
+            this.panel3.Controls.Add(this.lb_username);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 539);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(333, 168);
             this.panel3.TabIndex = 1;
             // 
-            // button4
+            // btn_signOut
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 98);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(333, 70);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "                       Log out";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_signOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(176)))), ((int)(((byte)(214)))));
+            this.btn_signOut.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_signOut.FlatAppearance.BorderSize = 0;
+            this.btn_signOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_signOut.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.btn_signOut.ForeColor = System.Drawing.Color.White;
+            this.btn_signOut.Location = new System.Drawing.Point(0, 98);
+            this.btn_signOut.Name = "btn_signOut";
+            this.btn_signOut.Size = new System.Drawing.Size(333, 70);
+            this.btn_signOut.TabIndex = 5;
+            this.btn_signOut.Text = "                       Log out";
+            this.btn_signOut.UseVisualStyleBackColor = false;
+            this.btn_signOut.Click += new System.EventHandler(this.btn_signOut_Click);
             // 
-            // label2
+            // lb_username
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 35);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "UserName";
+            this.lb_username.AutoSize = true;
+            this.lb_username.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.lb_username.ForeColor = System.Drawing.Color.White;
+            this.lb_username.Location = new System.Drawing.Point(12, 22);
+            this.lb_username.Name = "lb_username";
+            this.lb_username.Size = new System.Drawing.Size(147, 35);
+            this.lb_username.TabIndex = 0;
+            this.lb_username.Text = "UserName";
             // 
             // panel2
             // 
@@ -207,8 +208,8 @@ namespace PBL3
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label lb_username;
+        private System.Windows.Forms.Button btn_signOut;
         private System.Windows.Forms.Button button2;
     }
 }
