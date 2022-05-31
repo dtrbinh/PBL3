@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL3.BLL;
+using PBL3.DTO;
 
 namespace PBL3
 {
@@ -18,31 +20,71 @@ namespace PBL3
             this.BackColor = Color.FromArgb(55, 54, 92);
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lbForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ForgotPassword_step1 fg_1 = new ForgotPassword_step1();
+            ForgotPassword1 fg_1 = new ForgotPassword1();
             fg_1.Show();
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lbSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             SignUp signup = new SignUp();
             signup.Show();
         }
 
-        private void btn_showPassword_MouseDown(object sender, MouseEventArgs e)
+        private void btnShowPasswod_MouseDown(object sender, MouseEventArgs e)
         {
-            txt_password.PasswordChar = '\0';
+            txtPassword.PasswordChar = '\0';
         }
 
-        private void btn_showPassword_MouseUp(object sender, MouseEventArgs e)
+        private void btnShowPasswod_MouseUp(object sender, MouseEventArgs e)
         {
-            txt_password.PasswordChar = '*';
+            txtPassword.PasswordChar = '*';
         }
 
-        private void btn_signIn_Click(object sender, EventArgs e)
+        private void btnSignIn_Click(object sender, EventArgs e)
         {
-
+            if (txtPassword.Text != "" && txtUsername.Text != "")
+            {
+                string username = txtUsername.Text;
+                string password = txtPassword.Text;
+                foreach (Account i in Provider.Instance.database.Accounts)
+                {
+                    if (username == i.Username && password == i.Password)
+                    {
+                        Provider.Instance.currentUser = i;
+                        break;
+                    }
+                    else
+                    {
+                        Provider.Instance.currentUser = null;
+                    }
+                }
+                if (Provider.Instance.currentUser != null)
+                {
+                    //Nếu có quyền admin, mở menu Admin
+                    if (Provider.Instance.currentUser.Permission)
+                    {
+                        this.Hide();
+                        AdminMenu adminMenu = new AdminMenu();
+                        adminMenu.Show();
+                    }
+                    else
+                    {
+                        this.Hide();
+                        UserMenu userMenu = new UserMenu();
+                        userMenu.Show();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Username or Password.", "NOTICE");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Incorrect Username or Password.", "NOTICE");
+            }
         }
     }
 }

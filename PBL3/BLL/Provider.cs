@@ -1,9 +1,9 @@
-﻿using PBL3.Entity_Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PBL3.DTO;
 
 namespace PBL3.BLL
 {
@@ -24,7 +24,7 @@ namespace PBL3.BLL
         }
         private Provider()
         {
-            
+
 
         }
         //--------------Account------------------
@@ -54,6 +54,12 @@ namespace PBL3.BLL
         }
         //--------------Account------------------
 
+
+
+        public List<Vaccine> GetAllVaccine(string txt)
+        {
+            return database.Vaccines.Where(p => p.VaccineName.Contains(txt)).ToList();
+        }
     }
 
 }

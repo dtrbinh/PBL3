@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +16,11 @@ namespace PBL3
         public AdminMenu()
         {
             InitializeComponent();
-            customizeDesing();
+            CustomizeDesign();
         }
 
         private Form acctiveForm = null;
-        private void openChildForm(Form ChildForm)
+        private void OpenChildForm(Form ChildForm)
         {
             if (acctiveForm != null)
                 acctiveForm.Close();
@@ -33,26 +34,23 @@ namespace PBL3
             ChildForm.Show();
         }
 
-        /*
-         đoạn code giúp hide và open cá sub
-         */
-        private void customizeDesing()
+        private void CustomizeDesign()
         {
             panelSubData.Visible = false;
             panelsubAccount.Visible = false;
         }
-        private void hideSubMenu()
+        private void HideSubMenu()
         {
             if (panelSubData.Visible == true)
                 panelSubData.Visible = false;
             if (panelsubAccount.Visible == true)
                 panelsubAccount.Visible = false;
         }
-        private void showSubMenu(Panel subMenu)
+        private void ShowSubMenu(Panel subMenu)
         {
             if(subMenu.Visible == false)
             {
-                hideSubMenu();
+                HideSubMenu();
                 subMenu.Visible = true;
             }
             else
@@ -63,18 +61,18 @@ namespace PBL3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            openChildForm(new Home());
+            OpenChildForm(new Home());
         }
 
         private void btnDataManaging_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelSubData);
+            ShowSubMenu(panelSubData);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             // code
-            openChildForm(new CitizenData());
+            OpenChildForm(new CitizenData());
         }
         private void button7_Click(object sender, EventArgs e)
         {
@@ -84,27 +82,27 @@ namespace PBL3
         private void button8_Click(object sender, EventArgs e)
         {
             // code
-
+            OpenChildForm(new VaccineData());
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            openChildForm(new Statistics());
+            OpenChildForm(new Statistics());
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            openChildForm(new AccountSettings_Account());
+            OpenChildForm(new AccountSettings_Account());
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelsubAccount);
+            ShowSubMenu(panelsubAccount);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            openChildForm(new AccountSettings_UserMnaging());
+            OpenChildForm(new AccountSettings_UserMnaging());
         }
 
         private void button4_Click(object sender, EventArgs e)

@@ -48,8 +48,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,7 +70,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\DBHelper.cs" />
+    <Compile Include="BLL\Provider.cs" />
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\Citizen.cs" />
+    <Compile Include="DTO\CreateDB.cs" />
+    <Compile Include="DTO\Vaccine.cs" />
     <Compile Include="GUI\AccountSettings_Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,17 +105,17 @@
     <Compile Include="GUI\CitizenData.Designer.cs">
       <DependentUpon>CitizenData.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ForgotPassword_step1.cs">
+    <Compile Include="GUI\ForgotPassword1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ForgotPassword_step1.Designer.cs">
-      <DependentUpon>ForgotPassword_step1.cs</DependentUpon>
+    <Compile Include="GUI\ForgotPassword1.Designer.cs">
+      <DependentUpon>ForgotPassword1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ForgotPassWord_step2.cs">
+    <Compile Include="GUI\ForgotPassword2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ForgotPassWord_step2.Designer.cs">
-      <DependentUpon>ForgotPassWord_step2.cs</DependentUpon>
+    <Compile Include="GUI\ForgotPassword2.Designer.cs">
+      <DependentUpon>ForgotPassword2.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Home.cs">
       <SubType>Form</SubType>
@@ -123,6 +136,13 @@
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Program.cs" />
+    <Compile Include="DTO\PBL3Entities.cs" />
+    <Compile Include="GUI\VaccineData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VaccineData.Designer.cs">
+      <DependentUpon>VaccineData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\Statistics.cs">
       <SubType>Form</SubType>
@@ -163,11 +183,11 @@
     <EmbeddedResource Include="GUI\CitizenData.resx">
       <DependentUpon>CitizenData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ForgotPassword_step1.resx">
-      <DependentUpon>ForgotPassword_step1.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ForgotPassword1.resx">
+      <DependentUpon>ForgotPassword1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ForgotPassWord_step2.resx">
-      <DependentUpon>ForgotPassWord_step2.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ForgotPassword2.resx">
+      <DependentUpon>ForgotPassword2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -177,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VaccineData.resx">
+      <DependentUpon>VaccineData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -200,6 +223,8 @@
     <EmbeddedResource Include="GUI\VaccineRegistration.resx">
       <DependentUpon>VaccineRegistration.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -213,10 +238,7 @@
   <ItemGroup>
     <None Include="GUI\App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="assets\password.png" />
     <Content Include="assets\show_password.png" />

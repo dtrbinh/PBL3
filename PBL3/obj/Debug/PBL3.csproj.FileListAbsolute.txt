@@ -54,8 +54,6 @@ C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.Acc
 C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.AdminMenu.resources
 C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.CitizenAddEdit.resources
 C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.CitizenData.resources
-C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.ForgotPassword_step1.resources
-C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.ForgotPassWord_step2.resources
 C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.Home.resources
 C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.SignIn.resources
 C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.SignUp.resources
@@ -68,3 +66,11 @@ C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.csp
 C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
 C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.exe
 C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.pdb
+C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.ForgotPassword1.resources
+C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.ForgotPassword2.resources
+C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\bin\Debug\EntityFramework.dll
+C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\bin\Debug\EntityFramework.xml
+C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+C:\Users\Phan Tien Dat\Downloads\PBL3-main (1)\PBL3-main\PBL3\obj\Debug\PBL3.GUI.VaccineData.resources

@@ -30,89 +30,89 @@ namespace PBL3
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignIn));
-            this.btn_signUp = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.btn_signIn = new System.Windows.Forms.Button();
-            this.txt_password = new System.Windows.Forms.TextBox();
-            this.txt_userName = new System.Windows.Forms.TextBox();
+            this.lbSignUp = new System.Windows.Forms.LinkLabel();
+            this.lbForgotPassword = new System.Windows.Forms.LinkLabel();
+            this.btnSignIn = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_showPassword = new System.Windows.Forms.Button();
+            this.btnShowPassword = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btn_signUp
+            // lbSignUp
             // 
-            this.btn_signUp.ActiveLinkColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_signUp.AutoSize = true;
-            this.btn_signUp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_signUp.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.btn_signUp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btn_signUp.Location = new System.Drawing.Point(115, 330);
-            this.btn_signUp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.btn_signUp.Name = "btn_signUp";
-            this.btn_signUp.Size = new System.Drawing.Size(70, 21);
-            this.btn_signUp.TabIndex = 30;
-            this.btn_signUp.TabStop = true;
-            this.btn_signUp.Text = "Sign Up";
-            this.btn_signUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.lbSignUp.ActiveLinkColor = System.Drawing.Color.DeepSkyBlue;
+            this.lbSignUp.AutoSize = true;
+            this.lbSignUp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSignUp.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lbSignUp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.lbSignUp.Location = new System.Drawing.Point(115, 330);
+            this.lbSignUp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbSignUp.Name = "lbSignUp";
+            this.lbSignUp.Size = new System.Drawing.Size(70, 21);
+            this.lbSignUp.TabIndex = 30;
+            this.lbSignUp.TabStop = true;
+            this.lbSignUp.Text = "Sign Up";
+            this.lbSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbSignUp_LinkClicked);
             // 
-            // linkLabel1
+            // lbForgotPassword
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DeepSkyBlue;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.linkLabel1.Location = new System.Drawing.Point(39, 209);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(128, 19);
-            this.linkLabel1.TabIndex = 29;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Forgot Password?";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lbForgotPassword.ActiveLinkColor = System.Drawing.Color.DeepSkyBlue;
+            this.lbForgotPassword.AutoSize = true;
+            this.lbForgotPassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbForgotPassword.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lbForgotPassword.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.lbForgotPassword.Location = new System.Drawing.Point(39, 209);
+            this.lbForgotPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbForgotPassword.Name = "lbForgotPassword";
+            this.lbForgotPassword.Size = new System.Drawing.Size(128, 19);
+            this.lbForgotPassword.TabIndex = 29;
+            this.lbForgotPassword.TabStop = true;
+            this.lbForgotPassword.Text = "Forgot Password?";
+            this.lbForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbForgotPassword_LinkClicked);
             // 
-            // btn_signIn
+            // btnSignIn
             // 
-            this.btn_signIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(87)))), ((int)(((byte)(201)))));
-            this.btn_signIn.FlatAppearance.BorderSize = 0;
-            this.btn_signIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_signIn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_signIn.ForeColor = System.Drawing.Color.White;
-            this.btn_signIn.Location = new System.Drawing.Point(43, 244);
-            this.btn_signIn.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_signIn.Name = "btn_signIn";
-            this.btn_signIn.Size = new System.Drawing.Size(212, 40);
-            this.btn_signIn.TabIndex = 28;
-            this.btn_signIn.Text = "Sign In";
-            this.btn_signIn.UseVisualStyleBackColor = false;
-            this.btn_signIn.Click += new System.EventHandler(this.btn_signIn_Click);
+            this.btnSignIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(87)))), ((int)(((byte)(201)))));
+            this.btnSignIn.FlatAppearance.BorderSize = 0;
+            this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignIn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignIn.ForeColor = System.Drawing.Color.White;
+            this.btnSignIn.Location = new System.Drawing.Point(43, 244);
+            this.btnSignIn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSignIn.Name = "btnSignIn";
+            this.btnSignIn.Size = new System.Drawing.Size(212, 40);
+            this.btnSignIn.TabIndex = 28;
+            this.btnSignIn.Text = "Sign In";
+            this.btnSignIn.UseVisualStyleBackColor = false;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
-            // txt_password
+            // txtPassword
             // 
-            this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_password.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_password.Location = new System.Drawing.Point(43, 169);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_password.Multiline = true;
-            this.txt_password.Name = "txt_password";
-            this.txt_password.PasswordChar = '*';
-            this.txt_password.Size = new System.Drawing.Size(212, 29);
-            this.txt_password.TabIndex = 27;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(43, 169);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(212, 29);
+            this.txtPassword.TabIndex = 27;
             // 
-            // txt_userName
+            // txtUsername
             // 
-            this.txt_userName.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_userName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_userName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_userName.Location = new System.Drawing.Point(43, 109);
-            this.txt_userName.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_userName.Multiline = true;
-            this.txt_userName.Name = "txt_userName";
-            this.txt_userName.Size = new System.Drawing.Size(212, 29);
-            this.txt_userName.TabIndex = 26;
+            this.txtUsername.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(43, 109);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(212, 29);
+            this.txtUsername.TabIndex = 26;
             // 
             // label4
             // 
@@ -163,31 +163,31 @@ namespace PBL3
             this.label1.TabIndex = 31;
             this.label1.Text = "COVID-19 VACCINE MANAGER";
             // 
-            // btn_showPassword
+            // btnShowPassword
             // 
-            this.btn_showPassword.FlatAppearance.BorderSize = 0;
-            this.btn_showPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_showPassword.Image = ((System.Drawing.Image)(resources.GetObject("btn_showPassword.Image")));
-            this.btn_showPassword.Location = new System.Drawing.Point(258, 169);
-            this.btn_showPassword.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_showPassword.Name = "btn_showPassword";
-            this.btn_showPassword.Size = new System.Drawing.Size(32, 29);
-            this.btn_showPassword.TabIndex = 37;
-            this.btn_showPassword.UseVisualStyleBackColor = true;
-            this.btn_showPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_showPassword_MouseDown);
-            this.btn_showPassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_showPassword_MouseUp);
+            this.btnShowPassword.FlatAppearance.BorderSize = 0;
+            this.btnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnShowPassword.Image")));
+            this.btnShowPassword.Location = new System.Drawing.Point(258, 169);
+            this.btnShowPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowPassword.Name = "btnShowPassword";
+            this.btnShowPassword.Size = new System.Drawing.Size(32, 29);
+            this.btnShowPassword.TabIndex = 37;
+            this.btnShowPassword.UseVisualStyleBackColor = true;
+            this.btnShowPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnShowPasswod_MouseDown);
+            this.btnShowPassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnShowPasswod_MouseUp);
             // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(306, 371);
-            this.Controls.Add(this.btn_showPassword);
-            this.Controls.Add(this.btn_signUp);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.btn_signIn);
-            this.Controls.Add(this.txt_password);
-            this.Controls.Add(this.txt_userName);
+            this.Controls.Add(this.btnShowPassword);
+            this.Controls.Add(this.lbSignUp);
+            this.Controls.Add(this.lbForgotPassword);
+            this.Controls.Add(this.btnSignIn);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -201,15 +201,15 @@ namespace PBL3
         }
 
         #endregion
-        private System.Windows.Forms.LinkLabel btn_signUp;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button btn_signIn;
-        private System.Windows.Forms.TextBox txt_password;
-        private System.Windows.Forms.TextBox txt_userName;
+        private System.Windows.Forms.LinkLabel lbSignUp;
+        private System.Windows.Forms.LinkLabel lbForgotPassword;
+        private System.Windows.Forms.Button btnSignIn;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_showPassword;
+        private System.Windows.Forms.Button btnShowPassword;
     }
 }
