@@ -15,6 +15,7 @@ namespace PBL3
         public CitizenAddEdit()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(55, 54, 92);
         }
     }
 }

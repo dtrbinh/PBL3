@@ -15,6 +15,9 @@ namespace PBL3
         public Statistics()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(55, 54, 92);
         }
+
+       
     }
 }

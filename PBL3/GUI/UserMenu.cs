@@ -17,6 +17,8 @@ namespace PBL3
         {
             InitializeComponent();
             lb_username.Text = Provider.Instance.currentUser.Fullname;
+            this.BackColor = Color.FromArgb(55, 54, 92);
+            openChildForm(new Home());
         }
 
 

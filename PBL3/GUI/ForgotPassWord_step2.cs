@@ -18,6 +18,7 @@ namespace PBL3
         public ForgotPassWord_step2()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(55, 54, 92);
         }
         public ForgotPassWord_step2(Account account)
         {

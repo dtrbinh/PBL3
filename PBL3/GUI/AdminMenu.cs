@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL3.GUI;
 
 namespace PBL3
 {
@@ -18,6 +19,8 @@ namespace PBL3
             InitializeComponent();
             customizeDesing();
             lb_adMenu_username.Text = Provider.Instance.currentUser.Fullname;
+            this.BackColor = Color.FromArgb(55, 54, 92);
+            openChildForm(new Home());
         }
 
         private Form acctiveForm = null;
@@ -75,18 +78,16 @@ namespace PBL3
 
         private void button6_Click(object sender, EventArgs e)
         {
-            // code
             openChildForm(new CitizenData());
         }
         private void button7_Click(object sender, EventArgs e)
         {
-            // code
+            openChildForm(new RegistrationData());
 
         }
         private void button8_Click(object sender, EventArgs e)
         {
-            // code
-
+            openChildForm(new VaccineData());
         }
 
         private void button3_Click(object sender, EventArgs e)

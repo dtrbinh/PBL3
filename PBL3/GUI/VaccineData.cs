@@ -8,14 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3
+namespace PBL3.GUI
 {
-    public partial class AccountSettings_UserMnaging : Form
+    public partial class VaccineData : Form
     {
-        public AccountSettings_UserMnaging()
+        public VaccineData()
         {
             InitializeComponent();
             this.BackColor = Color.FromArgb(55, 54, 92);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            VaccineAddEdit vaccineAddEdit = new VaccineAddEdit();
+            vaccineAddEdit.Show();
+        }
     }
 }
+
