@@ -1,9 +1,9 @@
-﻿using PBL3.Entity_Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PBL3.DTO;
 
 namespace PBL3.BLL
 {

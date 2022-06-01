@@ -1,5 +1,4 @@
 ﻿using PBL3.BLL;
-using PBL3.Entity_Framework;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL3.DTO;
 
 namespace PBL3
 {
@@ -79,7 +79,11 @@ namespace PBL3
                     }
                     if (flag)
                     {
-                        Account newAccount = new Account(cmnd, username, password, false);
+                        Account newAccount = new Account();
+                        newAccount.Fullname = cmnd;
+                        newAccount.Username = username;
+                        newAccount.Password = password;
+                        newAccount.Permission = false;
                         Provider.Instance.database.Accounts.Add(newAccount);
                         Provider.Instance.database.SaveChanges();
                         MessageBox.Show("Create account successfully.", "NOTICE");
