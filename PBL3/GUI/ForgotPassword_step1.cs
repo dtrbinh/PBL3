@@ -17,6 +17,7 @@ namespace PBL3
         public ForgotPassword_step1()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(55, 54, 92);
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

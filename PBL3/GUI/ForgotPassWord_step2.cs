@@ -18,6 +18,7 @@ namespace PBL3
         public ForgotPassWord_step2()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(55, 54, 92);
         }
         public ForgotPassWord_step2(Account account)
         {
@@ -27,17 +28,25 @@ namespace PBL3
 
         private void btn_confirmChangePassword_Click(object sender, EventArgs e)
         {
-            if (txt_password.Text == txt_rePassword.Text)
+            if(txt_password.Text != "" && txt_password != null)
             {
-                Provider.Instance.database.Accounts.Where(a => a.Username == userForgotten.Username).FirstOrDefault().Password = txt_password.Text;
-                Provider.Instance.database.SaveChanges();
-                MessageBox.Show("Password changed!", "NOTICE");
-                this.Close();
+                if (txt_password.Text == txt_rePassword.Text)
+                {
+                    Provider.Instance.database.Accounts.Where(a => a.Username == userForgotten.Username).FirstOrDefault().Password = txt_password.Text;
+                    Provider.Instance.database.SaveChanges();
+                    MessageBox.Show("Password changed!", "NOTICE");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Password does not match!", "NOTICE");
+                }
             }
             else
             {
-                MessageBox.Show("Password does not match!", "NOTICE");
+                MessageBox.Show("Password can not null!", "NOTICE");
             }
+
         }
         private void btn_showPassword_MouseDown(object sender, MouseEventArgs e)
         {

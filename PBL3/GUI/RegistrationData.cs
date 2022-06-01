@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3
+namespace PBL3.GUI
 {
-    public partial class AccountSettings_UserMnaging : Form
+    public partial class RegistrationData : Form
     {
-        public AccountSettings_UserMnaging()
+        public RegistrationData()
         {
             InitializeComponent();
             this.BackColor = Color.FromArgb(55, 54, 92);

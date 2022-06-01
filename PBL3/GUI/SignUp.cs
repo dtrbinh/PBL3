@@ -17,6 +17,7 @@ namespace PBL3
         public SignUp()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(55, 54, 92);
         }
 
         private void btn_showPassword_MouseDown(object sender, MouseEventArgs e)

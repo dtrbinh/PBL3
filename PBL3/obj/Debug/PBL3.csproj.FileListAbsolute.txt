@@ -77,3 +77,64 @@ D:\workzone\Learning\HK IV 2021 - 2022\PBL3\PBL3\PBL3\obj\Debug\PBL3.csproj.Core
 D:\workzone\Learning\HK IV 2021 - 2022\PBL3\PBL3\PBL3\obj\Debug\PBL3.csproj.CopyComplete
 D:\workzone\Learning\HK IV 2021 - 2022\PBL3\PBL3\PBL3\obj\Debug\PBL3.exe
 D:\workzone\Learning\HK IV 2021 - 2022\PBL3\PBL3\PBL3\obj\Debug\PBL3.pdb
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\bin\Debug\PBL3.exe.config
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\bin\Debug\PBL3.exe
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\bin\Debug\PBL3.pdb
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\bin\Debug\EntityFramework.dll
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\bin\Debug\EntityFramework.xml
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.AccountSettings_Account.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.AccountSettings_UserMnaging.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.AdminMenu.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.CitizenAddEdit.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.CitizenData.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.ForgotPassword_step1.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.ForgotPassWord_step2.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.Home.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.SignIn.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.SignUp.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.Properties.Resources.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.Statistics.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.UserMenu.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.VaccineAddEdit.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.VaccineRegistration.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.exe
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.pdb
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.GUI.RegistrationData.resources
+C:\Users\Phan Tien Dat\Desktop\Current\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccineData.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\bin\Debug\PBL3.exe.config
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\bin\Debug\PBL3.exe
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\bin\Debug\PBL3.pdb
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\bin\Debug\EntityFramework.dll
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\bin\Debug\EntityFramework.xml
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.AccountSettings_Account.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.AccountSettings_UserMnaging.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.AdminMenu.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.CitizenAddEdit.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.CitizenData.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.ForgotPassword_step1.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.ForgotPassWord_step2.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.Home.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.GUI.RegistrationData.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.SignIn.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.SignUp.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccineData.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.Properties.Resources.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.Statistics.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.UserMenu.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.VaccineAddEdit.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.VaccineRegistration.resources
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.exe
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.pdb
