@@ -144,6 +144,7 @@ namespace PBL3
             this.Controls.Add(this.btn_confirmChangePassword);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ForgotPassWord_step2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

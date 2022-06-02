@@ -17,5 +17,15 @@ namespace PBL3.DTO
         [StringLength(50)]
         public string Password { get; set; }
         public bool Permission { get; set; }
+
+        public Account() { }
+        public Account(string _fullname, string _username, string _password, bool _permission)
+        {
+            this.Fullname = _fullname;
+            this.Username = _username;
+            this.Password = _password;
+            this.Permission = _permission;
+        }
+
     }
 }

@@ -252,6 +252,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="assets\appIcon.ico" />
+    <Content Include="assets\home_cover.jpg" />
     <Content Include="assets\password.png" />
     <Content Include="assets\show_password.png" />
     <Content Include="assets\user.png" />

@@ -79,11 +79,7 @@ namespace PBL3
                     }
                     if (flag)
                     {
-                        Account newAccount = new Account();
-                        newAccount.Fullname = cmnd;
-                        newAccount.Username = username;
-                        newAccount.Password = password;
-                        newAccount.Permission = false;
+                        Account newAccount = new Account(cmnd, username, password, false);
                         Provider.Instance.database.Accounts.Add(newAccount);
                         Provider.Instance.database.SaveChanges();
                         MessageBox.Show("Create account successfully.", "NOTICE");
