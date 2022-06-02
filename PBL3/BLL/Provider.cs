@@ -23,10 +23,7 @@ namespace PBL3.BLL
             private set { }
         }
         private Provider()
-        {
-            
-
-        }
+        {}
         //--------------Account------------------
         public PBL3Entities database = new PBL3Entities();
         public Account currentUser = new Account();
