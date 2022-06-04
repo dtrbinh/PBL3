@@ -61,6 +61,7 @@ namespace PBL3.BLL
         {
             return database.Citizens.Where(p => p.CMND_CCCD == CMND_CCCD).FirstOrDefault();
         }
+
         public void ExecuteAddEdit(Citizen s, string CMND_CCCD)
         {
             if (CheckAddEdit(s.CMND_CCCD))
@@ -198,6 +199,106 @@ namespace PBL3.BLL
             }
             return data2;
         }
-    }
 
+
+        //--------------Vaccine Data-------------
+        public List<Vaccine> GetAll_Vaccine(string txt = "")
+        {
+            return database.Vaccines.Where(p => p.vaccineName.Contains(txt)).ToList();
+        }
+        public Vaccine GetVaccine_By_Name(string name)
+        {
+            return database.Vaccines.Where(p => p.vaccineName == name).FirstOrDefault();
+        }
+        public void ExecuteAddEdit(Vaccine v, string name)
+        {
+            if (CheckAddEdit_Vaccine(v.vaccineName))
+            {
+                database.Vaccines.Add(v);
+                database.SaveChanges();
+            }
+            else
+            {
+                var x = database.Vaccines.Where(p => p.vaccineName == name).FirstOrDefault();
+                x.vaccineName = v.vaccineName;
+                x.quanity = v.quanity;
+                database.SaveChanges();
+            }
+        }
+        public bool CheckAddEdit_Vaccine(string name)
+        {
+            foreach (Vaccine i in database.Vaccines.ToList())
+            {
+                if (name == i.vaccineName)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public void Delete_BLL_Vaccine(string name)
+        {
+            try
+            {
+                var x = database.Vaccines.Find(name);
+                database.Vaccines.Remove(x);
+                database.SaveChanges();
+            }
+            catch (Exception e)
+            {
+            }
+        }
+        // Citizen Data Alternative View
+        public List<VaccineDataAltView> FilteredViews(string txt, string search)
+        {
+            if (txt == "All")
+            {
+                txt = "";
+            }
+            List<VaccineDataAltView> data = new List<VaccineDataAltView>();
+            foreach (Vaccine i in GetAll_Vaccine(txt))
+            {
+                if (i.vaccineName.Contains(txt) && i.quanity.ToString().Contains(search))
+                {                   
+                    data.Add(new VaccineDataAltView
+                    {
+                        vaccineName = i.vaccineName,
+                        quanity = i.quanity
+                    });
+                }
+            }
+            return data;
+        }
+        // CBB Filler
+        public List<string> GetCBB_Filter()
+        {
+            return database.Vaccines.Select(p => p.vaccineName).Distinct().ToList();
+        }
+        public List<VaccineDataAltView> Sort_BLL(string txt, int SortIndex)
+        {
+            List<Vaccine> data = new List<Vaccine>();
+            if (SortIndex == 0)
+            {
+                var x = database.Vaccines.Where(p => p.vaccineName.Contains(txt))
+                    .OrderBy(p => p.vaccineName);
+                data = x.ToList();
+            }
+            if (SortIndex == 1)
+            {
+                var x = database.Vaccines.Where(p => p.vaccineName.Contains(txt))
+                    .OrderBy(p => p.quanity);
+                data = x.ToList();
+            }
+            List<VaccineDataAltView> data2 = new List<VaccineDataAltView>();
+            foreach (Vaccine i in data)
+            {
+                data2.Add(new VaccineDataAltView
+                {
+                    vaccineName = i.vaccineName,
+                    quanity = i.quanity
+                }); 
+            }
+            return data2;
+        }
+    }
 }

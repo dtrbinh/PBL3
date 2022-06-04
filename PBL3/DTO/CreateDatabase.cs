@@ -13,18 +13,18 @@ namespace PBL3.DTO
         {
             context.Accounts.AddRange(new Account[]
             {
-                //new Account{Username = "admin", Password = "admin", Fullname = "Nguyen Admin", Permission = true},
-                //new Account{Username = "user", Password = "user", Fullname = "Nguyen User", Permission = false}
+                new Account{Username = "admin", Password = "admin", Fullname = "Nguyen Admin", Permission = true},
+                new Account{Username = "user", Password = "user", Fullname = "Nguyen User", Permission = false}
             });
             context.Citizens.AddRange(new Citizen[]
             {
-                //new Citizen{fullName = "Nguyen Van A", CMND_CCCD = "2001", address = "Da Nang", gender = true, phone = "911", birth = DateTime.Now, regisDay = DateTime.Now, vaccination = 1},
+                new Citizen{fullName = "Nguyen Van A", CMND_CCCD = "2001", address = "Da Nang", gender = true, phone = "911", birth = DateTime.Now, regisDay = DateTime.Now, vaccination = 1},
 
             });
             context.Vaccines.AddRange(new Vaccine[]
             {
-                //new Vaccine{vaccineName = "astra", quanity = 101},
-                //new Vaccine{vaccineName = "verocell", quanity = 202}
+                new Vaccine{vaccineName = "astra", quanity = 101},
+                new Vaccine{vaccineName = "verocell", quanity = 202}
             });
         }
     }
