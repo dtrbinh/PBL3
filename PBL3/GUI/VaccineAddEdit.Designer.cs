@@ -80,6 +80,7 @@ namespace PBL3.GUI
             this.txtQuanity.Name = "txtQuanity";
             this.txtQuanity.Size = new System.Drawing.Size(319, 36);
             this.txtQuanity.TabIndex = 59;
+            this.txtQuanity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuanity_KeyPress);
             // 
             // label8
             // 

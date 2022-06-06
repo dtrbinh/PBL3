@@ -20,6 +20,7 @@ namespace PBL3.GUI
         public VaccineAddEdit(string n)
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(55, 54, 92);
             vaccine_name = n;
             GUI();
         }
@@ -42,15 +43,43 @@ namespace PBL3.GUI
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
-            Vaccine v = GetData();
-            Provider.Instance.ExecuteAddEdit(v, vaccine_name);
-            d("", "");
-            this.Close();
+            if (txtVaccineName.Text == "" || txtQuanity.Text == "")
+            {
+                MessageBox.Show("Please fill in all the information");
+            }
+            else
+            {
+                Vaccine v = GetData();
+                if (txtVaccineName.Enabled == true)
+                {
+                    if (Provider.Instance.CheckDuplicate_VaccineName(v.vaccineName) == false)
+                    {
+                        MessageBox.Show("Duplicated Vaccine Name");
+                        //txtVaccineName.Text = "";
+                        //txtVaccineName.Focus();
+                    }
+                    else
+                    {
+                        Provider.Instance.ExecuteAdd(v, vaccine_name);
+                    }
+                }
+                else
+                {
+                    Provider.Instance.ExecuteEdit(v, vaccine_name);
+                }
+                d("", "");
+                this.Close();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtQuanity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

@@ -242,20 +242,32 @@ namespace PBL3.BLL
         {
             return database.Vaccines.Where(p => p.vaccineName == name).FirstOrDefault();
         }
-        public void ExecuteAddEdit(Vaccine v, string name)
+        //public void ExecuteAddEdit(Vaccine v, string name)
+        //{
+        //    if (CheckAddEdit_Vaccine(v.vaccineName))
+        //    {
+        //        database.Vaccines.Add(v);
+        //        database.SaveChanges();
+        //    }
+        //    else
+        //    {
+        //        var x = database.Vaccines.Where(p => p.vaccineName == name).FirstOrDefault();
+        //        x.vaccineName = v.vaccineName;
+        //        x.quanity = v.quanity;
+        //        database.SaveChanges();
+        //    }
+        //}
+        public void ExecuteAdd(Vaccine v, string name)
         {
-            if (CheckAddEdit_Vaccine(v.vaccineName))
-            {
-                database.Vaccines.Add(v);
-                database.SaveChanges();
-            }
-            else
-            {
-                var x = database.Vaccines.Where(p => p.vaccineName == name).FirstOrDefault();
-                x.vaccineName = v.vaccineName;
-                x.quanity = v.quanity;
-                database.SaveChanges();
-            }
+            database.Vaccines.Add(v);
+            database.SaveChanges();
+        }
+        public void ExecuteEdit(Vaccine v, string name)
+        {
+            var x = database.Vaccines.Where(p => p.vaccineName == name).FirstOrDefault();
+            x.vaccineName = v.vaccineName;
+            x.quanity = v.quanity;
+            database.SaveChanges();
         }
         public bool CheckAddEdit_Vaccine(string name)
         {
@@ -331,6 +343,18 @@ namespace PBL3.BLL
                 }); 
             }
             return data2;
+        }
+
+        public bool CheckDuplicate_VaccineName(string name)
+        {
+            foreach (string i in database.Vaccines.Select(p => p.vaccineName).ToList())
+            {
+                if (name == i)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
