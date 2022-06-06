@@ -76,8 +76,10 @@
     <Compile Include="BLL\Provider.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Citizen.cs" />
+    <Compile Include="DTO\CitizenDataAltView.cs" />
     <Compile Include="DTO\CreateDatabase.cs" />
     <Compile Include="DTO\Vaccine.cs" />
+    <Compile Include="DTO\VaccineDataAltView.cs" />
     <Compile Include="GUI\AccountSettings_Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +147,12 @@
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Program.cs" />
+    <Compile Include="GUI\VaccineAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VaccineAddEdit.Designer.cs">
+      <DependentUpon>VaccineAddEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\VaccineData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,12 +172,6 @@
     </Compile>
     <Compile Include="GUI\UserMenu.Designer.cs">
       <DependentUpon>UserMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\VaccineAddEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\VaccineAddEdit.Designer.cs">
-      <DependentUpon>VaccineAddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\VaccineRegistration.cs">
       <SubType>Form</SubType>
@@ -210,6 +212,9 @@
     <EmbeddedResource Include="GUI\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VaccineAddEdit.resx">
+      <DependentUpon>VaccineAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\VaccineData.resx">
       <DependentUpon>VaccineData.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,9 +233,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserMenu.resx">
       <DependentUpon>UserMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\VaccineAddEdit.resx">
-      <DependentUpon>VaccineAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\VaccineRegistration.resx">
       <DependentUpon>VaccineRegistration.cs</DependentUpon>

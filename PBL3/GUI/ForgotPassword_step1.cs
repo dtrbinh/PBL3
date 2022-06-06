@@ -22,7 +22,7 @@ namespace PBL3
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Dispose();
+            this.Close();
         }
 
         private void btn_checkUsernameValid_Click(object sender, EventArgs e)
