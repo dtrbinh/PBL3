@@ -60,6 +60,7 @@ namespace PBL3
         public Citizen GetData()
         {
             Citizen s = new Citizen();
+
             s.CMND_CCCD = txtCMND.Text;
             s.fullName = txtFullname.Text;
             s.phone = txtPhone.Text;
@@ -81,9 +82,17 @@ namespace PBL3
         private void btnOK_Click(object sender, EventArgs e)
         {
             Citizen s = GetData();
-            Provider.Instance.ExecuteAddEdit(s, CMND_CCCD);
-            d("","","");
-            this.Close();
+            if (Provider.Instance.Check_CMND(s.CMND_CCCD) == true)
+            {
+                s.CMND_CCCD = txtCMND.Text;
+                Provider.Instance.ExecuteAddEdit(s, CMND_CCCD);
+                d("", "", "");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Duplicated CMND");
+            }            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

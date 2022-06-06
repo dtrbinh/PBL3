@@ -176,6 +176,7 @@ namespace PBL3
             this.dgv.Location = new System.Drawing.Point(50, 112);
             this.dgv.Margin = new System.Windows.Forms.Padding(2);
             this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 24;
             this.dgv.Size = new System.Drawing.Size(599, 269);

@@ -27,7 +27,9 @@ namespace PBL3
             cbbAddress.Items.AddRange(Provider.Instance.GetCBB_Address().ToArray());
             cbbDoes.Items.AddRange(Provider.Instance.GetCBB_Does().ToArray());
             cbbSort.Items.Add("Full Name");
-            cbbSort.Items.Add("Address");
+            cbbSort.Items.Add("CMND/CCCD");
+            cbbSort.Items.Add("Date of Birth");
+            cbbSort.Items.Add("Number of Doses");
             cbbSort.SelectedIndex = 0;
         }
         public void ShowDGV(string txt, string Address = "", string Does = "")
@@ -49,11 +51,12 @@ namespace PBL3
             f.d = new CitizenAddEdit.MyDelegate(ShowDGV);
             f.Show();
         }
-
+        
         private void button3_Click(object sender, EventArgs e)
         {
-            if (dgv.SelectedRows.Count == 1)
+            if (dgv.SelectedCells.Count == 1)
             {
+                dgv.Rows[dgv.SelectedCells[0].RowIndex].Selected = true;
                 string CMND = dgv.SelectedRows[0].Cells["CMND_CCCD"].Value.ToString();
                 CitizenAddEdit f = new CitizenAddEdit(CMND);
                 f.d = new CitizenAddEdit.MyDelegate(ShowDGV);
@@ -63,8 +66,9 @@ namespace PBL3
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dgv.SelectedRows.Count > 0)
+            if (dgv.SelectedCells.Count > 0)
             {
+                dgv.Rows[dgv.SelectedCells[0].RowIndex].Selected = true;
                 string CMND = "";
                 foreach (DataGridViewRow i in dgv.SelectedRows)
                 {

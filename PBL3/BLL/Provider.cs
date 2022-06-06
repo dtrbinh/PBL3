@@ -135,7 +135,7 @@ namespace PBL3.BLL
                         birth = i.birth.ToString("MM/dd/yyyy"),
                         phone = i.phone,
                         address = i.address,
-                        vaccination = i.vaccination.ToString() + " Does Injected",
+                        vaccination = i.vaccination.ToString() + " Doses Injected",
                         regisDay = i.regisDay.ToString("MM/dd/yyyy"),
                     });
                 }
@@ -163,7 +163,19 @@ namespace PBL3.BLL
             if (SortIndex == 1)
             {
                 var x = database.Citizens.Where(p => p.fullName.Contains(txt))
-                    .OrderBy(p => p.address);
+                    .OrderBy(p => p.CMND_CCCD);
+                data = x.ToList();
+            }
+            if (SortIndex == 2)
+            {
+                var x = database.Citizens.Where(p => p.fullName.Contains(txt))
+                    .OrderBy(p => p.birth);
+                data = x.ToList();
+            }
+            if (SortIndex == 3)
+            {
+                var x = database.Citizens.Where(p => p.fullName.Contains(txt))
+                    .OrderBy(p => p.vaccination);
                 data = x.ToList();
             }
             List<CitizenDataAltView> data2 = new List<CitizenDataAltView>();
@@ -198,6 +210,17 @@ namespace PBL3.BLL
                 }
             }
             return data2;
+        }
+        public bool Check_CMND(string CMND)
+        {
+            foreach(string i in database.Citizens.Select(p => p.CMND_CCCD).ToList())
+            {
+                if(i == CMND)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
 
