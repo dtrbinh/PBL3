@@ -170,33 +170,66 @@ namespace PBL3.BLL
         {
             return database.Citizens.Select(p => p.vaccination.ToString()).Distinct().ToList();
         }
-        public List<CitizenDataAltView> Sort_BLL(string txt, string Address, string Does, int SortIndex)
+        public List<CitizenDataAltView> Sort_BLL(string txt, string Address, string Does, int SortIndex, bool SortingDirection)
         {
             List<Citizen> data = new List<Citizen>();
-            if (SortIndex == 0)
+            if(SortingDirection == true)
             {
-                var x = database.Citizens.Where(p => p.fullName.Contains(txt))
-                    .OrderBy(p => p.fullName);
-                data = x.ToList();
+                if (SortIndex == 0)
+                {
+                    var x = database.Citizens.Where(p => p.fullName.Contains(txt))
+                        .OrderBy(p => p.fullName);
+                    data = x.ToList();
+                }
+                if (SortIndex == 1)
+                {
+                    var x = database.Citizens.Where(p => p.fullName.Contains(txt)).ToList()
+                        .OrderBy(o => int.Parse(o.CMND_CCCD));
+                    data = x.ToList();
+
+
+                }
+                if (SortIndex == 2)
+                {
+                    var x = database.Citizens.Where(p => p.fullName.Contains(txt))
+                        .OrderBy(p => p.birth);
+                    data = x.ToList();
+                }
+                if (SortIndex == 3)
+                {
+                    var x = database.Citizens.Where(p => p.fullName.Contains(txt))
+                        .OrderBy(p => p.vaccination);
+                    data = x.ToList();
+                }
             }
-            if (SortIndex == 1)
+            else
             {
-                var x = database.Citizens.Where(p => p.fullName.Contains(txt))
-                    .OrderBy(p => p.CMND_CCCD);
-                data = x.ToList();
+                if (SortIndex == 0)
+                {
+                    var x = database.Citizens.Where(p => p.fullName.Contains(txt))
+                        .OrderByDescending(p => p.fullName);
+                    data = x.ToList();
+                }
+                if (SortIndex == 1)
+                {
+                    var x = database.Citizens.Where(p => p.fullName.Contains(txt)).ToList()
+                        .OrderByDescending(o => int.Parse(o.CMND_CCCD));
+                    data = x.ToList();
+                }
+                if (SortIndex == 2)
+                {
+                    var x = database.Citizens.Where(p => p.fullName.Contains(txt))
+                        .OrderByDescending(p => p.birth);
+                    data = x.ToList();
+                }
+                if (SortIndex == 3)
+                {
+                    var x = database.Citizens.Where(p => p.fullName.Contains(txt))
+                        .OrderByDescending(p => p.vaccination);
+                    data = x.ToList();
+                }
             }
-            if (SortIndex == 2)
-            {
-                var x = database.Citizens.Where(p => p.fullName.Contains(txt))
-                    .OrderBy(p => p.birth);
-                data = x.ToList();
-            }
-            if (SortIndex == 3)
-            {
-                var x = database.Citizens.Where(p => p.fullName.Contains(txt))
-                    .OrderBy(p => p.vaccination);
-                data = x.ToList();
-            }
+            
             List<CitizenDataAltView> data2 = new List<CitizenDataAltView>();
             if (Address == "All")
             {

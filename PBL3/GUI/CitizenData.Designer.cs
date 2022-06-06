@@ -147,6 +147,7 @@ namespace PBL3
             // 
             // cbbSort
             // 
+            this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbSort.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cbbSort.FormattingEnabled = true;
@@ -155,9 +156,11 @@ namespace PBL3
             this.cbbSort.Name = "cbbSort";
             this.cbbSort.Size = new System.Drawing.Size(178, 29);
             this.cbbSort.TabIndex = 39;
+            this.cbbSort.SelectedIndexChanged += new System.EventHandler(this.cbbSort_SelectedIndexChanged);
             // 
             // cbbAddress
             // 
+            this.cbbAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbAddress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbAddress.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cbbAddress.FormattingEnabled = true;
@@ -208,6 +211,7 @@ namespace PBL3
             // 
             // cbbDoes
             // 
+            this.cbbDoes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbDoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbDoes.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cbbDoes.FormattingEnabled = true;

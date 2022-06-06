@@ -66,17 +66,21 @@ namespace PBL3
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dgv.SelectedCells.Count > 0)
+            if (MessageBox.Show("This will permanently remove selected data", "Confirm Deletion", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                dgv.Rows[dgv.SelectedCells[0].RowIndex].Selected = true;
-                string CMND = "";
-                foreach (DataGridViewRow i in dgv.SelectedRows)
+                if (dgv.SelectedCells.Count > 0)
                 {
-                    CMND = i.Cells["CMND_CCCD"].Value.ToString();
+                    dgv.Rows[dgv.SelectedCells[0].RowIndex].Selected = true;
+                    string CMND = "";
+                    foreach (DataGridViewRow i in dgv.SelectedRows)
+                    {
+                        CMND = i.Cells["CMND_CCCD"].Value.ToString();
+                    }
+                    Provider.Instance.Delete_BLL(CMND);
                 }
-                Provider.Instance.Delete_BLL(CMND);
+                ShowDGV(txtSearch.Text, cbbAddress.SelectedItem.ToString(), cbbDoes.SelectedItem.ToString());
             }
-            ShowDGV(txtSearch.Text,cbbAddress.SelectedItem.ToString(), cbbDoes.SelectedItem.ToString());
+            
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -97,10 +101,23 @@ namespace PBL3
         {
             ShowDGV(txtSearch.Text, cbbAddress.SelectedItem.ToString(), cbbDoes.SelectedItem.ToString());
         }
-
+        public bool SortingDirection = true;
         private void btnSort_Click(object sender, EventArgs e)
         {
-            dgv.DataSource = Provider.Instance.Sort_BLL(txtSearch.Text, cbbAddress.SelectedItem.ToString(), cbbDoes.SelectedItem.ToString(), cbbSort.SelectedIndex);
+            dgv.DataSource = Provider.Instance.Sort_BLL(txtSearch.Text, cbbAddress.SelectedItem.ToString(), cbbDoes.SelectedItem.ToString(), cbbSort.SelectedIndex, SortingDirection);
+            if(SortingDirection == true)
+            {
+                SortingDirection = false;
+            }
+            else
+            {
+                SortingDirection = true;
+            }
+        }
+
+        private void cbbSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SortingDirection = true;
         }
     }
 }

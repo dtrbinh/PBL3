@@ -92,7 +92,7 @@ namespace PBL3
                 {
                     if (Provider.Instance.CheckDuplicateCMND(s.CMND_CCCD) == false)
                     {
-                        MessageBox.Show("Duplicated CMND/CCCD");
+                        MessageBox.Show("That CMND/CCCD already existed");
                     }
                     else
                     {

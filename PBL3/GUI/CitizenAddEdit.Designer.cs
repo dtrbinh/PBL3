@@ -210,6 +210,7 @@ namespace PBL3
             // 
             // cbbGender
             // 
+            this.cbbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbGender.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cbbGender.FormattingEnabled = true;
@@ -221,16 +222,20 @@ namespace PBL3
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(40, 236);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(37, 231);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(235, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(235, 30);
             this.dateTimePicker1.TabIndex = 65;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(311, 292);
+            this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(311, 290);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(235, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(235, 30);
             this.dateTimePicker2.TabIndex = 67;
             // 
             // label6
@@ -248,6 +253,7 @@ namespace PBL3
             // 
             // cbbDoes
             // 
+            this.cbbDoes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbDoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbDoes.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cbbDoes.FormattingEnabled = true;
