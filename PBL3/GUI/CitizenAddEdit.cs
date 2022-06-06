@@ -83,7 +83,7 @@ namespace PBL3
         {
             if(txtCMND.Text == "" || txtFullname.Text == "" || txtAddress.Text == "" || txtPhone.Text == "" || cbbGender.Text == "" || cbbDoes.Text == "")
             {
-                MessageBox.Show("Please fill in all the information");
+                MessageBox.Show("Please fill in all the information.", "NOTICE");
             }
             else
             {
@@ -92,19 +92,20 @@ namespace PBL3
                 {
                     if (Provider.Instance.CheckDuplicateCMND(s.CMND_CCCD) == false)
                     {
-                        MessageBox.Show("That CMND/CCCD already existed");
+                        MessageBox.Show("CMND/CCCD already existed!", "NOTICE");
                     }
                     else
                     {
                         Provider.Instance.ExecuteAdd(s, CMND_CCCD);
+                        this.Close();
                     }
                 }
                 else
                 {
                     Provider.Instance.ExecuteEdit(s, CMND_CCCD);
+                    this.Close();
                 }
                 d("", "", "");
-                this.Close();
             }
         }
 

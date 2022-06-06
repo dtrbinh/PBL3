@@ -111,7 +111,7 @@ namespace PBL3
         }
         private void btn_logOut_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
             SignIn signIn = new SignIn();
             signIn.Show();
         }

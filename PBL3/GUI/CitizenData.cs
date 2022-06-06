@@ -66,7 +66,7 @@ namespace PBL3
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("This will permanently remove selected data", "Confirm Deletion", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("This will permanently remove selected citizen!", "NOTICE", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 if (dgv.SelectedCells.Count > 0)
                 {

@@ -130,7 +130,6 @@ D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.GUI.Vac
 D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.Properties.Resources.resources
 D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.Statistics.resources
 D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.UserMenu.resources
-D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.VaccineAddEdit.resources
 D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.VaccineRegistration.resources
 D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
 D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
@@ -268,3 +267,4 @@ C:\Users\Pet\Desktop\PBL3_1\PBL3\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Pet\Desktop\PBL3_1\PBL3\bin\Debug\EntityFramework.xml
 C:\Users\Pet\Desktop\PBL3_1\PBL3\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Pet\Desktop\PBL3_1\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccineAddEdit.resources
