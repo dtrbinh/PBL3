@@ -81,23 +81,41 @@ namespace PBL3
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            Citizen s = GetData();
-            if (Provider.Instance.Check_CMND(s.CMND_CCCD) == true)
+            if(txtCMND.Text == "" || txtFullname.Text == "" || txtAddress.Text == "" || txtPhone.Text == "" || cbbGender.Text == "" || cbbDoes.Text == "")
             {
-                s.CMND_CCCD = txtCMND.Text;
-                Provider.Instance.ExecuteAddEdit(s, CMND_CCCD);
-                d("", "", "");
-                this.Close();
+                MessageBox.Show("Please fill in all the information");
             }
             else
             {
-                MessageBox.Show("Duplicated CMND");
-            }            
+                Citizen s = GetData();
+                if (txtCMND.Enabled == true)
+                {
+                    if (Provider.Instance.CheckDuplicateCMND(s.CMND_CCCD) == false)
+                    {
+                        MessageBox.Show("Duplicated CMND/CCCD");
+                    }
+                    else
+                    {
+                        Provider.Instance.ExecuteAdd(s, CMND_CCCD);
+                    }
+                }
+                else
+                {
+                    Provider.Instance.ExecuteEdit(s, CMND_CCCD);
+                }
+                d("", "", "");
+                this.Close();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

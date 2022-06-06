@@ -62,38 +62,57 @@ namespace PBL3.BLL
             return database.Citizens.Where(p => p.CMND_CCCD == CMND_CCCD).FirstOrDefault();
         }
 
-        public void ExecuteAddEdit(Citizen s, string CMND_CCCD)
+        //public void ExecuteAddEdit(Citizen s, string CMND_CCCD)
+        //{
+        //    if (CheckAddEdit(s.CMND_CCCD))
+        //    {
+        //        database.Citizens.Add(s);
+        //        database.SaveChanges();
+        //    }
+        //    else
+        //    {
+        //        var x = database.Citizens.Where(p => p.CMND_CCCD == CMND_CCCD).FirstOrDefault();
+        //        x.CMND_CCCD = s.CMND_CCCD;
+        //        x.fullName = s.fullName;
+        //        x.phone = s.phone;
+        //        x.address = s.address;
+        //        x.gender = s.gender;
+        //        x.birth = s.birth;
+        //        x.vaccination = s.vaccination;
+        //        x.regisDay = s.regisDay;
+        //        database.SaveChanges();
+        //    }
+        //}
+        public bool CheckDuplicateCMND(string CMND_CCCD)
         {
-            if (CheckAddEdit(s.CMND_CCCD))
+            foreach (string i in database.Citizens.Select(p=>p.CMND_CCCD).ToList())
             {
-                database.Citizens.Add(s);
-                database.SaveChanges();
-            }
-            else
-            {
-                var x = database.Citizens.Where(p => p.CMND_CCCD == CMND_CCCD).FirstOrDefault();
-                x.CMND_CCCD = s.CMND_CCCD;
-                x.fullName = s.fullName;
-                x.phone = s.phone;
-                x.address = s.address;
-                x.gender = s.gender;
-                x.birth = s.birth;
-                x.vaccination = s.vaccination;
-                x.regisDay = s.regisDay;
-                database.SaveChanges();
-            }
-        }
-        public bool CheckAddEdit(string CMND_CCCD)
-        {
-            foreach (Citizen i in database.Citizens.ToList())
-            {
-                if (CMND_CCCD == i.CMND_CCCD)
+                if (CMND_CCCD == i)
                 {
                     return false;
                 }
             }
             return true;
         }
+        public void ExecuteAdd(Citizen s, string CMND_CCCD)
+        {
+            database.Citizens.Add(s);
+            database.SaveChanges();
+        }
+        public void ExecuteEdit(Citizen s, string CMND_CCCD)
+        {
+            var x = database.Citizens.Where(p => p.CMND_CCCD == CMND_CCCD).FirstOrDefault();
+            x.CMND_CCCD = s.CMND_CCCD;
+            x.fullName = s.fullName;
+            x.phone = s.phone;
+            x.address = s.address;
+            x.gender = s.gender;
+            x.birth = s.birth;
+            x.vaccination = s.vaccination;
+            x.regisDay = s.regisDay;
+            database.SaveChanges();
+        }
+        
         public void Delete_BLL(string CMND)
         {
             try
@@ -211,17 +230,7 @@ namespace PBL3.BLL
             }
             return data2;
         }
-        public bool Check_CMND(string CMND)
-        {
-            foreach(string i in database.Citizens.Select(p => p.CMND_CCCD).ToList())
-            {
-                if(i == CMND)
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
+        
 
 
         //--------------Vaccine Data-------------

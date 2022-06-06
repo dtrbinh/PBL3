@@ -193,6 +193,7 @@ namespace PBL3
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(239, 29);
             this.txtPhone.TabIndex = 60;
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
             // label5
             // 
@@ -265,9 +266,9 @@ namespace PBL3
             this.label7.Location = new System.Drawing.Point(307, 323);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(201, 21);
+            this.label7.Size = new System.Drawing.Size(207, 21);
             this.label7.TabIndex = 68;
-            this.label7.Text = "Number of does injected";
+            this.label7.Text = "Number of doses injected";
             // 
             // CitizenAddEdit
             // 
