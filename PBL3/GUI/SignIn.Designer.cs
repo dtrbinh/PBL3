@@ -89,7 +89,7 @@ namespace PBL3
             this.btn_signIn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_signIn.ForeColor = System.Drawing.Color.White;
             this.btn_signIn.Location = new System.Drawing.Point(347, 238);
-            this.btn_signIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_signIn.Margin = new System.Windows.Forms.Padding(2);
             this.btn_signIn.Name = "btn_signIn";
             this.btn_signIn.Size = new System.Drawing.Size(212, 35);
             this.btn_signIn.TabIndex = 28;
@@ -102,7 +102,7 @@ namespace PBL3
             this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_password.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.Location = new System.Drawing.Point(347, 168);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(2);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
@@ -115,7 +115,7 @@ namespace PBL3
             this.txt_userName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_userName.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_userName.Location = new System.Drawing.Point(347, 100);
-            this.txt_userName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_userName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_userName.Multiline = true;
             this.txt_userName.Name = "txt_userName";
             this.txt_userName.Size = new System.Drawing.Size(212, 25);
@@ -125,12 +125,12 @@ namespace PBL3
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8F);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 7.5F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.label4.Location = new System.Drawing.Point(443, 287);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 16);
+            this.label4.Size = new System.Drawing.Size(22, 15);
             this.label4.TabIndex = 34;
             this.label4.Text = "OR";
             // 
@@ -138,12 +138,12 @@ namespace PBL3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(343, 145);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 17);
+            this.label3.Size = new System.Drawing.Size(72, 19);
             this.label3.TabIndex = 33;
             this.label3.Text = "Password";
             // 
@@ -151,12 +151,12 @@ namespace PBL3
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(343, 77);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 17);
+            this.label2.Size = new System.Drawing.Size(77, 19);
             this.label2.TabIndex = 32;
             this.label2.Text = "Username";
             // 
@@ -181,7 +181,7 @@ namespace PBL3
             this.btn_showPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_showPassword.Image = ((System.Drawing.Image)(resources.GetObject("btn_showPassword.Image")));
             this.btn_showPassword.Location = new System.Drawing.Point(532, 168);
-            this.btn_showPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_showPassword.Margin = new System.Windows.Forms.Padding(2);
             this.btn_showPassword.Name = "btn_showPassword";
             this.btn_showPassword.Size = new System.Drawing.Size(27, 25);
             this.btn_showPassword.TabIndex = 37;
@@ -218,7 +218,7 @@ namespace PBL3
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(541, 0);
+            this.button4.Location = new System.Drawing.Point(532, 0);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(32, 29);
@@ -264,7 +264,7 @@ namespace PBL3
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign In";

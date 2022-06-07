@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VaccinationInfo));
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cbbGender = new System.Windows.Forms.ComboBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -68,7 +69,7 @@
             this.cbbGender.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbbGender.FormattingEnabled = true;
             this.cbbGender.Location = new System.Drawing.Point(62, 194);
-            this.cbbGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbGender.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGender.Name = "cbbGender";
             this.cbbGender.Size = new System.Drawing.Size(239, 25);
             this.cbbGender.TabIndex = 99;
@@ -79,7 +80,7 @@
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAddress.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.txtAddress.Location = new System.Drawing.Point(397, 194);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(239, 25);
@@ -104,7 +105,7 @@
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.txtPhone.Location = new System.Drawing.Point(397, 135);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(239, 25);
@@ -156,7 +157,7 @@
             this.txtCMND.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCMND.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.txtCMND.Location = new System.Drawing.Point(62, 77);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(2);
             this.txtCMND.Multiline = true;
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(239, 25);
@@ -182,7 +183,7 @@
             this.txtFullname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFullname.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.txtFullname.Location = new System.Drawing.Point(62, 135);
-            this.txtFullname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFullname.Margin = new System.Windows.Forms.Padding(2);
             this.txtFullname.Multiline = true;
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.Size = new System.Drawing.Size(239, 25);
@@ -204,12 +205,13 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(87)))), ((int)(((byte)(201)))));
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(62, 382);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(239, 25);
             this.button1.TabIndex = 102;
@@ -220,12 +222,13 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(87)))), ((int)(((byte)(201)))));
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(62, 298);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(239, 25);
             this.button2.TabIndex = 101;
@@ -238,7 +241,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label2.Location = new System.Drawing.Point(58, 22);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -249,12 +252,13 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(87)))), ((int)(((byte)(201)))));
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(397, 298);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(108, 25);
             this.button3.TabIndex = 104;
@@ -265,12 +269,13 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(87)))), ((int)(((byte)(201)))));
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(528, 298);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(108, 25);
             this.button4.TabIndex = 105;
@@ -283,7 +288,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label3.Location = new System.Drawing.Point(58, 348);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -333,7 +338,7 @@
             this.cbbDoes.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbbDoes.FormattingEnabled = true;
             this.cbbDoes.Location = new System.Drawing.Point(62, 250);
-            this.cbbDoes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbDoes.Margin = new System.Windows.Forms.Padding(2);
             this.cbbDoes.Name = "cbbDoes";
             this.cbbDoes.Size = new System.Drawing.Size(239, 25);
             this.cbbDoes.TabIndex = 111;
@@ -343,6 +348,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(701, 438);
             this.Controls.Add(this.cbbDoes);
             this.Controls.Add(this.dateTimePicker2);

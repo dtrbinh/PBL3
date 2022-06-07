@@ -121,7 +121,7 @@
   <data name="btn_signIn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAXYAAAB0CAIAAAAeg46NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAPX5JREFUeF7t3fl3XUeV6PH8RS+2JcuSrMHyxD/y3mseD0jClEDo0ATI4Di4Q4Kh
+        vwAADr8BOAVTJAAAPX5JREFUeF7t3fl3XUeV6PH8RS+2JcuSrMHyxD/y3mseD0jClEDo0ATI4Di4Q4Kh
         IdadJTsO4AyYRoEAYUhouvv9S29PtWvXrqpz56sr2Wt9l9a59u+fVaeqTtUT//PJw//15OH//h8heJYO
         oH86ox1+/szh/3nSBD9NXzh7EDtz8H8rffHMwZfOHH7pzID78tkD11NnD56OHUrnDp4+N3jm7OArZwdf
         PXdQbmXAfe3c4Oumb6xAB9pzscFzK/3nVgfaN03fwg5M8LMPPQ+d73/7/OCfq/W/U++70GoIfw6gF7He
@@ -389,7 +389,7 @@
   <data name="btn_showPassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAAThJREFUOE/t0z1LglEYxvGnJIwcwoTqCxRWUjT4BRobWtslGqKgXa2Wtj5AUE7t
+        vgAADr4B6kKxwAAAAThJREFUOE/t0z1LglEYxvGnJIwcwoTqCxRWUjT4BRobWtslGqKgXa2Wtj5AUE7t
         NQna6yatLdEsWH2HyPpfh3PH4VQornXBD+Tc57mf57yY/Oe3DHkDZwYVXKGDN+8ZNzjAPHpmEXV08YFH
         bKCABZTwANVEzYv4Fi2nDH2FTT5HGkrWU0ZwCpv3jkMMw0XNTmATpI0MJtGAvliamEIK9wifOYPb520/
         EKpCUYO4dgllDXFtF27T48IqJmB7GdJYDuPBmHmBO7m40E/DsWDMqFeyEwwYW7KWF9d0lZQVxLUtuI2s
@@ -616,17 +616,17 @@
   </data>
   <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAA3SURBVDhPYxgF9Ab///8XAuJiIC4nAoPUCUG1gjUXATEpoAiqFW5zNRB3EIFB6hA2jwK6AAYG
-        AE0zi4BvQDcuAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAADdJREFUOE9j
+        GAX0Bv///xcC4mIgLicCg9QJQbWCNRcBMSmgCKoVbnM1EHcQgUHqEDaPAroABgYATTOLgG9ANy4AAAAA
+        SUVORK5CYII=
 </value>
   </data>
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAB3SURBVDhPxZLRCYAwDEQ7mII4UxfWFdTv+CIRW0MrVNAHR/AucLYa/kdEBjTrNCujmlugrChb
-        0GfzlcnsC8wOLUcssqGx5jsI0gad0abi3sjBQtp0Um68w6I2pkSL6rDY1sxC25kJetR225ivvnP5D4Kn
-        /EtC2AHBkjmvjdAPZQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAHdJREFUOE/F
+        ktEJgDAMRDuYgjhTF9YV1O/4IhFbQytU0AdH8C5wthr+R0QGNOs0K6OaW6CsKFvQZ/OVyewLzA4tRyyy
+        obHmOwjSBp3RpuLeyMFC2nRSbrzDojamRIvqsNjWzELbmQl61HbbmK++c/kPgqf8S0LYAcGSOa+N0A9l
+        AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

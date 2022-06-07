@@ -50,7 +50,7 @@ namespace PBL3
             this.btn_confirmChangePassword.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_confirmChangePassword.ForeColor = System.Drawing.Color.White;
             this.btn_confirmChangePassword.Location = new System.Drawing.Point(28, 164);
-            this.btn_confirmChangePassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_confirmChangePassword.Margin = new System.Windows.Forms.Padding(2);
             this.btn_confirmChangePassword.Name = "btn_confirmChangePassword";
             this.btn_confirmChangePassword.Size = new System.Drawing.Size(207, 30);
             this.btn_confirmChangePassword.TabIndex = 43;
@@ -65,7 +65,7 @@ namespace PBL3
             this.btn_reShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_reShowPassword.Image = ((System.Drawing.Image)(resources.GetObject("btn_reShowPassword.Image")));
             this.btn_reShowPassword.Location = new System.Drawing.Point(208, 111);
-            this.btn_reShowPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_reShowPassword.Margin = new System.Windows.Forms.Padding(2);
             this.btn_reShowPassword.Name = "btn_reShowPassword";
             this.btn_reShowPassword.Size = new System.Drawing.Size(27, 25);
             this.btn_reShowPassword.TabIndex = 49;
@@ -78,7 +78,7 @@ namespace PBL3
             this.txt_rePassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_rePassword.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_rePassword.Location = new System.Drawing.Point(28, 111);
-            this.txt_rePassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_rePassword.Margin = new System.Windows.Forms.Padding(2);
             this.txt_rePassword.Multiline = true;
             this.txt_rePassword.Name = "txt_rePassword";
             this.txt_rePassword.PasswordChar = '*';
@@ -92,7 +92,7 @@ namespace PBL3
             this.btn_showPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_showPassword.Image = ((System.Drawing.Image)(resources.GetObject("btn_showPassword.Image")));
             this.btn_showPassword.Location = new System.Drawing.Point(208, 44);
-            this.btn_showPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_showPassword.Margin = new System.Windows.Forms.Padding(2);
             this.btn_showPassword.Name = "btn_showPassword";
             this.btn_showPassword.Size = new System.Drawing.Size(27, 25);
             this.btn_showPassword.TabIndex = 52;
@@ -105,7 +105,7 @@ namespace PBL3
             this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_password.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.Location = new System.Drawing.Point(28, 44);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(2);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
@@ -116,12 +116,12 @@ namespace PBL3
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(25, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 17);
+            this.label2.Size = new System.Drawing.Size(72, 19);
             this.label2.TabIndex = 53;
             this.label2.Text = "Password";
             // 
@@ -129,12 +129,12 @@ namespace PBL3
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(25, 92);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 17);
+            this.label1.Size = new System.Drawing.Size(129, 19);
             this.label1.TabIndex = 54;
             this.label1.Text = "Confirm Password";
             // 
@@ -186,7 +186,7 @@ namespace PBL3
             this.Controls.Add(this.btn_confirmChangePassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ForgotPassWord_step2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ForgotPassWord_step2";
