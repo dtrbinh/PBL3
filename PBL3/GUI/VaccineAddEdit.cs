@@ -54,21 +54,22 @@ namespace PBL3.GUI
                 {
                     if (Provider.Instance.CheckDuplicate_VaccineName(v.vaccineName) == false)
                     {
-                        MessageBox.Show("Duplicated Vaccine Name");
-                        //txtVaccineName.Text = "";
-                        //txtVaccineName.Focus();
+                        MessageBox.Show("Vaccine Name already existed!", "NOTICE");
+                        txtVaccineName.Text = "";
+                        txtVaccineName.Focus();          
                     }
                     else
                     {
                         Provider.Instance.ExecuteAdd(v, vaccine_name);
+                        this.Close();
                     }
                 }
                 else
                 {
                     Provider.Instance.ExecuteEdit(v, vaccine_name);
+                    this.Close();
                 }
                 d("", "");
-                this.Close();
             }
         }
 

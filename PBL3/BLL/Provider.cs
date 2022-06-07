@@ -351,20 +351,39 @@ namespace PBL3.BLL
         {
             return database.Vaccines.Select(p => p.vaccineName).Distinct().ToList();
         }
-        public List<VaccineDataAltView> Sort_BLL(string txt, int SortIndex)
+        public List<VaccineDataAltView> Sort_BLL(string txt, int SortIndex, bool SortingDirection)
         {
             List<Vaccine> data = new List<Vaccine>();
-            if (SortIndex == 0)
+
+            if (SortingDirection == true)
             {
-                var x = database.Vaccines.Where(p => p.vaccineName.Contains(txt))
-                    .OrderBy(p => p.vaccineName);
-                data = x.ToList();
+                if (SortIndex == 0)
+                {
+                    var x = database.Vaccines.Where(p => p.vaccineName.Contains(txt))
+                        .OrderBy(p => p.vaccineName);
+                    data = x.ToList();
+                }
+                if (SortIndex == 1)
+                {
+                    var x = database.Vaccines.Where(p => p.vaccineName.Contains(txt))
+                        .OrderBy(p => p.quanity);
+                    data = x.ToList();
+                }
             }
-            if (SortIndex == 1)
+            else
             {
-                var x = database.Vaccines.Where(p => p.vaccineName.Contains(txt))
-                    .OrderBy(p => p.quanity);
-                data = x.ToList();
+                if (SortIndex == 0)
+                {
+                    var x = database.Vaccines.Where(p => p.vaccineName.Contains(txt))
+                        .OrderByDescending(p => p.vaccineName);
+                    data = x.ToList();
+                }
+                if (SortIndex == 1)
+                {
+                    var x = database.Vaccines.Where(p => p.vaccineName.Contains(txt))
+                        .OrderByDescending(p => p.quanity);
+                    data = x.ToList();
+                }
             }
             List<VaccineDataAltView> data2 = new List<VaccineDataAltView>();
             foreach (Vaccine i in data)
