@@ -111,7 +111,7 @@ namespace PBL3
             // txtSearch
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.txtSearch.Location = new System.Drawing.Point(196, 29);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Multiline = true;

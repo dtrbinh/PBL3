@@ -20,7 +20,6 @@ namespace PBL3.GUI
         public VaccineAddEdit(string n)
         {
             InitializeComponent();
-            this.BackColor = Color.FromArgb(55, 54, 92);
             vaccine_name = n;
             GUI();
         }

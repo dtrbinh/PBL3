@@ -29,7 +29,7 @@ namespace PBL3.DTO
             });
             context.Registrations.AddRange(new Registration[]
             {
-                new Registration{CMND_CCCD = "1234", Dose = 2, vaccineName = "astra", regisDay = DateTime.Now, State = false}
+                new Registration{regisId = "1",CMND_CCCD = "1234", Dose = 2, vaccineName = "astra", regisDay = DateTime.Now, State = false}
             });
         }
     }

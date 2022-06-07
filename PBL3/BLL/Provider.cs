@@ -96,7 +96,13 @@ namespace PBL3.BLL
             try
             {
                 var x = database.Citizens.Find(CMND);
-                database.Citizens.Remove(x);
+                //database.Citizens.Remove(x);
+                x.fullName = "";
+                x.phone = "";
+                x.address = "";
+                x.gender = true;
+                x.birth = DateTime.Now;
+                x.vaccination = 0;
                 database.SaveChanges();
             }
             catch (Exception e)
@@ -118,7 +124,7 @@ namespace PBL3.BLL
             List<CitizenDataAltView> data = new List<CitizenDataAltView>();
             foreach (Citizen i in GetAll_Citizen(txt))
             {
-                if (i.address.Contains(Address) && i.vaccination.ToString().Contains(Does))
+                if (i.fullName != "" && i.address.Contains(Address) && i.vaccination.ToString().Contains(Does))
                 {
                     string convertedGender = "Male";
                     if (i.gender == false)
@@ -219,7 +225,7 @@ namespace PBL3.BLL
             }
             foreach (Citizen i in data)
             {
-                if (i.address.Contains(Address) && i.vaccination.ToString().Contains(Does))
+                if (i.fullName != "" &&i.address.Contains(Address) && i.vaccination.ToString().Contains(Does))
                 {
                     string convertedGender = "Male";
                     if (i.gender == false)
@@ -376,6 +382,21 @@ namespace PBL3.BLL
         // ----------------Registration-------------------
         public void ExecuteAdd(Registration r)
         {
+            bool loop = true;
+            // generating unique random Id
+            while(loop == true)
+            {
+                Random rd = new Random();
+                r.regisId = rd.Next(1, 1000).ToString();
+                foreach (string i in database.Registrations.Select(p => p.regisId).ToList())
+                {
+                    if(r.regisId != i)
+                    {
+                        loop = false;
+                        break;
+                    }
+                }
+            }
             database.Registrations.Add(r);
             database.SaveChanges();
         }

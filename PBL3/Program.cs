@@ -18,7 +18,7 @@ namespace PBL3
             Application.SetCompatibleTextRenderingDefault(false);
             try
             {
-                Application.Run(new SignIn());
+                Application.Run(new Sig());
             }
             catch (Exception e) { Console.WriteLine("Error: " + e.ToString()); }
         }

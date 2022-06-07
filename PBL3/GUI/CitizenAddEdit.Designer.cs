@@ -43,8 +43,6 @@ namespace PBL3
             this.label5 = new System.Windows.Forms.Label();
             this.cbbGender = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
             this.cbbDoes = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -229,28 +227,6 @@ namespace PBL3
             this.dateTimePicker1.Size = new System.Drawing.Size(235, 30);
             this.dateTimePicker1.TabIndex = 65;
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(311, 290);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(235, 30);
-            this.dateTimePicker2.TabIndex = 67;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(304, 263);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 21);
-            this.label6.TabIndex = 66;
-            this.label6.Text = "Registration Date";
-            // 
             // cbbDoes
             // 
             this.cbbDoes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -284,8 +260,6 @@ namespace PBL3
             this.ClientSize = new System.Drawing.Size(616, 458);
             this.Controls.Add(this.cbbDoes);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.cbbGender);
             this.Controls.Add(this.txtAddress);
@@ -323,8 +297,6 @@ namespace PBL3
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbbGender;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbbDoes;
         private System.Windows.Forms.Label label7;
     }

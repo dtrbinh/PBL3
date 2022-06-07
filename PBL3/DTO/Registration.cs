@@ -9,6 +9,7 @@ namespace PBL3.DTO
         [Key]
         [StringLength(10)]
         [Required]
+        public string regisId { get; set; }
         public string CMND_CCCD { get; set; }
         public int Dose { get; set; }
         public string vaccineName { get; set; }        

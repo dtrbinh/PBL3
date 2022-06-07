@@ -44,10 +44,10 @@ namespace PBL3.GUI
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(52, 196);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOK.Location = new System.Drawing.Point(39, 159);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(133, 36);
+            this.btnOK.Size = new System.Drawing.Size(100, 29);
             this.btnOK.TabIndex = 63;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -60,10 +60,10 @@ namespace PBL3.GUI
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(238, 196);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Location = new System.Drawing.Point(178, 159);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(133, 36);
+            this.btnCancel.Size = new System.Drawing.Size(100, 29);
             this.btnCancel.TabIndex = 62;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -74,11 +74,11 @@ namespace PBL3.GUI
             this.txtquantity.BackColor = System.Drawing.SystemColors.Window;
             this.txtquantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtquantity.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtquantity.Location = new System.Drawing.Point(52, 133);
-            this.txtquantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtquantity.Location = new System.Drawing.Point(39, 108);
+            this.txtquantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtquantity.Multiline = true;
             this.txtquantity.Name = "txtquantity";
-            this.txtquantity.Size = new System.Drawing.Size(319, 36);
+            this.txtquantity.Size = new System.Drawing.Size(239, 29);
             this.txtquantity.TabIndex = 59;
             this.txtquantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquantity_KeyPress);
             // 
@@ -88,9 +88,10 @@ namespace PBL3.GUI
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(47, 105);
+            this.label8.Location = new System.Drawing.Point(35, 85);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 23);
+            this.label8.Size = new System.Drawing.Size(80, 21);
             this.label8.TabIndex = 61;
             this.label8.Text = "Quantity";
             // 
@@ -99,11 +100,11 @@ namespace PBL3.GUI
             this.txtVaccineName.BackColor = System.Drawing.SystemColors.Window;
             this.txtVaccineName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtVaccineName.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtVaccineName.Location = new System.Drawing.Point(52, 57);
-            this.txtVaccineName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtVaccineName.Location = new System.Drawing.Point(39, 46);
+            this.txtVaccineName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtVaccineName.Multiline = true;
             this.txtVaccineName.Name = "txtVaccineName";
-            this.txtVaccineName.Size = new System.Drawing.Size(319, 36);
+            this.txtVaccineName.Size = new System.Drawing.Size(239, 29);
             this.txtVaccineName.TabIndex = 58;
             // 
             // label2
@@ -112,23 +113,26 @@ namespace PBL3.GUI
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(47, 29);
+            this.label2.Location = new System.Drawing.Point(35, 24);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 23);
+            this.label2.Size = new System.Drawing.Size(127, 21);
             this.label2.TabIndex = 60;
             this.label2.Text = "Vaccine Name";
             // 
             // VaccineAddEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 265);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+            this.ClientSize = new System.Drawing.Size(315, 215);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtquantity);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtVaccineName);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "VaccineAddEdit";
             this.Text = "VaccineAddEdit";
             this.ResumeLayout(false);

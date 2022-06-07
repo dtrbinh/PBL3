@@ -172,9 +172,9 @@
   </data>
   <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAABNSURBVDhPYxgFo2Awgf///4sBcRAQh5KIQXrEoMYgAFDwOhCTC65DjUEAkCBEjixwDWoMAgAF
-        RYE4EIixeQsfBukRhRozCkbBIAAMDACiBOgUMBw4LAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAE1JREFUOE9j
+        GAWjYDCB////iwFxEBCHkohBesSgxiAAUPA6EJMLrkONQQCQIESOLHANagwCAAVFgTgQiLF5Cx8G6RGF
+        GjMKRsEgAAwMAKIE6BQwHDgsAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btn_showPassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
