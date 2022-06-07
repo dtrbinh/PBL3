@@ -371,5 +371,13 @@ namespace PBL3.BLL
             }
             return true;
         }
+
+
+        // ----------------Registration-------------------
+        public void ExecuteAdd(Registration r)
+        {
+            database.Registrations.Add(r);
+            database.SaveChanges();
+        }
     }
 }

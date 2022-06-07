@@ -300,3 +300,4 @@ C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.csproj.CopyComplete
 C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.exe
 C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.pdb
 C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccinationInfo.resources
+C:\Users\Pet\Desktop\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccinationInfo.resources

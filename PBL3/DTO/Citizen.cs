@@ -21,5 +21,19 @@ namespace PBL3.DTO
         public string address { get; set; }
         public int vaccination { get; set; }
 
+        public Citizen()
+        {
+
+        }
+        public Citizen(string _cmnd, string _fullname, string _address, bool _gender, string _phone, DateTime _birth, int _vaccination)
+        {
+            this.CMND_CCCD = _cmnd;
+            this.fullName = _fullname;
+            this.gender = _gender;
+            this.birth = _birth;
+            this.phone = _phone;
+            this.address = _address;
+            this.vaccination = _vaccination;
+        }
     }
 }

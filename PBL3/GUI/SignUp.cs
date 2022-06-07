@@ -89,6 +89,8 @@ namespace PBL3
                     if (flag)
                     {
                         Account newAccount = new Account(cmnd, "Người dùng", username, password, false);
+                        Citizen newCitizen = new Citizen(cmnd, "", "", true, "", DateTime.Now, 0);
+                        Provider.Instance.database.Citizens.Add(newCitizen);
                         Provider.Instance.database.Accounts.Add(newAccount);
                         Provider.Instance.database.SaveChanges();
                         MessageBox.Show("Create account successfully.", "NOTICE");
