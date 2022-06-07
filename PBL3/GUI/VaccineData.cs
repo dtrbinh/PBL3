@@ -86,12 +86,12 @@ namespace PBL3.GUI
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void cbbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             ShowDGV(cbbFilter.SelectedItem.ToString(), txtSearch.Text);
         }
 
-        private void cbbFilter_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             ShowDGV(cbbFilter.SelectedItem.ToString(), txtSearch.Text);
         }

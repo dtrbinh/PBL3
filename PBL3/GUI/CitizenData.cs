@@ -42,8 +42,7 @@ namespace PBL3
             dgv.Columns[3].HeaderText = "Date of Birth";
             dgv.Columns[4].HeaderText = "Phone Number";
             dgv.Columns[5].HeaderText = "Address";
-            dgv.Columns[6].HeaderText = "Lastest Vaccination Date";
-            dgv.Columns[7].HeaderText = "Current Vaccination Status";
+            dgv.Columns[6].HeaderText = "Current Vaccination Status";
         }
         private void button2_Click(object sender, EventArgs e)
         {

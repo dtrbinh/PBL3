@@ -53,7 +53,6 @@ namespace PBL3
                     cbbGender.SelectedIndex = 1;
                 }
                 dateTimePicker1.Value = s.birth;
-                dateTimePicker2.Value = s.regisDay;
                 cbbDoes.SelectedItem = s.vaccination.ToString();
             }
         }
@@ -74,7 +73,6 @@ namespace PBL3
             {
                 s.gender = false;
             }
-            s.regisDay = dateTimePicker2.Value;
             s.vaccination = Convert.ToInt32(cbbDoes.SelectedItem.ToString());
             return s;
         }

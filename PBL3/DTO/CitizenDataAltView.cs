@@ -14,7 +14,6 @@ namespace PBL3.DTO
         public string birth { get; set; }
         public string phone { get; set; }
         public string address { get; set; }
-        public string regisDay { get; set; }
         public string vaccination { get; set; }
     }
 }

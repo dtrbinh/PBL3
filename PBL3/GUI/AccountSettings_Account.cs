@@ -15,7 +15,6 @@ namespace PBL3
         public AccountSettings_Account()
         {
             InitializeComponent();
-            this.BackColor = Color.FromArgb(55, 54, 92);
         }
     }
 }

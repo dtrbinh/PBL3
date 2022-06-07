@@ -15,7 +15,11 @@ namespace PBL3
         public VaccineRegistration()
         {
             InitializeComponent();
-            this.BackColor = Color.FromArgb(55, 54, 92);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

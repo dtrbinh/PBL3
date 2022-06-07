@@ -62,27 +62,6 @@ namespace PBL3.BLL
             return database.Citizens.Where(p => p.CMND_CCCD == CMND_CCCD).FirstOrDefault();
         }
 
-        //public void ExecuteAddEdit(Citizen s, string CMND_CCCD)
-        //{
-        //    if (CheckAddEdit(s.CMND_CCCD))
-        //    {
-        //        database.Citizens.Add(s);
-        //        database.SaveChanges();
-        //    }
-        //    else
-        //    {
-        //        var x = database.Citizens.Where(p => p.CMND_CCCD == CMND_CCCD).FirstOrDefault();
-        //        x.CMND_CCCD = s.CMND_CCCD;
-        //        x.fullName = s.fullName;
-        //        x.phone = s.phone;
-        //        x.address = s.address;
-        //        x.gender = s.gender;
-        //        x.birth = s.birth;
-        //        x.vaccination = s.vaccination;
-        //        x.regisDay = s.regisDay;
-        //        database.SaveChanges();
-        //    }
-        //}
         public bool CheckDuplicateCMND(string CMND_CCCD)
         {
             foreach (string i in database.Citizens.Select(p=>p.CMND_CCCD).ToList())
@@ -109,7 +88,6 @@ namespace PBL3.BLL
             x.gender = s.gender;
             x.birth = s.birth;
             x.vaccination = s.vaccination;
-            x.regisDay = s.regisDay;
             database.SaveChanges();
         }
         
@@ -155,8 +133,7 @@ namespace PBL3.BLL
                         birth = i.birth.ToString("MM/dd/yyyy"),
                         phone = i.phone,
                         address = i.address,
-                        vaccination = i.vaccination.ToString() + " Doses Injected",
-                        regisDay = i.regisDay.ToString("MM/dd/yyyy"),
+                        vaccination = i.vaccination.ToString() + " Doses Injected"
                     });
                 }
             }
@@ -257,8 +234,7 @@ namespace PBL3.BLL
                         birth = i.birth.ToString("MM/dd/yyyy"),
                         phone = i.phone,
                         address = i.address,
-                        vaccination = i.vaccination.ToString() + " Does Injected",
-                        regisDay = i.regisDay.ToString("MM/dd/yyyy"),
+                        vaccination = i.vaccination.ToString() + " Doses Injected"
                     });
                 }
             }
@@ -276,21 +252,6 @@ namespace PBL3.BLL
         {
             return database.Vaccines.Where(p => p.vaccineName == name).FirstOrDefault();
         }
-        //public void ExecuteAddEdit(Vaccine v, string name)
-        //{
-        //    if (CheckAddEdit_Vaccine(v.vaccineName))
-        //    {
-        //        database.Vaccines.Add(v);
-        //        database.SaveChanges();
-        //    }
-        //    else
-        //    {
-        //        var x = database.Vaccines.Where(p => p.vaccineName == name).FirstOrDefault();
-        //        x.vaccineName = v.vaccineName;
-        //        x.quantity = v.quantity;
-        //        database.SaveChanges();
-        //    }
-        //}
         public void ExecuteAdd(Vaccine v, string name)
         {
             database.Vaccines.Add(v);

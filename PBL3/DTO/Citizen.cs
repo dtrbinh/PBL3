@@ -19,7 +19,6 @@ namespace PBL3.DTO
         [StringLength(50)]
         public string phone { get; set; }
         public string address { get; set; }
-        public DateTime regisDay { get; set; }
         public int vaccination { get; set; }
 
     }

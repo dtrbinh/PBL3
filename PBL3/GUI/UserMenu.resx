@@ -158,6 +158,22 @@
         RT+Mm64uJj5nNAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAE1JREFUOE9j
+        GAWjYDCB////iwFxEBCHkohBesSgxiAAUPA6EJMLrkONQQCQIESOLHANagwCAAVFgTgQiLF5Cx8G6RGF
+        GjMKRsEgAAwMAKIE6BQwHDgsAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btn_showPassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAANBJREFUOE/V
+        lEsOAiEMhlnq6HW8l8u5m270Ii4mIYRApCfA6UyHwNjiIyz0S7qg/JS2PNT/4QAOtxg3NBRBDWppyOPv
+        cHQBog/hYq3dk/uJYYjbUXdCrQuhJ3cJ7jYLkp211h1NJ9CHc4WWy3QqYS1cBWWDjWOxRWUps3mAK5bP
+        BcPWGGN2tJxHyoLz5dlX4TLN7dWhsUhBvwqGCKWnnpLsPaRgi30UtOmhsNeGelabo+UlzS9286eH5J9D
+        7QWU5QufwwLuJr7NjKlFUmY/jFIPV4Az2anEOlUAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEA9wAAAAEAIAAo/AMAFgAAACgAAAD3AAAAAAIAAAEAIAAAAAAAANwDABEXAAARFwAAAAAAAAAA
