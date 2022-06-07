@@ -46,7 +46,7 @@ namespace PBL3
 
             Registration r = new Registration();
             r.CMND_CCCD = s.CMND_CCCD;
-            r.Dose = s.vaccination + 1;
+            r.Dose = s.vaccination;
             r.vaccineName = _vaccinename;
             r.regisDay = DateTime.Now;
             r.State = false;

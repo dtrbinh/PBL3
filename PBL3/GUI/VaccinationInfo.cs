@@ -130,13 +130,8 @@ namespace PBL3.GUI
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-
-        // UNDO chưa được nơi
         private void button4_Click(object sender, EventArgs e)
         {
-            Provider.Instance.ExecuteEdit(s_old, txtCMND.Text);
-
-            txtCMND.Text = s_old.CMND_CCCD;
             txtPhone.Text = s_old.phone;
             txtFullname.Text = s_old.fullName;
             txtAddress.Text = s_old.address;
@@ -150,6 +145,8 @@ namespace PBL3.GUI
             }
             dateTimePicker1.Value = s_old.birth;
             cbbDoes.SelectedItem = s_old.vaccination.ToString();
+
+            Provider.Instance.ExecuteEdit(s_old, txtCMND.Text);
         }
     }
 }
