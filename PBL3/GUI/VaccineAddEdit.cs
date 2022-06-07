@@ -31,19 +31,19 @@ namespace PBL3.GUI
                 Vaccine v = Provider.Instance.GetVaccine_By_Name(vaccine_name);
                 txtVaccineName.Text = v.vaccineName;
                 txtVaccineName.Enabled = false;
-                txtQuanity.Text = v.quanity.ToString();
+                txtquantity.Text = v.quantity.ToString();
             }
         }
         public Vaccine GetData()
         {
             Vaccine v = new Vaccine();
             v.vaccineName = txtVaccineName.Text;
-            v.quanity = Convert.ToInt32(txtQuanity.Text);
+            v.quantity = Convert.ToInt32(txtquantity.Text);
             return v;
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (txtVaccineName.Text == "" || txtQuanity.Text == "")
+            if (txtVaccineName.Text == "" || txtquantity.Text == "")
             {
                 MessageBox.Show("Please fill in all the information");
             }
@@ -78,7 +78,7 @@ namespace PBL3.GUI
             this.Close();
         }
 
-        private void txtQuanity_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtquantity_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }

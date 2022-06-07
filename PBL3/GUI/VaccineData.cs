@@ -27,7 +27,7 @@ namespace PBL3.GUI
             cbbFilter.Items.Add("All");
             cbbFilter.Items.AddRange(Provider.Instance.GetCBB_Filter().ToArray());
             cbbSort.Items.Add("Vaccine Name");
-            cbbSort.Items.Add("Quanity");
+            cbbSort.Items.Add("Quantity");
             cbbSort.SelectedIndex = 0;
         }
         public void ShowDGV(string txt, string search = "")
@@ -35,7 +35,7 @@ namespace PBL3.GUI
             dgv.DataSource = BLL.Provider.Instance.FilteredViews(txt, search).ToArray();
             // Modify DGVs Appearance
             dgv.Columns[0].HeaderText = "Vaccine Name";
-            dgv.Columns[1].HeaderText = "Quanity";
+            dgv.Columns[1].HeaderText = "Quantity";
         }
         private void button2_Click(object sender, EventArgs e)
         {

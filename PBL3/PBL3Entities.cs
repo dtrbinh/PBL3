@@ -14,7 +14,7 @@ namespace PBL3
         // If you wish to target a different database and/or database provider, modify the 'PBL3Entities' 
         // connection string in the application configuration file.
         public PBL3Entities()
-            : base("name=PBL3Entities1")
+            : base("name=PBL3Entities")
         {
             Database.SetInitializer<PBL3Entities>(new CreateDatabase());
         }

@@ -123,6 +123,7 @@ namespace PBL3.BLL
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.ToString());
             }
         }
         // Citizen Data Alternative View
@@ -286,7 +287,7 @@ namespace PBL3.BLL
         //    {
         //        var x = database.Vaccines.Where(p => p.vaccineName == name).FirstOrDefault();
         //        x.vaccineName = v.vaccineName;
-        //        x.quanity = v.quanity;
+        //        x.quantity = v.quantity;
         //        database.SaveChanges();
         //    }
         //}
@@ -299,7 +300,7 @@ namespace PBL3.BLL
         {
             var x = database.Vaccines.Where(p => p.vaccineName == name).FirstOrDefault();
             x.vaccineName = v.vaccineName;
-            x.quanity = v.quanity;
+            x.quantity = v.quantity;
             database.SaveChanges();
         }
         public bool CheckAddEdit_Vaccine(string name)
@@ -323,6 +324,7 @@ namespace PBL3.BLL
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.ToString());
             }
         }
         // Citizen Data Alternative View
@@ -335,12 +337,12 @@ namespace PBL3.BLL
             List<VaccineDataAltView> data = new List<VaccineDataAltView>();
             foreach (Vaccine i in GetAll_Vaccine(txt))
             {
-                if (i.vaccineName.Contains(txt) && i.quanity.ToString().Contains(search))
+                if (i.vaccineName.Contains(txt) && i.quantity.ToString().Contains(search))
                 {                   
                     data.Add(new VaccineDataAltView
                     {
                         vaccineName = i.vaccineName,
-                        quanity = i.quanity
+                        quantity = i.quantity
                     });
                 }
             }
@@ -366,7 +368,7 @@ namespace PBL3.BLL
                 if (SortIndex == 1)
                 {
                     var x = database.Vaccines.Where(p => p.vaccineName.Contains(txt))
-                        .OrderBy(p => p.quanity);
+                        .OrderBy(p => p.quantity);
                     data = x.ToList();
                 }
             }
@@ -381,7 +383,7 @@ namespace PBL3.BLL
                 if (SortIndex == 1)
                 {
                     var x = database.Vaccines.Where(p => p.vaccineName.Contains(txt))
-                        .OrderByDescending(p => p.quanity);
+                        .OrderByDescending(p => p.quantity);
                     data = x.ToList();
                 }
             }
@@ -391,7 +393,7 @@ namespace PBL3.BLL
                 data2.Add(new VaccineDataAltView
                 {
                     vaccineName = i.vaccineName,
-                    quanity = i.quanity
+                    quantity = i.quantity
                 }); 
             }
             return data2;

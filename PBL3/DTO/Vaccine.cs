@@ -13,7 +13,7 @@ namespace PBL3.DTO
         [StringLength(50)]
         [Required]
         public string vaccineName { get; set; }
-        public int quanity { get; set; }
+        public int quantity { get; set; }
         
     }
 }

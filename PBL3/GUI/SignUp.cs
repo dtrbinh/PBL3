@@ -70,16 +70,25 @@ namespace PBL3
                     bool flag = true;
                     foreach (Account i in Provider.Instance.database.Accounts)
                     {
-                        if (i.Username == username)
+                        if (i.Username == username && i.CMND_CCCD == cmnd)
                         {
                             flag = false;
-                            MessageBox.Show("Username or CMND/CCCD already exist.", "NOTICE");
+                            MessageBox.Show("Username already exist./nPlease try again.", "NOTICE");
+                            break;
+                        }
+                    }
+                    foreach (Citizen i in Provider.Instance.database.Citizens)
+                    {
+                        if (i.CMND_CCCD == cmnd)
+                        {
+                            flag = false;
+                            MessageBox.Show("CMND/CCCD already exist./nPlease try again.", "NOTICE");
                             break;
                         }
                     }
                     if (flag)
                     {
-                        Account newAccount = new Account(cmnd, username, password, false);
+                        Account newAccount = new Account(cmnd, "Người dùng", username, password, false);
                         Provider.Instance.database.Accounts.Add(newAccount);
                         Provider.Instance.database.SaveChanges();
                         MessageBox.Show("Create account successfully.", "NOTICE");
