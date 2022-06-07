@@ -9,6 +9,6 @@ namespace PBL3.DTO
     class VaccineDataAltView
     {
         public string vaccineName { get; set; }
-        public int quanity { get; set; }
+        public int quantity { get; set; }
     }
 }

@@ -79,8 +79,7 @@ namespace PBL3
                     Provider.Instance.Delete_BLL(CMND);
                 }
                 ShowDGV(txtSearch.Text, cbbAddress.SelectedItem.ToString(), cbbDoes.SelectedItem.ToString());
-            }
-            
+            }          
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

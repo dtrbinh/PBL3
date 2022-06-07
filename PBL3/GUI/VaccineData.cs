@@ -27,7 +27,7 @@ namespace PBL3.GUI
             cbbFilter.Items.Add("All");
             cbbFilter.Items.AddRange(Provider.Instance.GetCBB_Filter().ToArray());
             cbbSort.Items.Add("Vaccine Name");
-            cbbSort.Items.Add("Quanity");
+            cbbSort.Items.Add("Quantity");
             cbbSort.SelectedIndex = 0;
         }
         public void ShowDGV(string txt, string search = "")
@@ -35,7 +35,7 @@ namespace PBL3.GUI
             dgv.DataSource = BLL.Provider.Instance.FilteredViews(txt, search).ToArray();
             // Modify DGVs Appearance
             dgv.Columns[0].HeaderText = "Vaccine Name";
-            dgv.Columns[1].HeaderText = "Quanity";
+            dgv.Columns[1].HeaderText = "Quantity";
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -56,22 +56,34 @@ namespace PBL3.GUI
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (dgv.SelectedRows.Count > 0)
+        {          
+            if (MessageBox.Show("This will permanently remove selected vaccine!", "NOTICE", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                string name = "";
-                foreach (DataGridViewRow i in dgv.SelectedRows)
+                if (dgv.SelectedRows.Count > 0)
                 {
-                    name = i.Cells["vaccineName"].Value.ToString();
+                    string name = "";
+                    foreach (DataGridViewRow i in dgv.SelectedRows)
+                    {
+                        name = i.Cells["vaccineName"].Value.ToString();
+                    }
+                    Provider.Instance.Delete_BLL_Vaccine(name);
                 }
-                Provider.Instance.Delete_BLL_Vaccine(name);
+                ShowDGV(cbbFilter.SelectedItem.ToString(), txtSearch.Text);
             }
-            ShowDGV(cbbFilter.SelectedItem.ToString(), txtSearch.Text);
         }
 
+        public bool SortingDirection = true;
         private void btnSort_Click(object sender, EventArgs e)
         {
-            dgv.DataSource = Provider.Instance.Sort_BLL(txtSearch.Text, cbbSort.SelectedIndex);
+            dgv.DataSource = Provider.Instance.Sort_BLL(txtSearch.Text, cbbSort.SelectedIndex, SortingDirection);
+            if (SortingDirection == true)
+            {
+                SortingDirection = false;
+            }
+            else
+            {
+                SortingDirection = true;
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

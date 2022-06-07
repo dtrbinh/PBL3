@@ -31,7 +31,7 @@ namespace PBL3.GUI
         {
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtQuanity = new System.Windows.Forms.TextBox();
+            this.txtquantity = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtVaccineName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -69,18 +69,18 @@ namespace PBL3.GUI
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txtQuanity
+            // txtquantity
             // 
-            this.txtQuanity.BackColor = System.Drawing.SystemColors.Window;
-            this.txtQuanity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtQuanity.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtQuanity.Location = new System.Drawing.Point(52, 133);
-            this.txtQuanity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtQuanity.Multiline = true;
-            this.txtQuanity.Name = "txtQuanity";
-            this.txtQuanity.Size = new System.Drawing.Size(319, 36);
-            this.txtQuanity.TabIndex = 59;
-            this.txtQuanity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuanity_KeyPress);
+            this.txtquantity.BackColor = System.Drawing.SystemColors.Window;
+            this.txtquantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtquantity.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtquantity.Location = new System.Drawing.Point(52, 133);
+            this.txtquantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtquantity.Multiline = true;
+            this.txtquantity.Name = "txtquantity";
+            this.txtquantity.Size = new System.Drawing.Size(319, 36);
+            this.txtquantity.TabIndex = 59;
+            this.txtquantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquantity_KeyPress);
             // 
             // label8
             // 
@@ -125,7 +125,7 @@ namespace PBL3.GUI
             this.ClientSize = new System.Drawing.Size(420, 265);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.txtQuanity);
+            this.Controls.Add(this.txtquantity);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtVaccineName);
             this.Controls.Add(this.label2);
@@ -140,7 +140,7 @@ namespace PBL3.GUI
 
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox txtQuanity;
+        private System.Windows.Forms.TextBox txtquantity;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtVaccineName;
         private System.Windows.Forms.Label label2;
