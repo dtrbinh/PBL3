@@ -29,6 +29,7 @@ namespace PBL3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VaccineRegistration));
             this.label3 = new System.Windows.Forms.Label();
             this.cbbVaccineType = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -56,7 +57,7 @@ namespace PBL3
             this.cbbVaccineType.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbbVaccineType.FormattingEnabled = true;
             this.cbbVaccineType.Location = new System.Drawing.Point(24, 105);
-            this.cbbVaccineType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbVaccineType.Margin = new System.Windows.Forms.Padding(2);
             this.cbbVaccineType.Name = "cbbVaccineType";
             this.cbbVaccineType.Size = new System.Drawing.Size(253, 25);
             this.cbbVaccineType.TabIndex = 80;
@@ -64,12 +65,13 @@ namespace PBL3
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(87)))), ((int)(((byte)(201)))));
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(24, 161);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(108, 25);
             this.btnCancel.TabIndex = 107;
@@ -80,12 +82,13 @@ namespace PBL3
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(87)))), ((int)(((byte)(201)))));
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(169, 161);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(108, 25);
             this.button3.TabIndex = 106;
@@ -112,7 +115,7 @@ namespace PBL3
             this.txtDose.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDose.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.txtDose.Location = new System.Drawing.Point(24, 41);
-            this.txtDose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDose.Margin = new System.Windows.Forms.Padding(2);
             this.txtDose.Multiline = true;
             this.txtDose.Name = "txtDose";
             this.txtDose.Size = new System.Drawing.Size(253, 25);
@@ -123,6 +126,7 @@ namespace PBL3
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(307, 212);
             this.Controls.Add(this.txtDose);
             this.Controls.Add(this.label1);
@@ -130,7 +134,7 @@ namespace PBL3
             this.Controls.Add(this.button3);
             this.Controls.Add(this.cbbVaccineType);
             this.Controls.Add(this.label3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VaccineRegistration";
             this.Text = "VaccineRegistration";
             this.ResumeLayout(false);
