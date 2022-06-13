@@ -468,21 +468,6 @@ namespace PBL3.BLL
         // ----------------Registration-------------------
         public void ExecuteAdd(Registration r)
         {
-            bool loop = true;
-            // generating unique random Id
-            while (loop == true)
-            {
-                Random rd = new Random();
-                r.regisId = rd.Next(1, 1000).ToString();
-                foreach (string i in database.Registrations.Select(p => p.regisId).ToList())
-                {
-                    if (r.regisId != i)
-                    {
-                        loop = false;
-                        break;
-                    }
-                }
-            }
             database.Registrations.Add(r);
             database.SaveChanges();
         }

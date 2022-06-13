@@ -13,23 +13,23 @@ namespace PBL3.DTO
         {
             context.Accounts.AddRange(new Account[]
             {
-                //new Account{CMND_CCCD = "0123", Username = "admin", Password = "admin123", Fullname = "Quản trị viên", Permission = true},
-                //new Account{CMND_CCCD = "1234", Username = "user", Password = "user", Fullname = "Nguyen User", Permission = false}
+                new Account{CMND_CCCD = "0123", Username = "admin", Password = "admin123", Fullname = "Quản trị viên", Permission = true},
+                new Account{CMND_CCCD = "1234", Username = "user", Password = "user", Fullname = "Nguyen User", Permission = false}
             });
             context.Citizens.AddRange(new Citizen[]
             {
-                //new Citizen{CMND_CCCD = "1234",fullName = "Nguyen Van A",  address = "Da Nang", gender = true, phone = "911", birth = DateTime.Now.Date, vaccination = 1},
-                //new Citizen{CMND_CCCD = "2222",fullName = "Nguyen Van B",  address = "Hue", gender = true, phone = "911", birth = DateTime.Now.Date, vaccination = 2},
-                //new Citizen{CMND_CCCD = "3333",fullName = "Nguyen Van C",  address = "Da Nang", gender = true, phone = "911", birth = DateTime.Now.Date, vaccination = 2},
+                new Citizen{CMND_CCCD = "1234",fullName = "Nguyen Van A",  address = "Da Nang", gender = true, phone = "911", birth = DateTime.Now.Date, vaccination = 1},
+                new Citizen{CMND_CCCD = "2222",fullName = "Nguyen Van B",  address = "Hue", gender = true, phone = "911", birth = DateTime.Now.Date, vaccination = 2},
+                new Citizen{CMND_CCCD = "3333",fullName = "Nguyen Van C",  address = "Da Nang", gender = true, phone = "911", birth = DateTime.Now.Date, vaccination = 2},
             });
             context.Vaccines.AddRange(new Vaccine[]
             {
-               //new Vaccine{vaccineName = "astra", quantity = 101},
-               //new Vaccine{vaccineName = "verocell", quantity = 202}
+               new Vaccine{vaccineName = "astra", quantity = 101},
+               new Vaccine{vaccineName = "verocell", quantity = 202}
             });
             context.Registrations.AddRange(new Registration[]
             {
-               //new Registration{regisId = "1",CMND_CCCD = "1234", Dose = 2, vaccineName = "astra", regisDay = DateTime.Now, State = false}
+               new Registration{regisId = "1",CMND_CCCD = "1234", Dose = 2, vaccineName = "astra", regisDay = DateTime.Now, State = false}
             });
         }
     }

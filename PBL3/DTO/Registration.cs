@@ -7,7 +7,7 @@ namespace PBL3.DTO
     public class Registration
     {
         [Key]
-        [StringLength(10)]
+        [StringLength(25)]
         [Required]
         public string regisId { get; set; }
         public string CMND_CCCD { get; set; }
@@ -23,8 +23,9 @@ namespace PBL3.DTO
         {
             
         }
-        public Registration(string _CMND_CCCD, int _Dose, string _vaccineName, DateTime _regisDay, bool _state)
+        public Registration(string id, string _CMND_CCCD, int _Dose, string _vaccineName, DateTime _regisDay, bool _state)
         {
+            this.regisId = id;
             this.CMND_CCCD = _CMND_CCCD;
             this.Dose = _Dose;
             this.vaccineName = _vaccineName;

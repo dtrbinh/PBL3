@@ -366,3 +366,34 @@ C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.csproj.CopyCompl
 C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.exe
 C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.pdb
 D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccinationInfo.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\bin\Debug\PBL3.exe.config
+C:\Users\Pet\Desktop\PBL_2\PBL3\bin\Debug\PBL3.exe
+C:\Users\Pet\Desktop\PBL_2\PBL3\bin\Debug\PBL3.pdb
+C:\Users\Pet\Desktop\PBL_2\PBL3\bin\Debug\EntityFramework.dll
+C:\Users\Pet\Desktop\PBL_2\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Pet\Desktop\PBL_2\PBL3\bin\Debug\EntityFramework.xml
+C:\Users\Pet\Desktop\PBL_2\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.AccountSettings_Account.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.AccountSettings_UserMnaging.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.AdminMenu.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.CitizenAddEdit.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.CitizenData.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.ForgotPassword_step1.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.ForgotPassWord_step2.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.Home.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.GUI.RegistrationData.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.SignIn.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.SignUp.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.GUI.VaccinationInfo.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.GUI.VaccineAddEdit.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.GUI.VaccineData.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.Properties.Resources.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.Statistics.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.UserMenu.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.VaccineRegistration.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.exe
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.pdb

@@ -44,7 +44,10 @@ namespace PBL3
             string _vaccinename = cbbVaccineType.SelectedItem.ToString();
             string cmnd = Provider.Instance.currentUser.CMND_CCCD;
             Citizen s = Provider.Instance.GetCitizen_By_CMND(cmnd);
-            Registration r = new Registration(cmnd, s.vaccination + 1, _vaccinename, DateTime.Now, false);
+
+            string id_regis = DateTime.Now.ToString("hhmmtt") + cmnd;
+
+            Registration r = new Registration(id_regis, cmnd, s.vaccination + 1, _vaccinename, DateTime.Now, false);
             Provider.Instance.ExecuteAdd(r);
             this.Close();
         }
