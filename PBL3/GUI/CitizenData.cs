@@ -34,7 +34,7 @@ namespace PBL3
         }
         public void ShowDGV(string txt, string Address = "", string Does = "")
         {
-            dgv.DataSource = BLL.Provider.Instance.FilteredViews(txt, Address, Does).ToArray();
+            dgv.DataSource = BLL.Provider.Instance.CitizenFilteredViews(txt, Address, Does).ToArray();
             // Modify DGVs Appearance
             dgv.Columns[0].HeaderText = "CMND/CCCD";
             dgv.Columns[1].HeaderText = "Full Name";
@@ -65,7 +65,7 @@ namespace PBL3
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("This will permanently remove selected citizen!", "NOTICE", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("This will permanently remove selected citizen's data, but not remove this citizen's account!", "NOTICE", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 if (dgv.SelectedCells.Count > 0)
                 {
@@ -75,7 +75,7 @@ namespace PBL3
                     {
                         CMND = i.Cells["CMND_CCCD"].Value.ToString();
                     }
-                    Provider.Instance.Delete_BLL(CMND);
+                    Provider.Instance.DeleteCitizen_BLL(CMND);
                 }
                 ShowDGV(txtSearch.Text, cbbAddress.SelectedItem.ToString(), cbbDoes.SelectedItem.ToString());
             }          

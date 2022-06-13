@@ -29,7 +29,7 @@ namespace PBL3
             txtDose.Text = (s.vaccination + 1).ToString();
         }
         public void InitCBB()
-        {           
+        {
             cbbVaccineType.Items.AddRange(Provider.Instance.GetCBB_Filter().ToArray());
             cbbVaccineType.SelectedIndex = 0;
         }
@@ -44,14 +44,7 @@ namespace PBL3
             string _vaccinename = cbbVaccineType.SelectedItem.ToString();
             string cmnd = Provider.Instance.currentUser.CMND_CCCD;
             Citizen s = Provider.Instance.GetCitizen_By_CMND(cmnd);
-
-            Registration r = new Registration();
-            r.CMND_CCCD = s.CMND_CCCD;
-            r.Dose = s.vaccination;
-            r.vaccineName = _vaccinename;
-            r.regisDay = DateTime.Now;
-            r.State = false;
-
+            Registration r = new Registration(cmnd, s.vaccination + 1, _vaccinename, DateTime.Now, false);
             Provider.Instance.ExecuteAdd(r);
             this.Close();
         }

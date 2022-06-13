@@ -32,7 +32,7 @@ namespace PBL3.GUI
         }
         public void ShowDGV(string txt, string search = "")
         {
-            dgv.DataSource = BLL.Provider.Instance.FilteredViews(txt, search).ToArray();
+            dgv.DataSource = BLL.Provider.Instance.VaccineFilteredViews(txt, search).ToArray();
             // Modify DGVs Appearance
             dgv.Columns[0].HeaderText = "Vaccine Name";
             dgv.Columns[1].HeaderText = "Quantity";

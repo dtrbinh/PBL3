@@ -18,5 +18,18 @@ namespace PBL3.DTO
 
         [ForeignKey("CMND_CCCD")]
         public virtual Citizen Citizen { get; set; }
+
+        public Registration()
+        {
+            
+        }
+        public Registration(string _CMND_CCCD, int _Dose, string _vaccineName, DateTime _regisDay, bool _state)
+        {
+            this.CMND_CCCD = _CMND_CCCD;
+            this.Dose = _Dose;
+            this.vaccineName = _vaccineName;
+            this.regisDay = _regisDay;
+            this.State = _state;
+        }
     }
 }
