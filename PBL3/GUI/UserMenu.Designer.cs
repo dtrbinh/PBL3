@@ -39,8 +39,15 @@ namespace PBL3
             this.lb_username = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btn_showPassword = new System.Windows.Forms.Button();
+            this.lbTitle = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,9 +60,9 @@ namespace PBL3
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(311, 588);
+            this.panel1.Size = new System.Drawing.Size(233, 478);
             this.panel1.TabIndex = 0;
             // 
             // button2
@@ -64,15 +71,15 @@ namespace PBL3
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 147);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(0, 120);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(311, 49);
+            this.button2.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(233, 40);
             this.button2.TabIndex = 5;
             this.button2.Text = "  Account Settings";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -86,17 +93,17 @@ namespace PBL3
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 98);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(0, 80);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(311, 49);
+            this.button3.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(233, 40);
             this.button3.TabIndex = 4;
-            this.button3.Text = "  Registration";
+            this.button3.Text = "  Vaccination";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
@@ -108,15 +115,15 @@ namespace PBL3
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 49);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(0, 40);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(51, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(311, 49);
+            this.button1.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(233, 40);
             this.button1.TabIndex = 2;
             this.button1.Text = "  Home";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -131,10 +138,10 @@ namespace PBL3
             this.panel3.Controls.Add(this.lb_username);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.panel3.Location = new System.Drawing.Point(0, 490);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(0, 398);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(311, 98);
+            this.panel3.Size = new System.Drawing.Size(233, 80);
             this.panel3.TabIndex = 1;
             // 
             // btn_signOut
@@ -143,14 +150,14 @@ namespace PBL3
             this.btn_signOut.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn_signOut.FlatAppearance.BorderSize = 0;
             this.btn_signOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_signOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_signOut.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Bold);
             this.btn_signOut.ForeColor = System.Drawing.Color.White;
             this.btn_signOut.Image = ((System.Drawing.Image)(resources.GetObject("btn_signOut.Image")));
             this.btn_signOut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_signOut.Location = new System.Drawing.Point(0, 49);
-            this.btn_signOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_signOut.Location = new System.Drawing.Point(0, 40);
+            this.btn_signOut.Margin = new System.Windows.Forms.Padding(2);
             this.btn_signOut.Name = "btn_signOut";
-            this.btn_signOut.Size = new System.Drawing.Size(311, 49);
+            this.btn_signOut.Size = new System.Drawing.Size(233, 40);
             this.btn_signOut.TabIndex = 5;
             this.btn_signOut.Text = "Log out";
             this.btn_signOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -161,11 +168,12 @@ namespace PBL3
             // lb_username
             // 
             this.lb_username.AutoSize = true;
-            this.lb_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lb_username.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Bold);
             this.lb_username.ForeColor = System.Drawing.Color.White;
-            this.lb_username.Location = new System.Drawing.Point(12, 22);
+            this.lb_username.Location = new System.Drawing.Point(9, 18);
+            this.lb_username.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_username.Name = "lb_username";
-            this.lb_username.Size = new System.Drawing.Size(108, 23);
+            this.lb_username.Size = new System.Drawing.Size(76, 17);
             this.lb_username.TabIndex = 0;
             this.lb_username.Text = "Username";
             // 
@@ -174,37 +182,107 @@ namespace PBL3
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(311, 49);
+            this.panel2.Size = new System.Drawing.Size(233, 40);
             this.panel2.TabIndex = 0;
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(311, 0);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelChildForm.Location = new System.Drawing.Point(233, 40);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(2);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(934, 588);
+            this.panelChildForm.Size = new System.Drawing.Size(701, 438);
             this.panelChildForm.TabIndex = 3;
+            this.panelChildForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(233, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(701, 40);
+            this.panel5.TabIndex = 4;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(57)))));
+            this.panel6.Controls.Add(this.button4);
+            this.panel6.Controls.Add(this.btn_showPassword);
+            this.panel6.Controls.Add(this.lbTitle);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(701, 40);
+            this.panel6.TabIndex = 7;
+            this.panel6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(632, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(32, 29);
+            this.button4.TabIndex = 39;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btn_showPassword
+            // 
+            this.btn_showPassword.BackColor = System.Drawing.Color.Transparent;
+            this.btn_showPassword.FlatAppearance.BorderSize = 0;
+            this.btn_showPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_showPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_showPassword.Image = ((System.Drawing.Image)(resources.GetObject("btn_showPassword.Image")));
+            this.btn_showPassword.Location = new System.Drawing.Point(667, 2);
+            this.btn_showPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_showPassword.Name = "btn_showPassword";
+            this.btn_showPassword.Size = new System.Drawing.Size(32, 29);
+            this.btn_showPassword.TabIndex = 38;
+            this.btn_showPassword.UseVisualStyleBackColor = false;
+            this.btn_showPassword.Click += new System.EventHandler(this.btn_showPassword_Click);
+            // 
+            // lbTitle
+            // 
+            this.lbTitle.AutoSize = true;
+            this.lbTitle.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Bold);
+            this.lbTitle.ForeColor = System.Drawing.Color.White;
+            this.lbTitle.Location = new System.Drawing.Point(322, 9);
+            this.lbTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(50, 17);
+            this.lbTitle.TabIndex = 1;
+            this.lbTitle.Text = "Home";
             // 
             // UserMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1245, 588);
+            this.ClientSize = new System.Drawing.Size(934, 478);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(1354, 750);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(1020, 617);
             this.Name = "UserMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserMenu";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -220,5 +298,10 @@ namespace PBL3
         private System.Windows.Forms.Label lb_username;
         private System.Windows.Forms.Button btn_signOut;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_showPassword;
+        private System.Windows.Forms.Label lbTitle;
     }
 }

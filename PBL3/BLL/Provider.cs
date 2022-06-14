@@ -49,9 +49,32 @@ namespace PBL3.BLL
                 return false;
             }
         }
-        //--------------Account------------------
-
-
+        //--------------Account Data------------------
+        private List<Account> GettAll_Accounts()
+        {
+            return database.Accounts.ToList();
+        }
+        private List<Account> GetAccounts_By_Username(string _username)
+        {
+            return database.Accounts.Where(p => p.Username.Contains(_username)).ToList();
+        }
+        //private List<Account> GetAccounts_By_Permission(string _permission)
+        //{
+        //    switch (_permission)
+        //    {
+        //        case "All":
+        //            return database.Accounts.ToList();
+        //        default:
+        //            if (_permission == "Admin")
+        //            {
+        //                return database.Accounts.Where(p => p.Permission == true).ToList();
+        //            }
+        //            else
+        //            {
+        //                return database.Accounts.Where(p => p.Permission == false).ToList();
+        //            }
+        //    }
+        //}
         //--------------Citizen Data-------------
         public List<Citizen> GetAll_Citizen(string txt = "")
         {
@@ -62,30 +85,9 @@ namespace PBL3.BLL
             return database.Citizens.Where(p => p.CMND_CCCD == CMND_CCCD).FirstOrDefault();
         }
 
-        //public void ExecuteAddEdit(Citizen s, string CMND_CCCD)
-        //{
-        //    if (CheckAddEdit(s.CMND_CCCD))
-        //    {
-        //        database.Citizens.Add(s);
-        //        database.SaveChanges();
-        //    }
-        //    else
-        //    {
-        //        var x = database.Citizens.Where(p => p.CMND_CCCD == CMND_CCCD).FirstOrDefault();
-        //        x.CMND_CCCD = s.CMND_CCCD;
-        //        x.fullName = s.fullName;
-        //        x.phone = s.phone;
-        //        x.address = s.address;
-        //        x.gender = s.gender;
-        //        x.birth = s.birth;
-        //        x.vaccination = s.vaccination;
-        //        x.regisDay = s.regisDay;
-        //        database.SaveChanges();
-        //    }
-        //}
         public bool CheckDuplicateCMND(string CMND_CCCD)
         {
-            foreach (string i in database.Citizens.Select(p=>p.CMND_CCCD).ToList())
+            foreach (string i in database.Citizens.Select(p => p.CMND_CCCD).ToList())
             {
                 if (CMND_CCCD == i)
                 {
@@ -109,16 +111,35 @@ namespace PBL3.BLL
             x.gender = s.gender;
             x.birth = s.birth;
             x.vaccination = s.vaccination;
-            x.regisDay = s.regisDay;
             database.SaveChanges();
         }
-        
-        public void Delete_BLL(string CMND)
+
+        public void DeleteCitizen_BLL(string CMND)
         {
             try
             {
                 var x = database.Citizens.Find(CMND);
-                database.Citizens.Remove(x);
+                //database.Citizens.Remove(x);
+                x.fullName = "";
+                x.phone = "";
+                x.address = "";
+                x.gender = true;
+                x.birth = DateTime.Now;
+                x.vaccination = 0;
+                database.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+        }
+        public void DeleteAccount_BLL(string CMND)
+        {
+            try
+            {
+   
+                database.Accounts.Remove(database.Accounts.Find(CMND));
+                database.Citizens.Remove(database.Citizens.Find(CMND));
                 database.SaveChanges();
             }
             catch (Exception e)
@@ -127,20 +148,20 @@ namespace PBL3.BLL
             }
         }
         // Citizen Data Alternative View
-        public List<CitizenDataAltView> FilteredViews(string txt, string Address, string Does)
+        public List<CitizenDataAltView> CitizenFilteredViews(string txt, string Address, string Does)
         {
-            if(Address == "All")
+            if (Address == "All")
             {
                 Address = "";
             }
-            if(Does == "All")
+            if (Does == "All")
             {
                 Does = "";
-            }            
+            }
             List<CitizenDataAltView> data = new List<CitizenDataAltView>();
             foreach (Citizen i in GetAll_Citizen(txt))
             {
-                if (i.address.Contains(Address) && i.vaccination.ToString().Contains(Does))
+                if (i.fullName != "" && i.address.Contains(Address) && i.vaccination.ToString().Contains(Does))
                 {
                     string convertedGender = "Male";
                     if (i.gender == false)
@@ -155,14 +176,76 @@ namespace PBL3.BLL
                         birth = i.birth.ToString("MM/dd/yyyy"),
                         phone = i.phone,
                         address = i.address,
-                        vaccination = i.vaccination.ToString() + " Doses Injected",
-                        regisDay = i.regisDay.ToString("MM/dd/yyyy"),
+                        vaccination = i.vaccination.ToString() + " Doses Injected"
                     });
                 }
             }
             return data;
         }
+        //Account Data Alternative View
+        public List<AccountDataAltView> AccountFilteredViews(string _permission, string _username)
+        {
+            List<AccountDataAltView> data = new List<AccountDataAltView>();
+            if(_permission == "All")
+            {
+                _permission = "";
+            }
+            if(_permission == "Admin")
+            {
+                _permission = "True";
+            }
+            if(_permission == "User")
+            {
+                _permission = "False";
+            }
+
+            foreach (Account i in GettAll_Accounts())
+            {
+                if(i.Permission.ToString().Contains(_permission) && i.Username.Contains(_username))
+                {
+                    data.Add(new AccountDataAltView
+                    {
+                        CMND_CCCD = i.CMND_CCCD,
+                        Username = i.Username,
+                        Password = i.Password,
+                        Fullname = i.Fullname,
+                        Permission = i.Permission
+                    });
+                }
+            }
+            //if (_username == "")
+            //{
+                
+            //}
+            //else
+            //{
+            //    foreach (AccountDataAltView i in data)
+            //    {
+            //        if (i.Username != _username)
+            //        {
+            //            data.Remove(i);
+            //        }
+            //    }
+            //}
+            return data;
+        }
         // CBB Filler
+        public List<string> GetCBB_Permission()
+        {
+            List<string> roleList = new List<string>();
+            foreach (var p in database.Accounts.Select(p => p.Permission))
+            {
+                if (p)
+                {
+                    roleList.Add("Admin");
+                }
+                else
+                {
+                    roleList.Add("User");
+                }
+            }
+            return roleList.Distinct().ToList();
+        }
         public List<string> GetCBB_Address()
         {
             return database.Citizens.Select(p => p.address).Distinct().ToList();
@@ -174,7 +257,7 @@ namespace PBL3.BLL
         public List<CitizenDataAltView> Sort_BLL(string txt, string Address, string Does, int SortIndex, bool SortingDirection)
         {
             List<Citizen> data = new List<Citizen>();
-            if(SortingDirection == true)
+            if (SortingDirection == true)
             {
                 if (SortIndex == 0)
                 {
@@ -230,7 +313,7 @@ namespace PBL3.BLL
                     data = x.ToList();
                 }
             }
-            
+
             List<CitizenDataAltView> data2 = new List<CitizenDataAltView>();
             if (Address == "All")
             {
@@ -242,7 +325,7 @@ namespace PBL3.BLL
             }
             foreach (Citizen i in data)
             {
-                if (i.address.Contains(Address) && i.vaccination.ToString().Contains(Does))
+                if (i.fullName != "" && i.address.Contains(Address) && i.vaccination.ToString().Contains(Does))
                 {
                     string convertedGender = "Male";
                     if (i.gender == false)
@@ -257,14 +340,13 @@ namespace PBL3.BLL
                         birth = i.birth.ToString("MM/dd/yyyy"),
                         phone = i.phone,
                         address = i.address,
-                        vaccination = i.vaccination.ToString() + " Does Injected",
-                        regisDay = i.regisDay.ToString("MM/dd/yyyy"),
+                        vaccination = i.vaccination.ToString() + " Doses Injected"
                     });
                 }
             }
             return data2;
         }
-        
+
 
 
         //--------------Vaccine Data-------------
@@ -276,21 +358,6 @@ namespace PBL3.BLL
         {
             return database.Vaccines.Where(p => p.vaccineName == name).FirstOrDefault();
         }
-        //public void ExecuteAddEdit(Vaccine v, string name)
-        //{
-        //    if (CheckAddEdit_Vaccine(v.vaccineName))
-        //    {
-        //        database.Vaccines.Add(v);
-        //        database.SaveChanges();
-        //    }
-        //    else
-        //    {
-        //        var x = database.Vaccines.Where(p => p.vaccineName == name).FirstOrDefault();
-        //        x.vaccineName = v.vaccineName;
-        //        x.quantity = v.quantity;
-        //        database.SaveChanges();
-        //    }
-        //}
         public void ExecuteAdd(Vaccine v, string name)
         {
             database.Vaccines.Add(v);
@@ -327,8 +394,9 @@ namespace PBL3.BLL
                 Console.WriteLine(e.ToString());
             }
         }
-        // Citizen Data Alternative View
-        public List<VaccineDataAltView> FilteredViews(string txt, string search)
+        //---------------------------------------
+        // Vaccine Data Alternative View
+        public List<VaccineDataAltView> VaccineFilteredViews(string txt, string search)
         {
             if (txt == "All")
             {
@@ -338,7 +406,7 @@ namespace PBL3.BLL
             foreach (Vaccine i in GetAll_Vaccine(txt))
             {
                 if (i.vaccineName.Contains(txt) && i.quantity.ToString().Contains(search))
-                {                   
+                {
                     data.Add(new VaccineDataAltView
                     {
                         vaccineName = i.vaccineName,
@@ -353,6 +421,7 @@ namespace PBL3.BLL
         {
             return database.Vaccines.Select(p => p.vaccineName).Distinct().ToList();
         }
+        //Vaccine Data Alternative views
         public List<VaccineDataAltView> Sort_BLL(string txt, int SortIndex, bool SortingDirection)
         {
             List<Vaccine> data = new List<Vaccine>();
@@ -394,7 +463,7 @@ namespace PBL3.BLL
                 {
                     vaccineName = i.vaccineName,
                     quantity = i.quantity
-                }); 
+                });
             }
             return data2;
         }
@@ -409,6 +478,14 @@ namespace PBL3.BLL
                 }
             }
             return true;
+        }
+
+
+        // ----------------Registration-------------------
+        public void ExecuteAdd(Registration r)
+        {
+            database.Registrations.Add(r);
+            database.SaveChanges();
         }
     }
 }

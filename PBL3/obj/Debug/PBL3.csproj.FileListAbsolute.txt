@@ -268,3 +268,164 @@ C:\Users\Pet\Desktop\PBL3_1\PBL3\bin\Debug\EntityFramework.xml
 C:\Users\Pet\Desktop\PBL3_1\PBL3\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Pet\Desktop\PBL3_1\PBL3\obj\Debug\PBL3.csproj.CopyComplete
 D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccineAddEdit.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\bin\Debug\PBL3.exe.config
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\bin\Debug\PBL3.exe
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\bin\Debug\PBL3.pdb
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\bin\Debug\EntityFramework.dll
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\bin\Debug\EntityFramework.xml
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.AccountSettings_Account.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.AccountSettings_UserMnaging.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.AdminMenu.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.CitizenAddEdit.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.CitizenData.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.ForgotPassword_step1.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.ForgotPassWord_step2.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.Home.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.GUI.RegistrationData.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.SignIn.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.SignUp.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccineAddEdit.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccineData.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.Properties.Resources.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.Statistics.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.UserMenu.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.VaccineRegistration.resources
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.exe
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.pdb
+C:\Users\Phan Tien Dat\Desktop\pbl\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccinationInfo.resources
+C:\Users\Pet\Desktop\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccinationInfo.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\bin\Debug\PBL3.exe.config
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\bin\Debug\PBL3.exe
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\bin\Debug\PBL3.pdb
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\bin\Debug\EntityFramework.dll
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\bin\Debug\EntityFramework.xml
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.AccountSettings_Account.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.AccountSettings_UserMnaging.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.AdminMenu.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.CitizenAddEdit.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.CitizenData.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.ForgotPassword_step1.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.ForgotPassWord_step2.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.Home.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.GUI.RegistrationData.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.SignIn.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.SignUp.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.GUI.VaccinationInfo.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.GUI.VaccineAddEdit.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.GUI.VaccineData.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.Properties.Resources.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.Statistics.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.UserMenu.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.VaccineRegistration.resources
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.exe
+C:\Users\Phan Tien Dat\Desktop\Now\PBL3\obj\Debug\PBL3.pdb
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\bin\Debug\PBL3.exe.config
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\bin\Debug\PBL3.exe
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\bin\Debug\PBL3.pdb
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\bin\Debug\EntityFramework.dll
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\bin\Debug\EntityFramework.xml
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.AccountSettings_Account.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.AccountSettings_UserMnaging.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.AdminMenu.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.CitizenAddEdit.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.CitizenData.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.ForgotPassword_step1.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.ForgotPassWord_step2.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.Home.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.GUI.RegistrationData.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.SignIn.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.SignUp.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.GUI.VaccinationInfo.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.GUI.VaccineAddEdit.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.GUI.VaccineData.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.Properties.Resources.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.Statistics.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.UserMenu.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.VaccineRegistration.resources
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.exe
+C:\Users\Phan Tien Dat\Desktop\light design\PBL3\obj\Debug\PBL3.pdb
+D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccinationInfo.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\bin\Debug\PBL3.exe.config
+C:\Users\Pet\Desktop\PBL_2\PBL3\bin\Debug\PBL3.exe
+C:\Users\Pet\Desktop\PBL_2\PBL3\bin\Debug\PBL3.pdb
+C:\Users\Pet\Desktop\PBL_2\PBL3\bin\Debug\EntityFramework.dll
+C:\Users\Pet\Desktop\PBL_2\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Pet\Desktop\PBL_2\PBL3\bin\Debug\EntityFramework.xml
+C:\Users\Pet\Desktop\PBL_2\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.AccountSettings_Account.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.AccountSettings_UserMnaging.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.AdminMenu.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.CitizenAddEdit.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.CitizenData.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.ForgotPassword_step1.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.ForgotPassWord_step2.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.Home.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.GUI.RegistrationData.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.SignIn.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.SignUp.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.GUI.VaccinationInfo.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.GUI.VaccineAddEdit.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.GUI.VaccineData.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.Properties.Resources.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.Statistics.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.UserMenu.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.VaccineRegistration.resources
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.exe
+C:\Users\Pet\Desktop\PBL_2\PBL3\obj\Debug\PBL3.pdb
+E:\PBL3\PBL3\bin\Debug\PBL3.exe.config
+E:\PBL3\PBL3\bin\Debug\PBL3.exe
+E:\PBL3\PBL3\bin\Debug\PBL3.pdb
+E:\PBL3\PBL3\bin\Debug\EntityFramework.dll
+E:\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+E:\PBL3\PBL3\bin\Debug\EntityFramework.xml
+E:\PBL3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+E:\PBL3\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
+E:\PBL3\PBL3\obj\Debug\PBL3.csproj.SuggestedBindingRedirects.cache
+E:\PBL3\PBL3\obj\Debug\PBL3.AccountSettings_Account.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.AccountSettings_UserMnaging.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.AdminMenu.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.CitizenAddEdit.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.CitizenData.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.ForgotPassword_step1.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.ForgotPassWord_step2.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.Home.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.GUI.RegistrationData.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.SignIn.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.SignUp.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccinationInfo.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccineAddEdit.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.GUI.VaccineData.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.Properties.Resources.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.Statistics.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.UserMenu.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.VaccineRegistration.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
+E:\PBL3\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
+E:\PBL3\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+E:\PBL3\PBL3\obj\Debug\PBL3.exe
+E:\PBL3\PBL3\obj\Debug\PBL3.pdb
