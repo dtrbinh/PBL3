@@ -49,6 +49,7 @@ namespace PBL3
 
             Registration r = new Registration(id_regis, cmnd, s.vaccination + 1, _vaccinename, DateTime.Now, false);
             Provider.Instance.ExecuteAdd(r);
+            MessageBox.Show("Registered successfully!\nRegistration ID: " + id_regis, "NOTICE");
             this.Close();
         }
         public const int WM_NCLBUTTONDOWN = 0xA1;

@@ -80,6 +80,7 @@
     <Compile Include="DTO\CitizenDataAltView.cs" />
     <Compile Include="DTO\CreateDatabase.cs" />
     <Compile Include="DTO\Registration.cs" />
+    <Compile Include="DTO\RegistrationDataAltView.cs" />
     <Compile Include="DTO\Vaccine.cs" />
     <Compile Include="DTO\VaccineDataAltView.cs" />
     <Compile Include="GUI\AccountSettings_Account.cs">
@@ -187,6 +188,12 @@
     <Compile Include="GUI\VaccineRegistration.Designer.cs">
       <DependentUpon>VaccineRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\RegistrationAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RegistrationAddEdit.Designer.cs">
+      <DependentUpon>RegistrationAddEdit.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GUI\AccountSettings_Account.resx">
       <DependentUpon>AccountSettings_Account.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RegistrationAddEdit.resx">
+      <DependentUpon>RegistrationAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\RegistrationData.resx">
       <DependentUpon>RegistrationData.cs</DependentUpon>

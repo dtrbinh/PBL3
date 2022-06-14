@@ -49,6 +49,17 @@ namespace PBL3.BLL
                 return false;
             }
         }
+        public void SyncRegistration()
+        {
+            foreach (Registration i in database.Registrations)
+            {
+                if (i.State)
+                {
+                    database.Citizens.Find(i.CMND_CCCD).vaccination = i.Dose;
+                }
+            }
+            database.SaveChanges();
+        }
         //--------------Account Data------------------
         private List<Account> GettAll_Accounts()
         {
@@ -58,6 +69,16 @@ namespace PBL3.BLL
         {
             return database.Accounts.Where(p => p.Username.Contains(_username)).ToList();
         }
+        //---------------Registration-----------
+        private List<Registration> GetAll_Registration()
+        {
+            return database.Registrations.ToList();
+        }
+        private List<Registration> GetRegistration_By_CMND(string cmnd)
+        {
+            return database.Registrations.Where(p => p.CMND_CCCD == cmnd).ToList();
+        }
+
         //private List<Account> GetAccounts_By_Permission(string _permission)
         //{
         //    switch (_permission)
@@ -113,7 +134,18 @@ namespace PBL3.BLL
             x.vaccination = s.vaccination;
             database.SaveChanges();
         }
-
+        public void DeleteRegistration_BLL(string regisID)
+        {
+            Registration r = database.Registrations.Find(regisID);
+            if (r.State)
+            {
+                if (database.Citizens.Find(r.CMND_CCCD).vaccination >= 1)
+                {
+                    database.Citizens.Find(r.CMND_CCCD).vaccination--;
+                }
+            }
+            database.Registrations.Remove(database.Registrations.Find(regisID));
+        }
         public void DeleteCitizen_BLL(string CMND)
         {
             try
@@ -137,7 +169,7 @@ namespace PBL3.BLL
         {
             try
             {
-   
+
                 database.Accounts.Remove(database.Accounts.Find(CMND));
                 database.Citizens.Remove(database.Citizens.Find(CMND));
                 database.SaveChanges();
@@ -182,26 +214,67 @@ namespace PBL3.BLL
             }
             return data;
         }
+        //Registration Alternative View
+        public List<Registration> RegistrationFilterViews(string _cmnd, string _vaccineName, string _state)
+        {
+            if (_cmnd == "All") _cmnd = "";
+            if (_vaccineName == "All") _vaccineName = "";
+            if (_state == "All") _state = "";
+
+            List<Registration> data = new List<Registration>();
+            bool vaccinationState;
+            if (_state == "")
+            {
+                foreach (Registration i in GetAll_Registration())
+                {
+                    if (i.CMND_CCCD.Contains(_cmnd) && i.vaccineName.Contains(_vaccineName))
+                    {
+                        data.Add(new Registration(i.regisId, i.CMND_CCCD, i.Dose, i.vaccineName, i.regisDay, i.State));
+                    }
+                }
+            }
+            else
+            {
+                if (_state == "Vaccinated")
+                {
+                    vaccinationState = true;
+                }
+                else if (_state == "Not vaccinated")
+                {
+                    vaccinationState = false;
+                }
+                else vaccinationState = false;
+                foreach (Registration i in GetAll_Registration())
+                {
+                    if (i.CMND_CCCD.Contains(_cmnd) && i.vaccineName.Contains(_vaccineName) && i.State == vaccinationState)
+                    {
+                        data.Add(new Registration(i.regisId, i.CMND_CCCD, i.Dose, i.vaccineName, i.regisDay, i.State));
+                    }
+                }
+            }
+
+            return data;
+        }
         //Account Data Alternative View
         public List<AccountDataAltView> AccountFilteredViews(string _permission, string _username)
         {
             List<AccountDataAltView> data = new List<AccountDataAltView>();
-            if(_permission == "All")
+            if (_permission == "All")
             {
                 _permission = "";
             }
-            if(_permission == "Admin")
+            if (_permission == "Admin")
             {
                 _permission = "True";
             }
-            if(_permission == "User")
+            if (_permission == "User")
             {
                 _permission = "False";
             }
 
             foreach (Account i in GettAll_Accounts())
             {
-                if(i.Permission.ToString().Contains(_permission) && i.Username.Contains(_username))
+                if (i.Permission.ToString().Contains(_permission) && i.Username.Contains(_username))
                 {
                     data.Add(new AccountDataAltView
                     {
@@ -215,7 +288,7 @@ namespace PBL3.BLL
             }
             //if (_username == "")
             //{
-                
+
             //}
             //else
             //{
@@ -230,6 +303,30 @@ namespace PBL3.BLL
             return data;
         }
         // CBB Filler
+        public List<String> GetCBB_AllVaccineName()
+        {
+            return database.Vaccines.Select(p => p.vaccineName).ToList();
+        }
+        public List<String> GetCBB_VaccineName()
+        {
+            return database.Registrations.Select(p => p.vaccineName).Distinct().ToList();
+        }
+        public List<String> GetCBB_VaccinationState()
+        {
+            List<string> stateList = new List<string>();
+            foreach (var p in database.Registrations.Select(p => p.State))
+            {
+                if (p)
+                {
+                    stateList.Add("Vaccinated");
+                }
+                else
+                {
+                    stateList.Add("Not vaccinated");
+                }
+            }
+            return stateList.Distinct().ToList();
+        }
         public List<string> GetCBB_Permission()
         {
             List<string> roleList = new List<string>();
@@ -253,6 +350,31 @@ namespace PBL3.BLL
         public List<string> GetCBB_Does()
         {
             return database.Citizens.Select(p => p.vaccination.ToString()).Distinct().ToList();
+        }
+        public List<Registration> Sort_BLL(string sortType, bool sortDirection, string txtSearch, string vaccineName, string vaccinationState)
+        {
+            List<Registration> rawdata = RegistrationFilterViews(txtSearch, vaccineName, vaccinationState);
+            switch (sortType)
+            {
+                case "Registration ID":
+                    rawdata = sortDirection ? rawdata.OrderBy(p => p.regisId).ToList() : rawdata.OrderByDescending(p => p.regisId).ToList();
+
+                    rawdata = sortDirection ? rawdata.OrderBy(p => p.regisId).ToList() : rawdata.OrderByDescending(p => p.regisId).ToList();
+                    break;
+                case "CMND / CCCD":
+                    rawdata = sortDirection ? rawdata.OrderBy(p => p.CMND_CCCD).ToList() : rawdata.OrderByDescending(p => p.CMND_CCCD).ToList();
+                    break;
+                case "Does":
+                    rawdata = sortDirection ? rawdata.OrderBy(p => p.Dose).ToList() : rawdata.OrderByDescending(p => p.Dose).ToList();
+                    break;
+                case "Registration Date":
+                    rawdata = sortDirection ? rawdata.OrderBy(p => p.regisDay).ToList() : rawdata.OrderByDescending(p => p.regisDay).ToList();
+                    break;
+                case "State":
+                    rawdata = sortDirection ? rawdata.OrderBy(p => p.State).ToList() : rawdata.OrderByDescending(p => p.State).ToList();
+                    break;
+            }
+            return rawdata;
         }
         public List<CitizenDataAltView> Sort_BLL(string txt, string Address, string Does, int SortIndex, bool SortingDirection)
         {
@@ -482,6 +604,18 @@ namespace PBL3.BLL
 
 
         // ----------------Registration-------------------
+        public Registration GetRegistration_By_ID(string ID)
+        {
+            return database.Registrations.Find(ID);
+        }
+        public void ExecuteEdit(Registration r)
+        {
+            var i = database.Registrations.Where(p => p.regisId == r.regisId).FirstOrDefault();
+            i.vaccineName = r.vaccineName;
+            i.State = r.State;
+            database.SaveChanges();
+
+        }
         public void ExecuteAdd(Registration r)
         {
             database.Registrations.Add(r);
