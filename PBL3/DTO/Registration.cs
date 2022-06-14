@@ -7,7 +7,7 @@ namespace PBL3.DTO
     public class Registration
     {
         [Key]
-        [StringLength(25)]
+        [StringLength(50)]
         [Required]
         public string regisId { get; set; }
         public string CMND_CCCD { get; set; }

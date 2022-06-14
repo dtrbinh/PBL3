@@ -10,7 +10,7 @@ namespace PBL3.DTO
     public class Account
     {
         [Key]
-        [StringLength(10)]
+        [StringLength(50)]
         [Required]
         public string CMND_CCCD { get; set; }
         public string Username { get; set; }

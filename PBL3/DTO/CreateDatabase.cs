@@ -24,8 +24,8 @@ namespace PBL3.DTO
             });
             context.Vaccines.AddRange(new Vaccine[]
             {
-               new Vaccine{vaccineName = "astra", quantity = 101},
-               new Vaccine{vaccineName = "verocell", quantity = 202}
+                new Vaccine{vaccineName = "astra", quantity = 101},
+                new Vaccine{vaccineName = "verocell", quantity = 202}
             });
             context.Registrations.AddRange(new Registration[]
             {
