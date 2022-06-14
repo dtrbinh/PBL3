@@ -18,7 +18,7 @@ namespace PBL3
             InitializeComponent();
             initCBB();
             cbbSort.SelectedIndex = 0;
-            ShowDGV("All","");
+            //ShowDGV("All","");
         }
         private void initCBB()
         {
@@ -35,19 +35,19 @@ namespace PBL3
             dgv.Columns[3].HeaderText = "Fullname";
             dgv.Columns[4].HeaderText = "Permission";
         }
-
         private void FilterChanged(object sender, EventArgs e)
         {
-            string _permission = cbbSort.SelectedItem.ToString();
-            string _username;
-            if (txtSearch.Text == "" || txtSearch.Text == null)
-            {
-                _username = "";
-            }else
-            {
-                _username = txtSearch.Text;
-            }
-            dgv.DataSource = Provider.Instance.AccountFilteredViews(_permission, _username).ToArray();
+            //string _permission = cbbSort.SelectedItem.ToString();
+            //string _username;
+            //if (txtSearch.Text == "" || txtSearch.Text == null)
+            //{
+            //    _username = "";
+            //}else
+            //{
+            //    _username = txtSearch.Text;
+            //}
+            //dgv.DataSource = Provider.Instance.AccountFilteredViews(_permission, _username).ToArray();
+            ShowDGV(cbbSort.SelectedItem.ToString(), txtSearch.Text);
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -58,23 +58,23 @@ namespace PBL3.BLL
         {
             return database.Accounts.Where(p => p.Username.Contains(_username)).ToList();
         }
-        private List<Account> GetAccounts_By_Permission(string _permission)
-        {
-            switch (_permission)
-            {
-                case "All":
-                    return database.Accounts.ToList();
-                default:
-                    if (_permission == "Admin")
-                    {
-                        return database.Accounts.Where(p => p.Permission == true).ToList();
-                    }
-                    else
-                    {
-                        return database.Accounts.Where(p => p.Permission == false).ToList();
-                    }
-            }
-        }
+        //private List<Account> GetAccounts_By_Permission(string _permission)
+        //{
+        //    switch (_permission)
+        //    {
+        //        case "All":
+        //            return database.Accounts.ToList();
+        //        default:
+        //            if (_permission == "Admin")
+        //            {
+        //                return database.Accounts.Where(p => p.Permission == true).ToList();
+        //            }
+        //            else
+        //            {
+        //                return database.Accounts.Where(p => p.Permission == false).ToList();
+        //            }
+        //    }
+        //}
         //--------------Citizen Data-------------
         public List<Citizen> GetAll_Citizen(string txt = "")
         {
@@ -186,31 +186,47 @@ namespace PBL3.BLL
         public List<AccountDataAltView> AccountFilteredViews(string _permission, string _username)
         {
             List<AccountDataAltView> data = new List<AccountDataAltView>();
-            foreach (Account i in GetAccounts_By_Permission(_permission))
+            if(_permission == "All")
             {
-                data.Add(new AccountDataAltView
-                {
-                    CMND_CCCD = i.CMND_CCCD,
-                    Username = i.Username,
-                    Password = i.Password,
-                    Fullname = i.Fullname,
-                    Permission = i.Permission
-                });
+                _permission = "";
             }
-            if (_username == "")
+            if(_permission == "Admin")
             {
-                
+                _permission = "True";
             }
-            else
+            if(_permission == "User")
             {
-                foreach (AccountDataAltView i in data)
+                _permission = "False";
+            }
+
+            foreach (Account i in GettAll_Accounts())
+            {
+                if(i.Permission.ToString().Contains(_permission) && i.Username.Contains(_username))
                 {
-                    if (i.Username != _username)
+                    data.Add(new AccountDataAltView
                     {
-                        data.Remove(i);
-                    }
+                        CMND_CCCD = i.CMND_CCCD,
+                        Username = i.Username,
+                        Password = i.Password,
+                        Fullname = i.Fullname,
+                        Permission = i.Permission
+                    });
                 }
             }
+            //if (_username == "")
+            //{
+                
+            //}
+            //else
+            //{
+            //    foreach (AccountDataAltView i in data)
+            //    {
+            //        if (i.Username != _username)
+            //        {
+            //            data.Remove(i);
+            //        }
+            //    }
+            //}
             return data;
         }
         // CBB Filler
