@@ -139,12 +139,16 @@ namespace PBL3.BLL
             Registration r = database.Registrations.Find(regisID);
             if (r.State)
             {
-                if (database.Citizens.Find(r.CMND_CCCD).vaccination >= 1)
+                if (r.Citizen.vaccination >= 1)
                 {
-                    database.Citizens.Find(r.CMND_CCCD).vaccination--;
+                    //database.Citizens.Find(r.CMND_CCCD).vaccination--;
+                    var x = database.Citizens.Where(p => p.CMND_CCCD == r.CMND_CCCD).FirstOrDefault();
+                    x.vaccination--;
+                    database.SaveChanges();
                 }
             }
-            database.Registrations.Remove(database.Registrations.Find(regisID));
+            database.Registrations.Remove(r);
+            database.SaveChanges();
         }
         public void DeleteCitizen_BLL(string CMND)
         {
@@ -619,6 +623,18 @@ namespace PBL3.BLL
         public void ExecuteAdd(Registration r)
         {
             database.Registrations.Add(r);
+            database.SaveChanges();
+        }
+        public void ChangingFullname(Account i, string fullname)
+        {
+            var x = database.Accounts.Find(i.CMND_CCCD);
+            x.Fullname = fullname;
+            if(i.Permission == false)
+            {
+                var y = database.Citizens.Find(i.CMND_CCCD);
+                y.fullName = fullname;
+                database.SaveChanges();
+            }
             database.SaveChanges();
         }
     }

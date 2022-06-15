@@ -430,3 +430,4 @@ E:\PBL3\PBL3\obj\Debug\PBL3.csproj.CopyComplete
 E:\PBL3\PBL3\obj\Debug\PBL3.exe
 E:\PBL3\PBL3\obj\Debug\PBL3.pdb
 D:\workzone\Learning\HK IV 2021 - 2022\PBL3\src\PBL3\PBL3\obj\Debug\PBL3.RegistrationAddEdit.resources
+E:\PBL3\PBL3\obj\Debug\PBL3.RegistrationAddEdit.resources

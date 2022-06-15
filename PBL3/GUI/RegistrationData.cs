@@ -47,6 +47,7 @@ namespace PBL3.GUI
             cbbVaccineName.SelectedIndex = 0;
 
             cbbSort.Items.AddRange(new string[] { "Registration ID", "CMND/CCCD", "Does", "Registration Date", "State" });
+            cbbSort.SelectedIndex = 0;
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -110,7 +111,6 @@ namespace PBL3.GUI
                 dgvRegistration.DataSource = Provider.Instance.Sort_BLL(cbbSort.SelectedItem.ToString(), sortingDirection, txtSearch.Text, cbbVaccineName.SelectedItem.ToString(), cbbVaccinationState.SelectedItem.ToString());
                 sortingDirection = !sortingDirection;
             }
-
         }
     }
 }
