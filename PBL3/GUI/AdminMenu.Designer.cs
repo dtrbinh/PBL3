@@ -45,7 +45,7 @@ namespace PBL3
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_logOut = new System.Windows.Forms.Button();
-            this.lb_adMenu_username = new System.Windows.Forms.Label();
+            this.lb_username = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbTitle = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -298,7 +298,7 @@ namespace PBL3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel3.Controls.Add(this.btn_logOut);
-            this.panel3.Controls.Add(this.lb_adMenu_username);
+            this.panel3.Controls.Add(this.lb_username);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 401);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
@@ -327,17 +327,17 @@ namespace PBL3
             this.btn_logOut.UseVisualStyleBackColor = false;
             this.btn_logOut.Click += new System.EventHandler(this.btn_logOut_Click);
             // 
-            // lb_adMenu_username
+            // lb_username
             // 
-            this.lb_adMenu_username.AutoSize = true;
-            this.lb_adMenu_username.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Bold);
-            this.lb_adMenu_username.ForeColor = System.Drawing.Color.White;
-            this.lb_adMenu_username.Location = new System.Drawing.Point(9, 18);
-            this.lb_adMenu_username.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_adMenu_username.Name = "lb_adMenu_username";
-            this.lb_adMenu_username.Size = new System.Drawing.Size(76, 17);
-            this.lb_adMenu_username.TabIndex = 0;
-            this.lb_adMenu_username.Text = "Username";
+            this.lb_username.AutoSize = true;
+            this.lb_username.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Bold);
+            this.lb_username.ForeColor = System.Drawing.Color.White;
+            this.lb_username.Location = new System.Drawing.Point(9, 18);
+            this.lb_username.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_username.Name = "lb_username";
+            this.lb_username.Size = new System.Drawing.Size(76, 17);
+            this.lb_username.TabIndex = 0;
+            this.lb_username.Text = "Username";
             // 
             // panel2
             // 
@@ -448,7 +448,7 @@ namespace PBL3
         private System.Windows.Forms.Button btnDataManaging;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lb_adMenu_username;
+        private System.Windows.Forms.Label lb_username;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

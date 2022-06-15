@@ -42,6 +42,7 @@ namespace PBL3
         private void button1_Click(object sender, EventArgs e)
         {
             openChildForm(new Home());
+            lbTitle.Text = "Home";
             pnSub.Visible = false;
         }
 
@@ -58,6 +59,7 @@ namespace PBL3
             v.d = new AccountSettings_Account.MyDelegate(UpdateUsernameLabel);
             openChildForm(v);
             pnSub.Visible = false;
+            lbTitle.Text = "Account Settings";
         }
 
         private void btn_signOut_Click(object sender, EventArgs e)
@@ -103,12 +105,13 @@ namespace PBL3
         private void btnInfo_Click(object sender, EventArgs e)
         {
             openChildForm(new VaccinationInfo());
-            
+            lbTitle.Text = "Vaccination Information";
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
             openChildForm(new VaccineRegistration());
+            lbTitle.Text = "Register for Vaccination";
         }
         public void UpdateUsernameLabel()
         {
