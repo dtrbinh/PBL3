@@ -109,7 +109,6 @@ namespace PBL3.GUI
             txtPhone.Enabled = false;
             txtAddress.Enabled = false;
             dateTimePicker1.Enabled = false;
-          
         }
 
         private void txtCMND_KeyPress(object sender, KeyPressEventArgs e)
@@ -138,5 +137,6 @@ namespace PBL3.GUI
 
             Provider.Instance.ExecuteEdit(s_old, txtCMND.Text);
         }
+
     }
 }

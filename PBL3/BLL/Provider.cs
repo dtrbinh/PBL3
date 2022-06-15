@@ -70,7 +70,7 @@ namespace PBL3.BLL
             return database.Accounts.Where(p => p.Username.Contains(_username)).ToList();
         }
         //---------------Registration-----------
-        private List<Registration> GetAll_Registration()
+        public List<Registration> GetAll_Registration()
         {
             return database.Registrations.ToList();
         }
