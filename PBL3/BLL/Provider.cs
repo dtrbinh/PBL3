@@ -637,5 +637,27 @@ namespace PBL3.BLL
             }
             database.SaveChanges();
         }
+        public int DoseCounter(int dose)
+        {
+            return database.Citizens.Count(p => p.vaccination == dose);
+        }
+        public int AgeCounter(int Range1, int Range2)
+        {
+            List<int> AgeList = new List<int>();
+            foreach(Citizen i in database.Citizens)
+            {
+                int age = (int)((DateTime.Now - i.birth).TotalDays / 365.242199);
+                AgeList.Add(age);
+            }
+            int counter = 0;
+            foreach(int age in AgeList)
+            {
+                if(age >= Range1 && age <= Range2)
+                {
+                    counter++;
+                }
+            }
+            return counter;
+        }
     }
 }

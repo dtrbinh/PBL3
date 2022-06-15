@@ -106,7 +106,7 @@ namespace PBL3.GUI
         }
         private void btnSort_Click(object sender, EventArgs e)
         {
-            if (cbbSort.SelectedItem != null || cbbSort.SelectedItem != "")
+            if (cbbSort.SelectedItem != null || cbbSort.SelectedItem.ToString() != "")
             {
                 dgvRegistration.DataSource = Provider.Instance.Sort_BLL(cbbSort.SelectedItem.ToString(), sortingDirection, txtSearch.Text, cbbVaccineName.SelectedItem.ToString(), cbbVaccinationState.SelectedItem.ToString());
                 sortingDirection = !sortingDirection;

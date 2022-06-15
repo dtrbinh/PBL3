@@ -13,6 +13,8 @@ namespace PBL3
 {
     public partial class AccountSettings_Account : Form
     {
+        public delegate void MyDelegate();
+        public MyDelegate d;
         public AccountSettings_Account()
         {
             InitializeComponent();
@@ -70,6 +72,7 @@ namespace PBL3
             {
                 Provider.Instance.ChangingFullname(Provider.Instance.currentUser, txtFullname.Text);
                 txtFullname.Enabled = false;
+                d();
             }
         }
     }

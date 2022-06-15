@@ -18,9 +18,8 @@ namespace PBL3
         public AdminMenu()
         {
             InitializeComponent();
-            customizeDesing();
+            customizeDesign();
             lb_adMenu_username.Text = Provider.Instance.currentUser.Fullname;
-            this.BackColor = Color.FromArgb(55, 54, 92);
             openChildForm(new Home());
         }
 
@@ -42,7 +41,7 @@ namespace PBL3
         /*
          đoạn code giúp hide và open cá sub
          */
-        private void customizeDesing()
+        private void customizeDesign()
         {
             panelSubData.Visible = false;
             panelsubAccount.Visible = false;

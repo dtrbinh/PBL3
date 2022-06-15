@@ -19,7 +19,7 @@ namespace PBL3
         {
             InitializeComponent();
             lb_username.Text = Provider.Instance.currentUser.Fullname;
-            this.BackColor = Color.FromArgb(55, 54, 92);
+            pnSub.Visible = false;
             openChildForm(new Home());
         }
 
@@ -27,8 +27,8 @@ namespace PBL3
         private Form acctiveForm = null;
         private void openChildForm(Form ChildForm)
         {
-            if(acctiveForm != null)
-                acctiveForm.Close();       
+            if (acctiveForm != null)
+                acctiveForm.Close();
             acctiveForm = ChildForm;
             ChildForm.TopLevel = false;
             ChildForm.FormBorderStyle = FormBorderStyle.None;
@@ -38,21 +38,26 @@ namespace PBL3
             ChildForm.BringToFront();
             ChildForm.Show();
         }
-       
+
         private void button1_Click(object sender, EventArgs e)
         {
             openChildForm(new Home());
+            pnSub.Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            openChildForm(new VaccinationInfo());
+            pnSub.Visible = true;
+            //openChildForm(new VaccinationInfo());
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {           
-            openChildForm(new AccountSettings_Account());
-
+        {
+            //openChildForm(new AccountSettings_Account());
+            AccountSettings_Account v = new AccountSettings_Account();
+            v.d = new AccountSettings_Account.MyDelegate(UpdateUsernameLabel);
+            openChildForm(v);
+            pnSub.Visible = false;
         }
 
         private void btn_signOut_Click(object sender, EventArgs e)
@@ -93,6 +98,21 @@ namespace PBL3
         private void btn_showPassword_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            openChildForm(new VaccinationInfo());
+            
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            openChildForm(new VaccineRegistration());
+        }
+        public void UpdateUsernameLabel()
+        {
+            lb_username.Text = Provider.Instance.currentUser.Fullname;
         }
     }
 }

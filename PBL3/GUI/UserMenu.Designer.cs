@@ -44,16 +44,21 @@ namespace PBL3
             this.button4 = new System.Windows.Forms.Button();
             this.btn_showPassword = new System.Windows.Forms.Button();
             this.lbTitle = new System.Windows.Forms.Label();
+            this.pnSub = new System.Windows.Forms.Panel();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.pnSub.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.pnSub);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel3);
@@ -75,7 +80,7 @@ namespace PBL3
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 120);
+            this.button2.Location = new System.Drawing.Point(0, 200);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
@@ -262,6 +267,54 @@ namespace PBL3
             this.lbTitle.TabIndex = 1;
             this.lbTitle.Text = "Home";
             // 
+            // pnSub
+            // 
+            this.pnSub.Controls.Add(this.btnRegister);
+            this.pnSub.Controls.Add(this.btnInfo);
+            this.pnSub.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnSub.Location = new System.Drawing.Point(0, 120);
+            this.pnSub.Name = "pnSub";
+            this.pnSub.Size = new System.Drawing.Size(233, 80);
+            this.pnSub.TabIndex = 5;
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnRegister.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegister.FlatAppearance.BorderSize = 0;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Bold);
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(0, 40);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Padding = new System.Windows.Forms.Padding(52, 0, 0, 0);
+            this.btnRegister.Size = new System.Drawing.Size(233, 40);
+            this.btnRegister.TabIndex = 6;
+            this.btnRegister.Text = " Register";
+            this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInfo.FlatAppearance.BorderSize = 0;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Bold);
+            this.btnInfo.ForeColor = System.Drawing.Color.White;
+            this.btnInfo.Location = new System.Drawing.Point(0, 0);
+            this.btnInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Padding = new System.Windows.Forms.Padding(52, 0, 0, 0);
+            this.btnInfo.Size = new System.Drawing.Size(233, 40);
+            this.btnInfo.TabIndex = 5;
+            this.btnInfo.Text = " Personal Info";
+            this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo.UseVisualStyleBackColor = false;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
             // UserMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,6 +336,7 @@ namespace PBL3
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.pnSub.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -303,5 +357,8 @@ namespace PBL3
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btn_showPassword;
         private System.Windows.Forms.Label lbTitle;
+        private System.Windows.Forms.Panel pnSub;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnInfo;
     }
 }
