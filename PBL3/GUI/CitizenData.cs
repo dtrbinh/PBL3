@@ -34,7 +34,7 @@ namespace PBL3
         }
         public void ShowDGV(string txt, string Address = "", string Does = "")
         {
-            dgv.DataSource = BLL.Provider.Instance.CitizenFilteredViews(txt, Address, Does).ToArray();
+            dgv.DataSource = Provider.Instance.CitizenFilteredViews(txt, Address, Does).ToArray();
             // Modify DGVs Appearance
             dgv.Columns[0].HeaderText = "CMND/CCCD";
             dgv.Columns[1].HeaderText = "Full Name";
@@ -103,14 +103,7 @@ namespace PBL3
         private void btnSort_Click(object sender, EventArgs e)
         {
             dgv.DataSource = Provider.Instance.Sort_BLL(txtSearch.Text, cbbAddress.SelectedItem.ToString(), cbbDoes.SelectedItem.ToString(), cbbSort.SelectedIndex, SortingDirection);
-            if(SortingDirection == true)
-            {
-                SortingDirection = false;
-            }
-            else
-            {
-                SortingDirection = true;
-            }
+            SortingDirection = !SortingDirection;
         }
 
         private void cbbSort_SelectedIndexChanged(object sender, EventArgs e)

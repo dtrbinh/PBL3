@@ -18,13 +18,35 @@ namespace PBL3
         public VaccineRegistration()
         {
             InitializeComponent();
+            GUI();
             InitCBB();
-            SetDose();
         }
-        public void SetDose()
+
+        public void GUI()
         {
+            txtDesesInjected.Enabled = false;
+            txtPreDay.Enabled = false;
             string cmnd = Provider.Instance.currentUser.CMND_CCCD;
             Citizen s = Provider.Instance.GetCitizen_By_CMND(cmnd);
+
+            txtDesesInjected.Text = s.vaccination.ToString();
+
+            if (s.vaccination == 0)
+            {
+                txtPreDay.Text = "";
+            }
+            else
+            {
+                foreach (Registration r in Provider.Instance.GetAll_Registration())
+                {
+                    if (r.CMND_CCCD == s.CMND_CCCD)
+                    {
+                        txtPreDay.Text = r.regisDay.ToString();
+                        break;
+                    }
+                }
+            }
+
             txtDose.Enabled = false;
             txtDose.Text = (s.vaccination + 1).ToString();
         }
@@ -36,19 +58,6 @@ namespace PBL3
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            string _vaccinename = cbbVaccineType.SelectedItem.ToString();
-            string cmnd = Provider.Instance.currentUser.CMND_CCCD;
-            Citizen s = Provider.Instance.GetCitizen_By_CMND(cmnd);
-
-            string id_regis = DateTime.Now.ToString("hhmmtt") + cmnd;
-
-            Registration r = new Registration(id_regis, cmnd, s.vaccination + 1, _vaccinename, DateTime.Now, false);
-            Provider.Instance.ExecuteAdd(r);
             this.Close();
         }
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -69,10 +78,37 @@ namespace PBL3
         {
             WindowState = FormWindowState.Minimized;
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
-            this.Close();
+            string cmnd = Provider.Instance.currentUser.CMND_CCCD;
+            bool flag = true;
+            Registration check = new Registration();
+            foreach (Registration i in Provider.Instance.GetRegistration_By_CMND(cmnd))
+            {
+                if (i.State)
+                {
+                    flag = true;
+                }
+                else
+                {
+                    flag = false;
+                    check = i;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                string _vaccinename = cbbVaccineType.SelectedItem.ToString();
+                Citizen s = Provider.Instance.GetCitizen_By_CMND(cmnd);
+                string id_regis = DateTime.Now.ToString("hhmmss") + cmnd;
+                Registration r = new Registration(id_regis, cmnd, s.vaccination + 1, _vaccinename, DateTime.Now, false);
+                Provider.Instance.ExecuteAdd(r);
+                MessageBox.Show("Registered successfully!\nRegistration ID: " + id_regis, "NOTICE");
+            }
+            else
+            {
+                MessageBox.Show("You can't register!\nBecause you have an pending registration.\nID: " + check.regisId, "NOTICE");
+            }
         }
     }
 }

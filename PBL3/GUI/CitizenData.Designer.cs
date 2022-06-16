@@ -52,10 +52,10 @@ namespace PBL3
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(49, 341);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Location = new System.Drawing.Point(65, 420);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(90, 25);
+            this.btnAdd.Size = new System.Drawing.Size(120, 31);
             this.btnAdd.TabIndex = 32;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -68,10 +68,10 @@ namespace PBL3
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(150, 341);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Location = new System.Drawing.Point(200, 420);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(90, 25);
+            this.btnEdit.Size = new System.Drawing.Size(120, 31);
             this.btnEdit.TabIndex = 34;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -84,10 +84,10 @@ namespace PBL3
             this.btnSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSort.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSort.ForeColor = System.Drawing.Color.White;
-            this.btnSort.Location = new System.Drawing.Point(49, 377);
-            this.btnSort.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSort.Location = new System.Drawing.Point(65, 464);
+            this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(90, 25);
+            this.btnSort.Size = new System.Drawing.Size(120, 31);
             this.btnSort.TabIndex = 35;
             this.btnSort.Text = "Sort";
             this.btnSort.UseVisualStyleBackColor = false;
@@ -100,10 +100,10 @@ namespace PBL3
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(253, 341);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Location = new System.Drawing.Point(337, 420);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(90, 25);
+            this.btnDelete.Size = new System.Drawing.Size(120, 31);
             this.btnDelete.TabIndex = 36;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -113,11 +113,11 @@ namespace PBL3
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 10.5F);
-            this.txtSearch.Location = new System.Drawing.Point(196, 29);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.Location = new System.Drawing.Point(261, 36);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(246, 25);
+            this.txtSearch.Size = new System.Drawing.Size(328, 31);
             this.txtSearch.TabIndex = 38;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -127,10 +127,10 @@ namespace PBL3
             this.cbbSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbSort.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbbSort.FormattingEnabled = true;
-            this.cbbSort.Location = new System.Drawing.Point(150, 377);
-            this.cbbSort.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbSort.Location = new System.Drawing.Point(200, 464);
+            this.cbbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbSort.Name = "cbbSort";
-            this.cbbSort.Size = new System.Drawing.Size(193, 25);
+            this.cbbSort.Size = new System.Drawing.Size(256, 29);
             this.cbbSort.TabIndex = 39;
             this.cbbSort.SelectedIndexChanged += new System.EventHandler(this.cbbSort_SelectedIndexChanged);
             // 
@@ -140,10 +140,10 @@ namespace PBL3
             this.cbbAddress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbAddress.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbbAddress.FormattingEnabled = true;
-            this.cbbAddress.Location = new System.Drawing.Point(455, 341);
-            this.cbbAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbAddress.Location = new System.Drawing.Point(607, 420);
+            this.cbbAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbAddress.Name = "cbbAddress";
-            this.cbbAddress.Size = new System.Drawing.Size(193, 25);
+            this.cbbAddress.Size = new System.Drawing.Size(256, 29);
             this.cbbAddress.TabIndex = 40;
             this.cbbAddress.SelectedIndexChanged += new System.EventHandler(this.cbbFilter_SelectedIndexChanged);
             // 
@@ -152,13 +152,13 @@ namespace PBL3
             this.dgv.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(49, 77);
-            this.dgv.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv.Location = new System.Drawing.Point(65, 95);
+            this.dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 24;
-            this.dgv.Size = new System.Drawing.Size(599, 230);
+            this.dgv.Size = new System.Drawing.Size(799, 283);
             this.dgv.TabIndex = 91;
             // 
             // label1
@@ -167,10 +167,9 @@ namespace PBL3
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(386, 347);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(515, 427);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 17);
+            this.label1.Size = new System.Drawing.Size(76, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Address";
             // 
@@ -180,10 +179,9 @@ namespace PBL3
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(386, 381);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(515, 469);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 17);
+            this.label3.Size = new System.Drawing.Size(59, 19);
             this.label3.TabIndex = 92;
             this.label3.Text = "Doses";
             // 
@@ -193,10 +191,10 @@ namespace PBL3
             this.cbbDoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbDoes.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbbDoes.FormattingEnabled = true;
-            this.cbbDoes.Location = new System.Drawing.Point(455, 377);
-            this.cbbDoes.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbDoes.Location = new System.Drawing.Point(607, 464);
+            this.cbbDoes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbDoes.Name = "cbbDoes";
-            this.cbbDoes.Size = new System.Drawing.Size(193, 25);
+            this.cbbDoes.Size = new System.Drawing.Size(256, 29);
             this.cbbDoes.TabIndex = 93;
             this.cbbDoes.SelectedIndexChanged += new System.EventHandler(this.cbbDoes_SelectedIndexChanged);
             // 
@@ -206,20 +204,19 @@ namespace PBL3
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(46, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(61, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 17);
+            this.label2.Size = new System.Drawing.Size(178, 19);
             this.label2.TabIndex = 94;
             this.label2.Text = "Search By Full Name";
             // 
             // CitizenData
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(701, 438);
+            this.ClientSize = new System.Drawing.Size(935, 539);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbbDoes);
             this.Controls.Add(this.label3);
@@ -233,7 +230,7 @@ namespace PBL3
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CitizenData";
             this.Text = "CitizenData";
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();

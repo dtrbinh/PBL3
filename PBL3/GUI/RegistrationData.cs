@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,104 @@ namespace PBL3.GUI
 {
     public partial class RegistrationData : Form
     {
+        private bool sortingDirection = false;
         public RegistrationData()
         {
             InitializeComponent();
             this.BackColor = Color.FromArgb(55, 54, 92);
+            initCBB();
+            showDGV("All", "All", "All");
+            dgvRegistration.Columns[6].Visible = false;
+            Provider.Instance.SyncRegistration();
+        }
+
+        private void showDGV(string cmnd_cccd, string vaccineName = "", string state = "")
+        {
+            dgvRegistration.DataSource = Provider.Instance.RegistrationFilterViews(cmnd_cccd, vaccineName, state).ToArray();
+            // Modify DGVs Appearance
+            dgvRegistration.Columns[0].HeaderText = "ID";
+            dgvRegistration.Columns[1].HeaderText = "CMND/CCCD";
+            dgvRegistration.Columns[2].HeaderText = "Does";
+            dgvRegistration.Columns[3].HeaderText = "Vaccine Name";
+            dgvRegistration.Columns[4].HeaderText = "Registration Date";
+            dgvRegistration.Columns[5].HeaderText = "Vaccination State";
+        }
+        private void initCBB()
+        {
+            cbbVaccinationState.Items.Add("All");
+            cbbVaccineName.Items.Add("All");
+
+            cbbVaccinationState.Items.AddRange(Provider.Instance.GetCBB_VaccinationState().ToArray());
+            cbbVaccineName.Items.AddRange(Provider.Instance.GetCBB_VaccineName().ToArray());
+
+            cbbVaccinationState.SelectedIndex = 0;
+            cbbVaccineName.SelectedIndex = 0;
+
+            cbbSort.Items.AddRange(new string[] { "Registration ID", "CMND/CCCD", "Does", "Registration Date", "State" });
+            cbbSort.SelectedIndex = 0;
+        }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void ValueChanged(object sender, EventArgs e)
+        {
+            if (cbbVaccinationState.SelectedItem == null)
+            {
+                showDGV(txtSearch.Text, cbbVaccineName.SelectedItem.ToString(), "All");
+
+            }
+            else if (cbbVaccineName.SelectedItem == null)
+            {
+                showDGV(txtSearch.Text, "All", cbbVaccinationState.SelectedItem.ToString());
+            }
+            else
+            {
+                showDGV(txtSearch.Text, cbbVaccineName.SelectedItem.ToString(), cbbVaccinationState.SelectedItem.ToString());
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (dgvRegistration.SelectedCells.Count > 0)
+            {
+                dgvRegistration.Rows[dgvRegistration.SelectedCells[0].RowIndex].Selected = true;
+                string regisID = "";
+                foreach (DataGridViewRow i in dgvRegistration.SelectedRows)
+                {
+                    regisID = i.Cells["regisId"].Value.ToString();
+                }
+                RegistrationAddEdit s = new RegistrationAddEdit(regisID);
+                Provider.Instance.SyncRegistration();
+                s.d = new RegistrationAddEdit.MyDelegate(showDGV);
+                s.Show();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("This will permanently remove selected registration data!", "NOTICE", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if (dgvRegistration.SelectedCells.Count == 1)
+                {
+                    dgvRegistration.Rows[dgvRegistration.SelectedCells[0].RowIndex].Selected = true;
+                    string regisID = "";
+                    foreach (DataGridViewRow i in dgvRegistration.SelectedRows)
+                    {
+                        regisID = i.Cells["regisId"].Value.ToString();
+                    }
+                    Provider.Instance.DeleteRegistration_BLL(regisID);
+                }
+                showDGV(txtSearch.Text, cbbVaccineName.SelectedItem.ToString(), cbbVaccinationState.SelectedItem.ToString());
+            }
+        }
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            if (cbbSort.SelectedItem != null || cbbSort.SelectedItem.ToString() != "")
+            {
+                dgvRegistration.DataSource = Provider.Instance.Sort_BLL(cbbSort.SelectedItem.ToString(), sortingDirection, txtSearch.Text, cbbVaccineName.SelectedItem.ToString(), cbbVaccinationState.SelectedItem.ToString());
+                sortingDirection = !sortingDirection;
+            }
         }
     }
 }

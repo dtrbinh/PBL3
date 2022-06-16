@@ -25,11 +25,7 @@ namespace PBL3.GUI
         {
             cbbGender.Items.Add("Male");
             cbbGender.Items.Add("Female");
-            cbbDoes.Items.Add("0");
-            cbbDoes.Items.Add("1");
-            cbbDoes.Items.Add("2");
-            cbbDoes.Items.Add("3");
-            cbbDoes.Items.Add("4");
+           
         }
         public void GUI()
         {
@@ -51,8 +47,6 @@ namespace PBL3.GUI
                 cbbGender.SelectedIndex = 1;
             }
             dateTimePicker1.Value = s.birth;
-            dateTimePicker2.Value = DateTime.Now;
-            cbbDoes.SelectedItem = s.vaccination.ToString();
 
             cbbGender.Enabled = false;
             txtCMND.Enabled = false;
@@ -60,8 +54,6 @@ namespace PBL3.GUI
             txtPhone.Enabled = false;
             txtAddress.Enabled = false;
             dateTimePicker1.Enabled = false;
-            dateTimePicker2.Enabled = false;
-            cbbDoes.Enabled = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -71,7 +63,6 @@ namespace PBL3.GUI
             txtPhone.Enabled = true;
             txtAddress.Enabled = true;
             dateTimePicker1.Enabled = true;
-            cbbDoes.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -97,13 +88,13 @@ namespace PBL3.GUI
             {
                 s.gender = false;
             }
-            s.vaccination = Convert.ToInt32(cbbDoes.SelectedItem.ToString());
+           
             return s;
         }
         private void button3_Click(object sender, EventArgs e)
         {
 
-            if (txtCMND.Text == "" || txtFullname.Text == "" || txtAddress.Text == "" || txtPhone.Text == "" || cbbGender.Text == "" || cbbDoes.Text == "")
+            if (txtCMND.Text == "" || txtFullname.Text == "" || txtAddress.Text == "" || txtPhone.Text == "" || cbbGender.Text == "")
             {
                 MessageBox.Show("Please fill in all the information.", "NOTICE");
             }
@@ -118,7 +109,6 @@ namespace PBL3.GUI
             txtPhone.Enabled = false;
             txtAddress.Enabled = false;
             dateTimePicker1.Enabled = false;
-            cbbDoes.Enabled = false;
         }
 
         private void txtCMND_KeyPress(object sender, KeyPressEventArgs e)
@@ -144,9 +134,9 @@ namespace PBL3.GUI
                 cbbGender.SelectedIndex = 1;
             }
             dateTimePicker1.Value = s_old.birth;
-            cbbDoes.SelectedItem = s_old.vaccination.ToString();
 
             Provider.Instance.ExecuteEdit(s_old, txtCMND.Text);
         }
+
     }
 }

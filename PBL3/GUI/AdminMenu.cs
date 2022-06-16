@@ -18,9 +18,8 @@ namespace PBL3
         public AdminMenu()
         {
             InitializeComponent();
-            customizeDesing();
-            lb_adMenu_username.Text = Provider.Instance.currentUser.Fullname;
-            this.BackColor = Color.FromArgb(55, 54, 92);
+            customizeDesign();
+            lb_username.Text = Provider.Instance.currentUser.Fullname;
             openChildForm(new Home());
         }
 
@@ -42,7 +41,7 @@ namespace PBL3
         /*
          đoạn code giúp hide và open cá sub
          */
-        private void customizeDesing()
+        private void customizeDesign()
         {
             panelSubData.Visible = false;
             panelsubAccount.Visible = false;
@@ -103,7 +102,9 @@ namespace PBL3
 
         private void button5_Click(object sender, EventArgs e)
         {
-            openChildForm(new AccountSettings_Account());
+            AccountSettings_Account v = new AccountSettings_Account();
+            v.d = new AccountSettings_Account.MyDelegate(UpdateUsernameLabel);
+            openChildForm(v);
             lbTitle.Text = "Account Information";
         }
 
@@ -148,6 +149,10 @@ namespace PBL3
         private void btn_showPassword_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        public void UpdateUsernameLabel()
+        {
+            lb_username.Text = Provider.Instance.currentUser.Fullname;
         }
     }
 }
