@@ -37,9 +37,9 @@ namespace PBL3
             }
             else
             {
-                foreach(Registration r in Provider.Instance.GetAll_Registration())
+                foreach (Registration r in Provider.Instance.GetAll_Registration())
                 {
-                    if(r.CMND_CCCD == s.CMND_CCCD)
+                    if (r.CMND_CCCD == s.CMND_CCCD)
                     {
                         txtPreDay.Text = r.regisDay.ToString();
                         break;
@@ -80,16 +80,35 @@ namespace PBL3
         }
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string _vaccinename = cbbVaccineType.SelectedItem.ToString();
             string cmnd = Provider.Instance.currentUser.CMND_CCCD;
-            Citizen s = Provider.Instance.GetCitizen_By_CMND(cmnd);
-
-            string id_regis = DateTime.Now.ToString("hhmmss") + cmnd;
-
-            Registration r = new Registration(id_regis, cmnd, s.vaccination + 1, _vaccinename, DateTime.Now, false);
-            Provider.Instance.ExecuteAdd(r);
-            MessageBox.Show("Registered successfully!\nRegistration ID: " + id_regis, "NOTICE");
-            this.Close();
+            bool flag = true;
+            Registration check = new Registration();
+            foreach (Registration i in Provider.Instance.GetRegistration_By_CMND(cmnd))
+            {
+                if (i.State)
+                {
+                    flag = true;
+                }
+                else
+                {
+                    flag = false;
+                    check = i;
+                    break;
+                }
+            }
+            if (flag)
+            {
+                string _vaccinename = cbbVaccineType.SelectedItem.ToString();
+                Citizen s = Provider.Instance.GetCitizen_By_CMND(cmnd);
+                string id_regis = DateTime.Now.ToString("hhmmss") + cmnd;
+                Registration r = new Registration(id_regis, cmnd, s.vaccination + 1, _vaccinename, DateTime.Now, false);
+                Provider.Instance.ExecuteAdd(r);
+                MessageBox.Show("Registered successfully!\nRegistration ID: " + id_regis, "NOTICE");
+            }
+            else
+            {
+                MessageBox.Show("You can't register!\nBecause you have an pending registration.\nID: " + check.regisId, "NOTICE");
+            }
         }
     }
 }

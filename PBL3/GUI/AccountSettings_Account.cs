@@ -66,7 +66,7 @@ namespace PBL3
         {
             if(txtFullname.Text == "")
             {
-                MessageBox.Show("Notice", "Empty Field");
+                MessageBox.Show("Can not empty", "NOTICE");
             }
             else
             {

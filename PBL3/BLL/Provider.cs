@@ -69,16 +69,7 @@ namespace PBL3.BLL
         {
             return database.Accounts.Where(p => p.Username.Contains(_username)).ToList();
         }
-        //---------------Registration-----------
-        public List<Registration> GetAll_Registration()
-        {
-            return database.Registrations.ToList();
-        }
-        private List<Registration> GetRegistration_By_CMND(string cmnd)
-        {
-            return database.Registrations.Where(p => p.CMND_CCCD == cmnd).ToList();
-        }
-
+        
         //private List<Account> GetAccounts_By_Permission(string _permission)
         //{
         //    switch (_permission)
@@ -608,9 +599,17 @@ namespace PBL3.BLL
 
 
         // ----------------Registration-------------------
+        public List<Registration> GetAll_Registration()
+        {
+            return database.Registrations.ToList();
+        }
         public Registration GetRegistration_By_ID(string ID)
         {
             return database.Registrations.Find(ID);
+        }
+        public List<Registration> GetRegistration_By_CMND(string _cmnd)
+        {
+            return database.Registrations.Where(p => p.CMND_CCCD == _cmnd).ToList();
         }
         public void ExecuteEdit(Registration r)
         {
@@ -633,9 +632,8 @@ namespace PBL3.BLL
             {
                 var y = database.Citizens.Find(i.CMND_CCCD);
                 y.fullName = fullname;
-                database.SaveChanges();
             }
-            database.SaveChanges();
+            database.SaveChangesAsync();
         }
         public int DoseCounter(int dose)
         {
