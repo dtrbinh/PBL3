@@ -123,6 +123,7 @@ namespace PBL3.BLL
             x.gender = s.gender;
             x.birth = s.birth;
             x.vaccination = s.vaccination;
+
             database.SaveChanges();
         }
         public void DeleteRegistration_BLL(string regisID)
@@ -487,6 +488,7 @@ namespace PBL3.BLL
             x.quantity = v.quantity;
             database.SaveChanges();
         }
+
         public bool CheckAddEdit_Vaccine(string name)
         {
             foreach (Vaccine i in database.Vaccines.ToList())
@@ -591,10 +593,18 @@ namespace PBL3.BLL
             {
                 if (name == i)
                 {
-                    return false;
+                    return true;
                 }
             }
-            return true;
+            return false;
+
+            //Vaccine v = new Vaccine();
+            //v = database.Vaccines.Find(name);
+            //if (v != null)
+            //{
+            //    return true;
+            //}
+            //return false;
         }
 
 

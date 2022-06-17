@@ -52,10 +52,11 @@ namespace PBL3.GUI
                 Vaccine v = GetData();
                 if (txtVaccineName.Enabled == true)
                 {
-                    if (Provider.Instance.CheckDuplicate_VaccineName(v.vaccineName) == false)
+                    //MessageBox.Show(v.vaccineName);
+                    if (Provider.Instance.CheckDuplicate_VaccineName(v.vaccineName))
                     {
                         MessageBox.Show("Vaccine Name already existed!", "NOTICE");
-                        txtVaccineName.Text = "";
+                        txtVaccineName.Text = "";   
                         txtVaccineName.Focus();          
                     }
                     else

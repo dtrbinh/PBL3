@@ -15,6 +15,8 @@ namespace PBL3.GUI
     public partial class VaccinationInfo : Form
     {
         Citizen s_old = new Citizen();
+        public delegate void MyDelegate();
+        public MyDelegate d;
         public VaccinationInfo()
         {
             InitializeComponent();
@@ -102,13 +104,14 @@ namespace PBL3.GUI
             {
                 Citizen s = GetData();
                 Provider.Instance.ExecuteEdit(s, txtCMND.Text);
+                Provider.Instance.ChangingFullname(Provider.Instance.currentUser, txtFullname.Text);
+                cbbGender.Enabled = false;
+                txtFullname.Enabled = false;
+                txtPhone.Enabled = false;
+                txtAddress.Enabled = false;
+                dateTimePicker1.Enabled = false;    
+                d();
             }
-
-            cbbGender.Enabled = false;
-            txtFullname.Enabled = false;
-            txtPhone.Enabled = false;
-            txtAddress.Enabled = false;
-            dateTimePicker1.Enabled = false;
         }
 
         private void txtCMND_KeyPress(object sender, KeyPressEventArgs e)
