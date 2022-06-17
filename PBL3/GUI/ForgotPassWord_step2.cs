@@ -34,7 +34,7 @@ namespace PBL3
                 if (txt_password.Text == txt_rePassword.Text)
                 {
                     Provider.Instance.database.Accounts.Where(a => a.Username == userForgotten.Username).FirstOrDefault().Password = txt_password.Text;
-                    Provider.Instance.database.SaveChanges();
+                    Provider.Instance.database.SaveChangesAsync();
                     MessageBox.Show("Password changed!", "NOTICE");
                     this.Close();
                 }

@@ -92,7 +92,7 @@ namespace PBL3
                         Citizen newCitizen = new Citizen(cmnd, "", "", true, "", DateTime.Now, 0);
                         Provider.Instance.database.Citizens.Add(newCitizen);
                         Provider.Instance.database.Accounts.Add(newAccount);
-                        Provider.Instance.database.SaveChanges();
+                        Provider.Instance.database.SaveChangesAsync();
                         MessageBox.Show("Create account successfully.", "NOTICE");
                         this.Close();
                     }

@@ -49,6 +49,16 @@ namespace PBL3.BLL
                 return false;
             }
         }
+        //---------------Sync Changes-----------
+        public void SyncFullNameFromCitizen()
+        {
+            foreach (Citizen i in GetAll_Citizen())
+            {
+                var x = database.Accounts.Find(i.CMND_CCCD);
+                if (x.Permission == false) x.Fullname = i.fullName;
+            }
+            database.SaveChanges();
+        }
         public void SyncRegistration()
         {
             foreach (Registration i in database.Registrations)
@@ -58,7 +68,7 @@ namespace PBL3.BLL
                     database.Citizens.Find(i.CMND_CCCD).vaccination = i.Dose;
                 }
             }
-            database.SaveChanges();
+            database.SaveChangesAsync();
         }
         //--------------Account Data------------------
         private List<Account> GettAll_Accounts()
@@ -69,7 +79,7 @@ namespace PBL3.BLL
         {
             return database.Accounts.Where(p => p.Username.Contains(_username)).ToList();
         }
-        
+
         //private List<Account> GetAccounts_By_Permission(string _permission)
         //{
         //    switch (_permission)
@@ -111,7 +121,7 @@ namespace PBL3.BLL
         public void ExecuteAdd(Citizen s, string CMND_CCCD)
         {
             database.Citizens.Add(s);
-            database.SaveChanges();
+            database.SaveChangesAsync();
         }
         public void ExecuteEdit(Citizen s, string CMND_CCCD)
         {
@@ -123,8 +133,8 @@ namespace PBL3.BLL
             x.gender = s.gender;
             x.birth = s.birth;
             x.vaccination = s.vaccination;
-
-            database.SaveChanges();
+            Task.WaitAll();
+            SyncFullNameFromCitizen();
         }
         public void DeleteRegistration_BLL(string regisID)
         {
@@ -136,11 +146,11 @@ namespace PBL3.BLL
                     //database.Citizens.Find(r.CMND_CCCD).vaccination--;
                     var x = database.Citizens.Where(p => p.CMND_CCCD == r.CMND_CCCD).FirstOrDefault();
                     x.vaccination--;
-                    database.SaveChanges();
+                    database.SaveChangesAsync();
                 }
             }
             database.Registrations.Remove(r);
-            database.SaveChanges();
+            database.SaveChangesAsync();
         }
         public void DeleteCitizen_BLL(string CMND)
         {
@@ -154,7 +164,7 @@ namespace PBL3.BLL
                 x.gender = true;
                 x.birth = DateTime.Now;
                 x.vaccination = 0;
-                database.SaveChanges();
+                database.SaveChangesAsync();
             }
             catch (Exception e)
             {
@@ -168,7 +178,7 @@ namespace PBL3.BLL
 
                 database.Accounts.Remove(database.Accounts.Find(CMND));
                 database.Citizens.Remove(database.Citizens.Find(CMND));
-                database.SaveChanges();
+                database.SaveChangesAsync();
             }
             catch (Exception e)
             {
@@ -479,14 +489,14 @@ namespace PBL3.BLL
         public void ExecuteAdd(Vaccine v, string name)
         {
             database.Vaccines.Add(v);
-            database.SaveChanges();
+            database.SaveChangesAsync();
         }
         public void ExecuteEdit(Vaccine v, string name)
         {
             var x = database.Vaccines.Where(p => p.vaccineName == name).FirstOrDefault();
             x.vaccineName = v.vaccineName;
             x.quantity = v.quantity;
-            database.SaveChanges();
+            database.SaveChangesAsync();
         }
 
         public bool CheckAddEdit_Vaccine(string name)
@@ -506,7 +516,7 @@ namespace PBL3.BLL
             {
                 var x = database.Vaccines.Find(name);
                 database.Vaccines.Remove(x);
-                database.SaveChanges();
+                database.SaveChangesAsync();
             }
             catch (Exception e)
             {
@@ -626,19 +636,19 @@ namespace PBL3.BLL
             var i = database.Registrations.Where(p => p.regisId == r.regisId).FirstOrDefault();
             i.vaccineName = r.vaccineName;
             i.State = r.State;
-            database.SaveChanges();
+            database.SaveChangesAsync();
 
         }
         public void ExecuteAdd(Registration r)
         {
             database.Registrations.Add(r);
-            database.SaveChanges();
+            database.SaveChangesAsync();
         }
         public void ChangingFullname(Account i, string fullname)
         {
             var x = database.Accounts.Find(i.CMND_CCCD);
             x.Fullname = fullname;
-            if(i.Permission == false)
+            if (i.Permission == false)
             {
                 var y = database.Citizens.Find(i.CMND_CCCD);
                 y.fullName = fullname;
@@ -652,15 +662,15 @@ namespace PBL3.BLL
         public int AgeCounter(int Range1, int Range2)
         {
             List<int> AgeList = new List<int>();
-            foreach(Citizen i in database.Citizens)
+            foreach (Citizen i in database.Citizens)
             {
                 int age = (int)((DateTime.Now - i.birth).TotalDays / 365.242199);
                 AgeList.Add(age);
             }
             int counter = 0;
-            foreach(int age in AgeList)
+            foreach (int age in AgeList)
             {
-                if(age >= Range1 && age <= Range2)
+                if (age >= Range1 && age <= Range2)
                 {
                     counter++;
                 }
