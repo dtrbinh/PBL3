@@ -104,7 +104,9 @@ namespace PBL3
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            openChildForm(new VaccinationInfo());
+            VaccinationInfo v = new VaccinationInfo();
+            v.d = new VaccinationInfo.MyDelegate(UpdateUsernameLabel);
+            openChildForm(v);
             lbTitle.Text = "Vaccination Information";
         }
 
