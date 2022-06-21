@@ -29,25 +29,25 @@ namespace PBL3
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.cbbType = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chartGender = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartDose = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartAge = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
-            this.chartGender = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartGender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartDose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartAge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartGender)).BeginInit();
             this.SuspendLayout();
             // 
             // cbbType
@@ -72,6 +72,24 @@ namespace PBL3
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(535, 330);
             this.panel1.TabIndex = 108;
+            // 
+            // chartGender
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartGender.ChartAreas.Add(chartArea1);
+            this.chartGender.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chartGender.Legends.Add(legend1);
+            this.chartGender.Location = new System.Drawing.Point(0, 0);
+            this.chartGender.Name = "chartGender";
+            this.chartGender.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Gender";
+            this.chartGender.Series.Add(series1);
+            this.chartGender.Size = new System.Drawing.Size(535, 330);
+            this.chartGender.TabIndex = 2;
+            this.chartGender.Text = "chart1";
             // 
             // chartDose
             // 
@@ -121,24 +139,6 @@ namespace PBL3
             this.label1.TabIndex = 106;
             this.label1.Text = "Type";
             // 
-            // chartGender
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chartGender.ChartAreas.Add(chartArea1);
-            this.chartGender.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartGender.Legends.Add(legend1);
-            this.chartGender.Location = new System.Drawing.Point(0, 0);
-            this.chartGender.Name = "chartGender";
-            this.chartGender.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Gender";
-            this.chartGender.Series.Add(series1);
-            this.chartGender.Size = new System.Drawing.Size(535, 330);
-            this.chartGender.TabIndex = 2;
-            this.chartGender.Text = "chart1";
-            // 
             // Statistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,9 +153,9 @@ namespace PBL3
             this.Name = "Statistics";
             this.Text = "Statistics";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartGender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartDose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartAge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartGender)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
