@@ -42,6 +42,7 @@ namespace PBL3
             this.label3 = new System.Windows.Forms.Label();
             this.cbbDoes = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,6 +211,22 @@ namespace PBL3
             this.label2.TabIndex = 94;
             this.label2.Text = "Search By Full Name";
             // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(87)))), ((int)(((byte)(201)))));
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Location = new System.Drawing.Point(744, 36);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(120, 31);
+            this.btnExport.TabIndex = 95;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // CitizenData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -217,6 +234,7 @@ namespace PBL3
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(935, 539);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbbDoes);
             this.Controls.Add(this.label3);
@@ -252,5 +270,6 @@ namespace PBL3
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbbDoes;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnExport;
     }
 }

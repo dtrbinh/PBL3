@@ -16,7 +16,7 @@ namespace PBL3
         public CitizenData()
         {
             InitializeComponent();
-            ShowDGV("","","");
+            ShowDGV("", "", "");
             InitCBB();
             cbbAddress.SelectedIndex = 0;
         }
@@ -50,7 +50,7 @@ namespace PBL3
             f.d = new CitizenAddEdit.MyDelegate(ShowDGV);
             f.Show();
         }
-        
+
         private void button3_Click(object sender, EventArgs e)
         {
             if (dgv.SelectedCells.Count == 1)
@@ -78,7 +78,7 @@ namespace PBL3
                     Provider.Instance.DeleteCitizen_BLL(CMND);
                 }
                 ShowDGV(txtSearch.Text, cbbAddress.SelectedItem.ToString(), cbbDoes.SelectedItem.ToString());
-            }          
+            }
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -88,7 +88,7 @@ namespace PBL3
 
         private void cbbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbbDoes.SelectedItem == null)
+            if (cbbDoes.SelectedItem == null)
             {
                 cbbDoes.SelectedIndex = 0;
             }
@@ -110,5 +110,17 @@ namespace PBL3
         {
             SortingDirection = true;
         }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            dgv.SelectAll();
+            DataObject dataObj = dgv.GetClipboardContent();
+            if (dataObj != null)
+            {
+                Clipboard.SetDataObject(dataObj);
+            }
+            Provider.Instance.load_Excel_App();
+        }
+        
     }
 }

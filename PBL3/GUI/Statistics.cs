@@ -29,6 +29,7 @@ namespace PBL3
             chartAge.Series["Age"].Points.AddXY("5-12", Provider.Instance.AgeCounter(5, 12));
             chartAge.Series["Age"].Points.AddXY("13-40", Provider.Instance.AgeCounter(13, 40));
             chartAge.Series["Age"].Points.AddXY("41-85", Provider.Instance.AgeCounter(41, 85));
+
             //format charts
             chartDose.Series["Dose"].IsValueShownAsLabel = true;
             chartAge.Series["Age"].IsValueShownAsLabel = true;
@@ -38,6 +39,7 @@ namespace PBL3
 
             chartAge.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineColor = Color.Gainsboro;
             chartAge.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.Gainsboro;
+
         }
 
        

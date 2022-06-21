@@ -49,12 +49,13 @@ namespace PBL3
             legend1.Name = "Legend1";
             this.chartDose.Legends.Add(legend1);
             this.chartDose.Location = new System.Drawing.Point(0, 0);
+            this.chartDose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartDose.Name = "chartDose";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Dose";
             this.chartDose.Series.Add(series1);
-            this.chartDose.Size = new System.Drawing.Size(350, 438);
+            this.chartDose.Size = new System.Drawing.Size(467, 539);
             this.chartDose.TabIndex = 0;
             this.chartDose.Text = "chart1";
             // 
@@ -65,26 +66,27 @@ namespace PBL3
             this.chartAge.Dock = System.Windows.Forms.DockStyle.Right;
             legend2.Name = "Legend1";
             this.chartAge.Legends.Add(legend2);
-            this.chartAge.Location = new System.Drawing.Point(350, 0);
+            this.chartAge.Location = new System.Drawing.Point(467, 0);
+            this.chartAge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartAge.Name = "chartAge";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Age";
             this.chartAge.Series.Add(series2);
-            this.chartAge.Size = new System.Drawing.Size(351, 438);
+            this.chartAge.Size = new System.Drawing.Size(468, 539);
             this.chartAge.TabIndex = 1;
             this.chartAge.Text = "chart1";
             // 
             // Statistics
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
-            this.ClientSize = new System.Drawing.Size(701, 438);
+            this.ClientSize = new System.Drawing.Size(935, 539);
             this.Controls.Add(this.chartAge);
             this.Controls.Add(this.chartDose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Statistics";
             this.Text = "Statistics";
             ((System.ComponentModel.ISupportInitialize)(this.chartDose)).EndInit();

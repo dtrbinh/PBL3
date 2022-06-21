@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using PBL3.DTO;
+using Excel = Microsoft.Office.Interop.Excel;
+
 
 namespace PBL3.BLL
 {
@@ -671,6 +674,29 @@ namespace PBL3.BLL
                 }
             }
             return counter;
+        }
+
+        //---------------Export Excel-------------------
+        public void load_Excel_App()
+        {
+            try
+            {
+                Excel.Application xlexcel;
+                Excel.Workbook xlWorkBook;
+                Excel.Worksheet xlWorkSheet;
+                object misValue = System.Reflection.Missing.Value;
+                xlexcel = new Excel.Application();
+                xlexcel.Visible = true;
+                xlWorkBook = xlexcel.Workbooks.Add(misValue);
+                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+                Excel.Range CR = (Excel.Range)xlWorkSheet.Cells[1, 1];
+                CR.Select();
+                xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+            }
+            catch (Exception e1)
+            {
+                MessageBox.Show(e1.ToString(), "Error");
+            }
         }
     }
 }

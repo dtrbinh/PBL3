@@ -73,7 +73,7 @@ namespace PBL3
                         if (i.Username == username && i.CMND_CCCD == cmnd)
                         {
                             flag = false;
-                            MessageBox.Show("Username already exist./nPlease try again.", "NOTICE");
+                            MessageBox.Show("Username already exist.\nPlease try again.", "NOTICE");
                             break;
                         }
                     }
@@ -82,7 +82,7 @@ namespace PBL3
                         if (i.CMND_CCCD == cmnd)
                         {
                             flag = false;
-                            MessageBox.Show("CMND/CCCD already exist./nPlease try again.", "NOTICE");
+                            MessageBox.Show("CMND/CCCD already exist.\nPlease try again.", "NOTICE");
                             break;
                         }
                     }
