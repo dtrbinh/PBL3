@@ -16,7 +16,14 @@ namespace PBL3
         public Statistics()
         {
             InitializeComponent();
+            InitCBB();
             GUI();
+        }
+        public void InitCBB()
+        {
+            cbbType.Items.Add("Age");
+            cbbType.Items.Add("Dose");
+            cbbType.SelectedIndex = 0;
         }
         public void GUI()
         {
@@ -42,6 +49,18 @@ namespace PBL3
 
         }
 
-       
+        private void cbbType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbType.SelectedItem == "Age")
+            {
+                chartAge.Visible = true;
+                chartDose.Visible = false;
+            }
+            if (cbbType.SelectedItem == "Dose")
+            {
+                chartAge.Visible = false;
+                chartDose.Visible = true;
+            }
+        }
     }
 }

@@ -699,5 +699,14 @@ namespace PBL3.BLL
                 MessageBox.Show(e1.ToString(), "Error");
             }
         }
+        public List<Registration> GetVaccinationInfoByCMND(string CMND)
+        {
+            return database.Registrations.Where(p => p.CMND_CCCD == CMND).ToList();
+        }
+        public string GetPreviousVaccineName(string CMND)
+        {
+            Registration a = database.Registrations.Where(p => p.CMND_CCCD == CMND).FirstOrDefault();
+            return a.vaccineName;
+        }
     }
 }

@@ -19,21 +19,34 @@ namespace PBL3
         {
             InitializeComponent();
             GUI();
-            InitCBB();
+            //InitCBB();
+            ShowDGV();
         }
 
         public void GUI()
         {
-            txtDesesInjected.Enabled = false;
+            txtDosesInjected.Enabled = false;
             txtPreDay.Enabled = false;
             string cmnd = Provider.Instance.currentUser.CMND_CCCD;
             Citizen s = Provider.Instance.GetCitizen_By_CMND(cmnd);
 
-            txtDesesInjected.Text = s.vaccination.ToString();
-
+            txtDosesInjected.Text = s.vaccination.ToString();
+            if(s.vaccination > 3)
+            {
+                cbbVaccineType.Items.AddRange(Provider.Instance.GetCBB_Filter().ToArray());
+                cbbVaccineType.SelectedIndex = 0;
+            }
+            if(s.vaccination > 0 && s.vaccination < 4)
+            {
+                cbbVaccineType.Items.AddRange(Provider.Instance.GetCBB_Filter().ToArray());
+                cbbVaccineType.SelectedItem = Provider.Instance.GetPreviousVaccineName(s.CMND_CCCD);
+                cbbVaccineType.Enabled = false;
+            }
             if (s.vaccination == 0)
             {
                 txtPreDay.Text = "";
+                cbbVaccineType.Items.AddRange(Provider.Instance.GetCBB_Filter().ToArray());
+                cbbVaccineType.SelectedIndex = 0;
             }
             else
             {
@@ -50,11 +63,11 @@ namespace PBL3
             txtDose.Enabled = false;
             txtDose.Text = (s.vaccination + 1).ToString();
         }
-        public void InitCBB()
-        {
-            cbbVaccineType.Items.AddRange(Provider.Instance.GetCBB_Filter().ToArray());
-            cbbVaccineType.SelectedIndex = 0;
-        }
+        //public void InitCBB()
+        //{
+        //    cbbVaccineType.Items.AddRange(Provider.Instance.GetCBB_Filter().ToArray());
+        //    cbbVaccineType.SelectedIndex = 0;
+        //}
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -106,6 +119,7 @@ namespace PBL3
                     Registration r = new Registration(id_regis, cmnd, s.vaccination + 1, _vaccinename, DateTime.Now, false);
                     Provider.Instance.ExecuteAdd(r);
                     MessageBox.Show("Registered successfully!\nRegistration ID: " + id_regis, "NOTICE");
+                    ShowDGV();
                 }
                 else
                 {
@@ -116,6 +130,17 @@ namespace PBL3
             {
                 MessageBox.Show("Out of vaccine " + _vaccinename + ".\nPlease choose another vaccine.", "NOTICE");
             }
+
+        }
+        public void ShowDGV()
+        {
+            dgv.DataSource = Provider.Instance.GetVaccinationInfoByCMND(Provider.Instance.currentUser.CMND_CCCD);
+            dgv.Columns[0].Visible = false;
+            dgv.Columns[1].Visible = false;
+            dgv.Columns[3].HeaderText = "Vaccine Name";
+            dgv.Columns[4].Visible = false;
+            dgv.Columns[5].HeaderText = "State of Injection";
+            dgv.Columns[6].Visible = false;
 
         }
     }
