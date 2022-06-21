@@ -88,8 +88,8 @@ namespace PBL3.GUI
             }
             else
             {
-                MessageBox.Show("There are currently registered users for this vaccine," + "\n" +
-                    " Please do not delete!", "NOTICE");
+                MessageBox.Show("There are currently registered users for this vaccine!" + "\n" +
+                    "Please do not delete!", "NOTICE");
             }
         }
 

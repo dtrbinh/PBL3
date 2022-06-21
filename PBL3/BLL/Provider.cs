@@ -45,6 +45,28 @@ namespace PBL3.BLL
                 return false;
             }
         }
+        public void fixData()
+        {
+            foreach(Citizen i in GetAll_Citizen())
+            {
+                string _newVCN = "";
+                foreach (Registration j in GetRegistration_By_CMND(i.CMND_CCCD))
+                {
+                    if (j.Dose == 1)
+                    {
+                        _newVCN = j.vaccineName;
+                    }
+                }
+                foreach (Registration j in GetRegistration_By_CMND(i.CMND_CCCD))
+                {
+                    if (j.Dose != 1)
+                    {
+                        j.vaccineName = _newVCN;
+                    }
+                }
+            }
+            database.SaveChanges();
+        }
         //---------------Sync Changes-----------
         public void SyncFullNameFromCitizen()
         {
