@@ -31,12 +31,16 @@ namespace PBL3
             Citizen s = Provider.Instance.GetCitizen_By_CMND(cmnd);
 
             txtDosesInjected.Text = s.vaccination.ToString();
-            if(s.vaccination > 3)
+            if (s.vaccination == 4)
+            {
+                btnRegister.Enabled = false;
+            }
+            if (s.vaccination == 3)
             {
                 cbbVaccineType.Items.AddRange(Provider.Instance.GetCBB_Filter().ToArray());
                 cbbVaccineType.SelectedIndex = 0;
             }
-            if(s.vaccination > 0 && s.vaccination < 4)
+            if (s.vaccination == 2 || s.vaccination == 1)
             {
                 cbbVaccineType.Items.AddRange(Provider.Instance.GetCBB_Filter().ToArray());
                 cbbVaccineType.SelectedItem = Provider.Instance.GetPreviousVaccineName(s.CMND_CCCD);
@@ -47,6 +51,11 @@ namespace PBL3
                 txtPreDay.Text = "";
                 cbbVaccineType.Items.AddRange(Provider.Instance.GetCBB_Filter().ToArray());
                 cbbVaccineType.SelectedIndex = 0;
+                if (Provider.Instance.GetPreviousVaccineName(s.CMND_CCCD) != "")
+                {
+                    cbbVaccineType.SelectedItem = Provider.Instance.GetPreviousVaccineName(s.CMND_CCCD);
+                    cbbVaccineType.Enabled = false;
+                }              
             }
             else
             {

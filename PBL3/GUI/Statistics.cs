@@ -23,6 +23,7 @@ namespace PBL3
         {
             cbbType.Items.Add("Age");
             cbbType.Items.Add("Dose");
+            cbbType.Items.Add("Gender");
             cbbType.SelectedIndex = 0;
         }
         public void GUI()
@@ -37,15 +38,21 @@ namespace PBL3
             chartAge.Series["Age"].Points.AddXY("13-40", Provider.Instance.AgeCounter(13, 40));
             chartAge.Series["Age"].Points.AddXY("41-85", Provider.Instance.AgeCounter(41, 85));
 
+            chartGender.Series["Gender"].Points.AddXY("Male", Provider.Instance.GenderCounter(true));
+            chartGender.Series["Gender"].Points.AddXY("Female", Provider.Instance.GenderCounter(false)); 
             //format charts
             chartDose.Series["Dose"].IsValueShownAsLabel = true;
             chartAge.Series["Age"].IsValueShownAsLabel = true;
+            chartGender.Series["Gender"].IsValueShownAsLabel = true;
 
             chartDose.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineColor = Color.Gainsboro;
             chartDose.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.Gainsboro;
 
             chartAge.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineColor = Color.Gainsboro;
             chartAge.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.Gainsboro;
+
+            chartGender.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineColor = Color.Gainsboro;
+            chartGender.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.Gainsboro;
 
         }
 
@@ -55,11 +62,19 @@ namespace PBL3
             {
                 chartAge.Visible = true;
                 chartDose.Visible = false;
+                chartGender.Visible = false;
             }
             if (cbbType.SelectedItem == "Dose")
             {
                 chartAge.Visible = false;
                 chartDose.Visible = true;
+                chartGender.Visible = false;
+            }
+            if(cbbType.SelectedItem == "Gender")
+            {
+                chartAge.Visible = false;
+                chartDose.Visible = false;
+                chartGender.Visible = true;
             }
         }
     }

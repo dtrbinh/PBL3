@@ -679,6 +679,10 @@ namespace PBL3.BLL
         {
             return database.Citizens.Count(p => p.vaccination == dose);
         }
+        public int GenderCounter(bool gender)
+        {
+            return database.Citizens.Count(p => p.gender == gender);
+        }
         public int AgeCounter(int Range1, int Range2)
         {
             List<int> AgeList = new List<int>();
@@ -728,6 +732,10 @@ namespace PBL3.BLL
         public string GetPreviousVaccineName(string CMND)
         {
             Registration a = database.Registrations.Where(p => p.CMND_CCCD == CMND).FirstOrDefault();
+            if(a == null)
+            {
+                return "";
+            }
             return a.vaccineName;
         }
     }
