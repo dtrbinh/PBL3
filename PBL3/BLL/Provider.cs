@@ -114,6 +114,8 @@ namespace PBL3.BLL
         public void ExecuteAdd(Citizen s, string CMND_CCCD)
         {
             database.Citizens.Add(s);
+            Account newAccount = new Account(s.CMND_CCCD, s.fullName, s.CMND_CCCD, s.CMND_CCCD, false);
+            database.Accounts.Add(newAccount);
             database.SaveChangesAsync();
         }
         public void ExecuteEdit(Citizen s, string CMND_CCCD)
@@ -126,7 +128,7 @@ namespace PBL3.BLL
             x.gender = s.gender;
             x.birth = s.birth;
             x.vaccination = s.vaccination;
-            Task.WaitAll();
+            //Task.WaitAll();
             SyncFullNameFromCitizen();
         }
         public void DeleteRegistration_BLL(string regisID)
