@@ -113,13 +113,20 @@ namespace PBL3
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            dgv.SelectAll();
-            DataObject dataObj = dgv.GetClipboardContent();
-            if (dataObj != null)
+            try
             {
-                Clipboard.SetDataObject(dataObj);
+                dgv.SelectAll();
+                DataObject dataObj = dgv.GetClipboardContent();
+                if (dataObj != null)
+                {
+                    Clipboard.SetDataObject(dataObj);
+                }
+                Provider.Instance.load_Excel_App();
             }
-            Provider.Instance.load_Excel_App();
+            catch (Exception e1)
+            {
+                MessageBox.Show(e1.ToString(), "Error!");
+            }
         }
         
     }

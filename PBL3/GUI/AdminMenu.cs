@@ -145,14 +145,19 @@ namespace PBL3
         {
             WindowState = FormWindowState.Minimized;
         }
-
-        private void btn_showPassword_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
         public void UpdateUsernameLabel()
         {
             lb_username.Text = Provider.Instance.currentUser.Fullname;
+        }
+
+        private void btn_ExitApp_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to exit?", "NOTICE", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
+            {
+                this.Dispose();
+                Application.Exit();
+            }
         }
     }
 }

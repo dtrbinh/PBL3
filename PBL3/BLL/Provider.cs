@@ -692,6 +692,7 @@ namespace PBL3.BLL
                 Excel.Range CR = (Excel.Range)xlWorkSheet.Cells[1, 1];
                 CR.Select();
                 xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+                xlWorkSheet.Columns.AutoFit();
             }
             catch (Exception e1)
             {

@@ -45,7 +45,7 @@ namespace PBL3
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.btn_showPassword = new System.Windows.Forms.Button();
+            this.btn_ExitApp = new System.Windows.Forms.Button();
             this.lbTitle = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnSub.SuspendLayout();
@@ -98,7 +98,7 @@ namespace PBL3
             this.pnSub.Controls.Add(this.btnInfo);
             this.pnSub.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnSub.Location = new System.Drawing.Point(0, 147);
-            this.pnSub.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnSub.Margin = new System.Windows.Forms.Padding(4);
             this.pnSub.Name = "pnSub";
             this.pnSub.Size = new System.Drawing.Size(311, 98);
             this.pnSub.TabIndex = 5;
@@ -255,7 +255,7 @@ namespace PBL3
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(311, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(934, 49);
             this.panel5.TabIndex = 4;
@@ -264,7 +264,7 @@ namespace PBL3
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(57)))));
             this.panel6.Controls.Add(this.button4);
-            this.panel6.Controls.Add(this.btn_showPassword);
+            this.panel6.Controls.Add(this.btn_ExitApp);
             this.panel6.Controls.Add(this.lbTitle);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
@@ -289,20 +289,20 @@ namespace PBL3
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // btn_showPassword
+            // btn_ExitApp
             // 
-            this.btn_showPassword.BackColor = System.Drawing.Color.Transparent;
-            this.btn_showPassword.FlatAppearance.BorderSize = 0;
-            this.btn_showPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_showPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_showPassword.Image = ((System.Drawing.Image)(resources.GetObject("btn_showPassword.Image")));
-            this.btn_showPassword.Location = new System.Drawing.Point(889, 2);
-            this.btn_showPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_showPassword.Name = "btn_showPassword";
-            this.btn_showPassword.Size = new System.Drawing.Size(43, 36);
-            this.btn_showPassword.TabIndex = 38;
-            this.btn_showPassword.UseVisualStyleBackColor = false;
-            this.btn_showPassword.Click += new System.EventHandler(this.btn_showPassword_Click);
+            this.btn_ExitApp.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ExitApp.FlatAppearance.BorderSize = 0;
+            this.btn_ExitApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ExitApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ExitApp.Image = ((System.Drawing.Image)(resources.GetObject("btn_ExitApp.Image")));
+            this.btn_ExitApp.Location = new System.Drawing.Point(889, 2);
+            this.btn_ExitApp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ExitApp.Name = "btn_ExitApp";
+            this.btn_ExitApp.Size = new System.Drawing.Size(43, 36);
+            this.btn_ExitApp.TabIndex = 38;
+            this.btn_ExitApp.UseVisualStyleBackColor = false;
+            this.btn_ExitApp.Click += new System.EventHandler(this.btn_ExitApp_Click);
             // 
             // lbTitle
             // 
@@ -355,7 +355,7 @@ namespace PBL3
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button btn_showPassword;
+        private System.Windows.Forms.Button btn_ExitApp;
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Panel pnSub;
         private System.Windows.Forms.Button btnRegister;

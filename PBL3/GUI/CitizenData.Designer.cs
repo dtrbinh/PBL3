@@ -152,6 +152,7 @@ namespace PBL3
             // 
             this.dgv.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Location = new System.Drawing.Point(65, 95);
             this.dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

@@ -112,5 +112,25 @@ namespace PBL3.GUI
                 sortingDirection = !sortingDirection;
             }
         }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvRegistration.SelectAll();
+                DataObject dataObj = dgvRegistration.GetClipboardContent();
+                if (dataObj != null)
+                {
+                    Clipboard.SetDataObject(dataObj);
+                }
+                Provider.Instance.load_Excel_App();
+            }
+            catch (Exception e1)
+            {
+                MessageBox.Show(e1.ToString(), "Error!");
+                Console.WriteLine(e1.ToString());
+            }
+
+        }
     }
 }
