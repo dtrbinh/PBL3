@@ -126,6 +126,7 @@ namespace PBL3
             catch (Exception e1)
             {
                 MessageBox.Show(e1.ToString(), "Error!");
+                Console.WriteLine(e1.ToString());
             }
         }
         
