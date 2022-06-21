@@ -80,35 +80,43 @@ namespace PBL3
         }
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string cmnd = Provider.Instance.currentUser.CMND_CCCD;
-            bool flag = true;
-            Registration check = new Registration();
-            foreach (Registration i in Provider.Instance.GetRegistration_By_CMND(cmnd))
+            string _vaccinename = cbbVaccineType.SelectedItem.ToString();
+            if (Provider.Instance.GetVaccine_By_Name(_vaccinename).quantity >= 1)
             {
-                if (i.State)
+                string cmnd = Provider.Instance.currentUser.CMND_CCCD;
+                bool flag = true;
+                Registration check = new Registration();
+                foreach (Registration i in Provider.Instance.GetRegistration_By_CMND(cmnd))
                 {
-                    flag = true;
+                    if (i.State)
+                    {
+                        flag = true;
+                    }
+                    else
+                    {
+                        flag = false;
+                        check = i;
+                        break;
+                    }
+                }
+                if (flag)
+                {
+                    Citizen s = Provider.Instance.GetCitizen_By_CMND(cmnd);
+                    string id_regis = DateTime.Now.ToString("hhmmss") + cmnd;
+                    Registration r = new Registration(id_regis, cmnd, s.vaccination + 1, _vaccinename, DateTime.Now, false);
+                    Provider.Instance.ExecuteAdd(r);
+                    MessageBox.Show("Registered successfully!\nRegistration ID: " + id_regis, "NOTICE");
                 }
                 else
                 {
-                    flag = false;
-                    check = i;
-                    break;
+                    MessageBox.Show("You can't register!\nBecause you have an pending registration.\nID: " + check.regisId, "NOTICE");
                 }
-            }
-            if (flag)
-            {
-                string _vaccinename = cbbVaccineType.SelectedItem.ToString();
-                Citizen s = Provider.Instance.GetCitizen_By_CMND(cmnd);
-                string id_regis = DateTime.Now.ToString("hhmmss") + cmnd;
-                Registration r = new Registration(id_regis, cmnd, s.vaccination + 1, _vaccinename, DateTime.Now, false);
-                Provider.Instance.ExecuteAdd(r);
-                MessageBox.Show("Registered successfully!\nRegistration ID: " + id_regis, "NOTICE");
             }
             else
             {
-                MessageBox.Show("You can't register!\nBecause you have an pending registration.\nID: " + check.regisId, "NOTICE");
+                MessageBox.Show("Out of vaccine " + _vaccinename + ".\nPlease choose another vaccine.", "NOTICE");
             }
+
         }
     }
 }

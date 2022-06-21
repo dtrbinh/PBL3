@@ -65,7 +65,7 @@ namespace PBL3
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("This will permanently remove selected citizen's data, but not remove this citizen's account!", "NOTICE", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("This will permanently remove selected citizen's data, but not remove this citizen's account!", "NOTICE", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 if (dgv.SelectedCells.Count > 0)
                 {

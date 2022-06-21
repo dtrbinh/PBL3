@@ -57,7 +57,7 @@ namespace PBL3.GUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {          
-            if (MessageBox.Show("This will permanently remove selected vaccine!", "NOTICE", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("This will permanently remove selected vaccine!", "NOTICE", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 if (dgv.SelectedRows.Count > 0)
                 {
