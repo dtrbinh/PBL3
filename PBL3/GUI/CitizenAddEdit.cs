@@ -80,7 +80,7 @@ namespace PBL3
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if(txtCMND.Text == "" || txtFullname.Text == "" || txtAddress.Text == "" || txtPhone.Text == "" || cbbGender.Text == "" || cbbDoes.Text == "")
+            if (txtCMND.Text == "" || txtFullname.Text == "" || txtAddress.Text == "" || txtPhone.Text == "" || cbbGender.Text == "" || cbbDoes.Text == "")
             {
                 MessageBox.Show("Please fill in all the information.", "NOTICE");
             }
@@ -96,6 +96,7 @@ namespace PBL3
                     else
                     {
                         Provider.Instance.ExecuteAdd(s, CMND_CCCD);
+                        MessageBox.Show("Add successfully, default account for this citizen:\nUsername: " + s.CMND_CCCD + "\nPassword: " + s.CMND_CCCD, "NOTICE");
                         this.Close();
                     }
                 }

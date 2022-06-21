@@ -29,14 +29,7 @@ namespace PBL3.BLL
         public Account currentUser = new Account();
         public Boolean isSignIn()
         {
-            if (currentUser == null)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return (currentUser == null) ? false : true;
         }
         public Boolean isAdmin()
         {
@@ -59,7 +52,7 @@ namespace PBL3.BLL
             }
             database.SaveChanges();
         }
-        public void SyncRegistration()
+        public async void SyncRegistration()
         {
             foreach (Registration i in database.Registrations)
             {
@@ -68,7 +61,7 @@ namespace PBL3.BLL
                     database.Citizens.Find(i.CMND_CCCD).vaccination = i.Dose;
                 }
             }
-            database.SaveChangesAsync();
+            await database.SaveChangesAsync();
         }
         //--------------Account Data------------------
         private List<Account> GettAll_Accounts()
@@ -121,6 +114,8 @@ namespace PBL3.BLL
         public void ExecuteAdd(Citizen s, string CMND_CCCD)
         {
             database.Citizens.Add(s);
+            Account newAccount = new Account(s.CMND_CCCD, s.fullName, s.CMND_CCCD, s.CMND_CCCD, false);
+            database.Accounts.Add(newAccount);
             database.SaveChangesAsync();
         }
         public void ExecuteEdit(Citizen s, string CMND_CCCD)
@@ -133,7 +128,7 @@ namespace PBL3.BLL
             x.gender = s.gender;
             x.birth = s.birth;
             x.vaccination = s.vaccination;
-            Task.WaitAll();
+            //Task.WaitAll();
             SyncFullNameFromCitizen();
         }
         public void DeleteRegistration_BLL(string regisID)
@@ -489,14 +484,14 @@ namespace PBL3.BLL
         public void ExecuteAdd(Vaccine v, string name)
         {
             database.Vaccines.Add(v);
-            database.SaveChangesAsync();
+            database.SaveChanges();
         }
         public void ExecuteEdit(Vaccine v, string name)
         {
             var x = database.Vaccines.Where(p => p.vaccineName == name).FirstOrDefault();
             x.vaccineName = v.vaccineName;
             x.quantity = v.quantity;
-            database.SaveChangesAsync();
+            database.SaveChanges();
         }
 
         public bool CheckAddEdit_Vaccine(string name)
@@ -636,7 +631,7 @@ namespace PBL3.BLL
             var i = database.Registrations.Where(p => p.regisId == r.regisId).FirstOrDefault();
             i.vaccineName = r.vaccineName;
             i.State = r.State;
-            database.SaveChangesAsync();
+            database.SaveChanges();
 
         }
         public void ExecuteAdd(Registration r)

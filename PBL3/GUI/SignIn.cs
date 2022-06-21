@@ -107,7 +107,12 @@ namespace PBL3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show("Do you want to exit?", "NOTICE", MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
+            {
+                this.Dispose();
+                Application.Exit();
+            }
         }
     }
 }
