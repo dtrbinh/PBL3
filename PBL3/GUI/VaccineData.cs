@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PBL3.BLL;
+using PBL3.DTO;
 
 namespace PBL3.GUI
 {
@@ -56,19 +57,39 @@ namespace PBL3.GUI
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
-        {          
-            if (MessageBox.Show("This will permanently remove selected vaccine!", "NOTICE", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+        {
+            string vaccine_name = dgv.Rows[dgv.CurrentRow.Index].Cells["vaccineName"].Value.ToString();
+            bool check_del = true;
+
+            foreach (Registration r in Provider.Instance.GetAll_Registration())
             {
-                if (dgv.SelectedRows.Count > 0)
+                if (r.vaccineName == vaccine_name)
                 {
-                    string name = "";
-                    foreach (DataGridViewRow i in dgv.SelectedRows)
-                    {
-                        name = i.Cells["vaccineName"].Value.ToString();
-                    }
-                    Provider.Instance.Delete_BLL_Vaccine(name);
+                    check_del = false;
+                    break;
                 }
-                ShowDGV(cbbFilter.SelectedItem.ToString(), txtSearch.Text);
+            }
+
+            if (check_del)
+            {
+                if (MessageBox.Show("This will permanently remove selected vaccine!", "NOTICE", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    if (dgv.SelectedRows.Count > 0)
+                    {
+                        string name = "";
+                        foreach (DataGridViewRow i in dgv.SelectedRows)
+                        {
+                            name = i.Cells["vaccineName"].Value.ToString();
+                        }
+                        Provider.Instance.Delete_BLL_Vaccine(name);
+                    }
+                    ShowDGV(cbbFilter.SelectedItem.ToString(), txtSearch.Text);
+                }
+            }
+            else
+            {
+                MessageBox.Show("There are currently registered users for this vaccine," + "\n" +
+                    " Please do not delete!", "NOTICE");
             }
         }
 

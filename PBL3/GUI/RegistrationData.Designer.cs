@@ -41,6 +41,8 @@
             this.btnSort = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
+            this.cbbDose = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistration)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +64,7 @@
             this.cbbVaccinationState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbVaccinationState.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbbVaccinationState.FormattingEnabled = true;
-            this.cbbVaccinationState.Location = new System.Drawing.Point(659, 464);
+            this.cbbVaccinationState.Location = new System.Drawing.Point(659, 512);
             this.cbbVaccinationState.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbVaccinationState.Name = "cbbVaccinationState";
             this.cbbVaccinationState.Size = new System.Drawing.Size(204, 29);
@@ -75,7 +77,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(484, 464);
+            this.label3.Location = new System.Drawing.Point(484, 516);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 19);
             this.label3.TabIndex = 104;
@@ -127,7 +129,7 @@
             this.cbbSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbSort.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbbSort.FormattingEnabled = true;
-            this.cbbSort.Location = new System.Drawing.Point(65, 464);
+            this.cbbSort.Location = new System.Drawing.Point(65, 481);
             this.cbbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbSort.Name = "cbbSort";
             this.cbbSort.Size = new System.Drawing.Size(391, 29);
@@ -152,7 +154,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(200, 420);
+            this.btnDelete.Location = new System.Drawing.Point(200, 437);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 31);
@@ -168,7 +170,7 @@
             this.btnSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSort.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSort.ForeColor = System.Drawing.Color.White;
-            this.btnSort.Location = new System.Drawing.Point(337, 420);
+            this.btnSort.Location = new System.Drawing.Point(337, 437);
             this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(120, 31);
@@ -184,7 +186,7 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(65, 420);
+            this.btnEdit.Location = new System.Drawing.Point(65, 437);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(120, 31);
@@ -209,13 +211,39 @@
             this.btnExport.UseVisualStyleBackColor = false;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
+            // cbbDose
+            // 
+            this.cbbDose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbDose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbDose.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cbbDose.FormattingEnabled = true;
+            this.cbbDose.Location = new System.Drawing.Point(659, 467);
+            this.cbbDose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbDose.Name = "cbbDose";
+            this.cbbDose.Size = new System.Drawing.Size(204, 29);
+            this.cbbDose.TabIndex = 109;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(585, 470);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 19);
+            this.label4.TabIndex = 108;
+            this.label4.Text = "Dose";
+            // 
             // RegistrationData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(935, 539);
+            this.ClientSize = new System.Drawing.Size(935, 599);
+            this.Controls.Add(this.cbbDose);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbbVaccinationState);
@@ -252,5 +280,7 @@
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.ComboBox cbbDose;
+        private System.Windows.Forms.Label label4;
     }
 }

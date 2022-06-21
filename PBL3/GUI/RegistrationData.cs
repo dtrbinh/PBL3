@@ -48,6 +48,14 @@ namespace PBL3.GUI
 
             cbbSort.Items.AddRange(new string[] { "Registration ID", "CMND/CCCD", "Does", "Registration Date", "State" });
             cbbSort.SelectedIndex = 0;
+
+            cbbDose.Items.Add("All");
+            cbbDose.Items.Add("0");
+            cbbDose.Items.Add("1");
+            cbbDose.Items.Add("2");
+            cbbDose.Items.Add("3");
+            cbbDose.Items.Add("4");
+            cbbDose.SelectedIndex = 0;
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -130,7 +138,7 @@ namespace PBL3.GUI
                 MessageBox.Show(e1.ToString(), "Error!");
                 Console.WriteLine(e1.ToString());
             }
-
         }
     }
 }
+
