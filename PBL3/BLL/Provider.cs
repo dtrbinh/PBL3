@@ -47,7 +47,7 @@ namespace PBL3.BLL
         }
         public void fixData()
         {
-            foreach(Citizen i in GetAll_Citizen())
+            foreach (Citizen i in GetAll_Citizen())
             {
                 string _newVCN = "";
                 foreach (Registration j in GetRegistration_By_CMND(i.CMND_CCCD))
@@ -241,11 +241,13 @@ namespace PBL3.BLL
             return data;
         }
         //Registration Alternative View
-        public List<Registration> RegistrationFilterViews(string _cmnd, string _vaccineName, string _state)
+        public List<Registration> RegistrationFilterViews(string _cmnd, string _vaccineName, string _state, string _dose)
         {
+            int k = 0;
             if (_cmnd == "All") _cmnd = "";
             if (_vaccineName == "All") _vaccineName = "";
             if (_state == "All") _state = "";
+            if (_dose == "All") { } else { k = Convert.ToInt32(_dose); }
 
             List<Registration> data = new List<Registration>();
             bool vaccinationState;
@@ -256,6 +258,11 @@ namespace PBL3.BLL
                     if (i.CMND_CCCD.Contains(_cmnd) && i.vaccineName.Contains(_vaccineName))
                     {
                         data.Add(new Registration(i.regisId, i.CMND_CCCD, i.Dose, i.vaccineName, i.regisDay, i.State));
+                    }
+                    if (_dose != "All")
+                    {
+                        if (i.Dose == k) data.Add(i);
+
                     }
                 }
             }
@@ -276,9 +283,15 @@ namespace PBL3.BLL
                     {
                         data.Add(new Registration(i.regisId, i.CMND_CCCD, i.Dose, i.vaccineName, i.regisDay, i.State));
                     }
+                    if (_dose != "All")
+                    {
+                        if (i.Dose == k) data.Add(i);
+
+                    }
                 }
             }
 
+            data.Distinct();
             return data;
         }
         //Account Data Alternative View
@@ -377,14 +390,12 @@ namespace PBL3.BLL
         {
             return database.Citizens.Select(p => p.vaccination.ToString()).Distinct().ToList();
         }
-        public List<Registration> Sort_BLL(string sortType, bool sortDirection, string txtSearch, string vaccineName, string vaccinationState)
+        public List<Registration> Sort_BLL(string sortType, bool sortDirection, string txtSearch, string vaccineName, string vaccinationState, string dose)
         {
-            List<Registration> rawdata = RegistrationFilterViews(txtSearch, vaccineName, vaccinationState);
+            List<Registration> rawdata = RegistrationFilterViews(txtSearch, vaccineName, vaccinationState, dose);
             switch (sortType)
             {
                 case "Registration ID":
-                    rawdata = sortDirection ? rawdata.OrderBy(p => p.regisId).ToList() : rawdata.OrderByDescending(p => p.regisId).ToList();
-
                     rawdata = sortDirection ? rawdata.OrderBy(p => p.regisId).ToList() : rawdata.OrderByDescending(p => p.regisId).ToList();
                     break;
                 case "CMND / CCCD":
@@ -732,7 +743,7 @@ namespace PBL3.BLL
         public string GetPreviousVaccineName(string CMND)
         {
             Registration a = database.Registrations.Where(p => p.CMND_CCCD == CMND).FirstOrDefault();
-            if(a == null)
+            if (a == null)
             {
                 return "";
             }
