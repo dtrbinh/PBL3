@@ -15,7 +15,7 @@ namespace PBL3
 {
     public partial class RegistrationAddEdit : Form
     {
-        public delegate void MyDelegate(string txt, string vaccineName, string vaccineState);
+        public delegate void MyDelegate(string txt, string vaccineName, string vaccineState, string dose);
         public MyDelegate d;
         public string regisID;
         public RegistrationAddEdit()
@@ -50,7 +50,7 @@ namespace PBL3
             r.vaccineName = cbbVaccineName.Text;
             r.State = txtState.Checked;
             Provider.Instance.ExecuteEdit(r);
-            d("", "", "");
+            d("", "", "", "");
         }
         private void showData()
         {

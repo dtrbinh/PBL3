@@ -30,9 +30,10 @@ namespace PBL3
         {
             Account userForgotten = null;
             string username = txt_username.Text;
+            string cmnd = txtCMND_CCCD.Text;
             foreach (Account i in Provider.Instance.database.Accounts)
             {
-                if (username == i.Username)
+                if (username == i.Username && cmnd == i.CMND_CCCD)
                 {
                     userForgotten = i;
                     break;
