@@ -244,26 +244,29 @@ namespace PBL3.BLL
         public List<Registration> RegistrationFilterViews(string _cmnd, string _vaccineName, string _state, string _dose)
         {
             int k = 0;
-            if (_cmnd == "All") _cmnd = "";
+            //if (_cmnd == "All") _cmnd = "";
             if (_vaccineName == "All") _vaccineName = "";
             if (_state == "All") _state = "";
-            if (_dose == "All") { } else { k = Convert.ToInt32(_dose); }
-
+            if (_dose == "All")
+            {
+                _dose = "";
+            }
+            
             List<Registration> data = new List<Registration>();
             bool vaccinationState;
             if (_state == "")
             {
                 foreach (Registration i in GetAll_Registration())
                 {
-                    if (i.CMND_CCCD.Contains(_cmnd) && i.vaccineName.Contains(_vaccineName))
+                    if (i.CMND_CCCD.Contains(_cmnd) && i.vaccineName.Contains(_vaccineName) && i.Dose.ToString().Contains(_dose))
                     {
                         data.Add(new Registration(i.regisId, i.CMND_CCCD, i.Dose, i.vaccineName, i.regisDay, i.State));
                     }
-                    if (_dose != "All")
-                    {
-                        if (i.Dose == k) data.Add(i);
+                    //if (_dose != "All")
+                    //{
+                    //    if (i.Dose == k) data.Add(i);
 
-                    }
+                    //}
                 }
             }
             else
@@ -272,22 +275,21 @@ namespace PBL3.BLL
                 {
                     vaccinationState = true;
                 }
-                else if (_state == "Not vaccinated")
+                else
                 {
                     vaccinationState = false;
                 }
-                else vaccinationState = false;
                 foreach (Registration i in GetAll_Registration())
                 {
-                    if (i.CMND_CCCD.Contains(_cmnd) && i.vaccineName.Contains(_vaccineName) && i.State == vaccinationState)
+                    if (i.CMND_CCCD.Contains(_cmnd) && i.vaccineName.Contains(_vaccineName) && i.State == vaccinationState && i.Dose.ToString().Contains(_dose))
                     {
                         data.Add(new Registration(i.regisId, i.CMND_CCCD, i.Dose, i.vaccineName, i.regisDay, i.State));
                     }
-                    if (_dose != "All")
-                    {
-                        if (i.Dose == k) data.Add(i);
+                    //if (_dose != "All")
+                    //{
+                    //    if (i.Dose == k) data.Add(i);
 
-                    }
+                    //}
                 }
             }
 

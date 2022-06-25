@@ -17,11 +17,10 @@ namespace PBL3.GUI
         public RegistrationData()
         {
             InitializeComponent();
-            this.BackColor = Color.FromArgb(55, 54, 92);
             initCBB();
-            showDGV("All", "All", "All", "All");
+            showDGV("", "All", "All", "All");
             dgvRegistration.Columns[6].Visible = false;
-            Provider.Instance.SyncRegistration();
+            //Provider.Instance.SyncRegistration();
         }
 
         private void showDGV(string cmnd_cccd, string vaccineName = "", string state = "", string dose = "")
@@ -68,7 +67,6 @@ namespace PBL3.GUI
                 if (cbbVaccineName.SelectedItem == null || cbbDose.SelectedItem == null)
                 {
                     showDGV(txtSearch.Text, "All", cbbVaccinationState.SelectedItem.ToString(), "All");
-
                 }
                 else
                 {
