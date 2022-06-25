@@ -565,7 +565,7 @@ namespace PBL3.BLL
             List<VaccineDataAltView> data = new List<VaccineDataAltView>();
             foreach (Vaccine i in GetAll_Vaccine(txt))
             {
-                if (i.vaccineName.Contains(txt) && i.quantity.ToString().Contains(search))
+                if (i.vaccineName.Contains(txt) && (i.quantity.ToString().Contains(search) || i.vaccineName.Contains(search)))
                 {
                     data.Add(new VaccineDataAltView
                     {
