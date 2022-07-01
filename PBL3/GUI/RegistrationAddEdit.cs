@@ -50,6 +50,7 @@ namespace PBL3
             r.vaccineName = cbbVaccineName.Text;
             r.State = txtState.Checked;
             Provider.Instance.ExecuteEdit(r);
+            Provider.Instance.SyncRegistration(r.CMND_CCCD);
             d("", "", "", "");
         }
         private void showData()
