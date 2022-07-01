@@ -198,7 +198,7 @@ namespace PBL3.BLL
 
                 database.Accounts.Remove(database.Accounts.Find(CMND));
                 database.Citizens.Remove(database.Citizens.Find(CMND));
-                database.SaveChangesAsync();
+                database.SaveChanges();
             }
             catch (Exception e)
             {
