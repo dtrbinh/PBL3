@@ -780,6 +780,10 @@ namespace PBL3.BLL
         public string GetPreviousRegistrationDate(string cmnd)
         {
             Registration r = database.Registrations.Where(p => p.CMND_CCCD == cmnd).OrderByDescending(p => p.regisDay).FirstOrDefault();
+            if(r == null)
+            {
+                return "";
+            }
             return r.regisDay.ToString();
         }
     }

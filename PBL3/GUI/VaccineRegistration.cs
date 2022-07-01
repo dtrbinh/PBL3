@@ -29,12 +29,9 @@ namespace PBL3
             txtPreDay.Enabled = false;
             string cmnd = Provider.Instance.currentUser.CMND_CCCD;
             Citizen s = Provider.Instance.GetCitizen_By_CMND(cmnd);
-            //Registration a = Provider.Instance.GetRegistration_By_CMND(Provider.Instance.currentUser.CMND_CCCD).First();
-            ////if (Provider.Instance.CheckRegistration(cmnd))
-            ////{
-            ////    txtPreDay.Text = a.regisDay.ToString();
-            ////}
+            
             txtPreDay.Text = Provider.Instance.GetPreviousRegistrationDate(cmnd);
+
             txtDosesInjected.Text = s.vaccination.ToString();
             if (s.vaccination == 4)
             {
