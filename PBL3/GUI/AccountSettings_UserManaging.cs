@@ -63,6 +63,7 @@ namespace PBL3
                         CMND = i.Cells["CMND_CCCD"].Value.ToString();
                     }
                     Provider.Instance.DeleteAccount_BLL(CMND);
+                    Provider.Instance.DeleteAllRegistration_BLL(CMND);
                 }
                 ShowDGV("All", "");
             }

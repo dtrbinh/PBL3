@@ -91,7 +91,7 @@ namespace PBL3.GUI
                     regisID = i.Cells["regisId"].Value.ToString();
                 }
                 RegistrationAddEdit s = new RegistrationAddEdit(regisID);
-                Provider.Instance.SyncRegistration();
+                Provider.Instance.SyncAllRegistration();
                 s.d = new RegistrationAddEdit.MyDelegate(showDGV);
                 s.Show();
             }
@@ -111,6 +111,7 @@ namespace PBL3.GUI
                     }
                     Provider.Instance.DeleteRegistration_BLL(regisID);
                 }
+                Provider.Instance.SyncAllRegistration();
                 showDGV(txtSearch.Text, cbbVaccineName.SelectedItem.ToString(), cbbVaccinationState.SelectedItem.ToString(), cbbDose.SelectedItem.ToString());
             }
         }

@@ -65,17 +65,20 @@ namespace PBL3
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("This will permanently remove selected citizen's data, but not remove this citizen's account!", "NOTICE", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            dgv.Rows[dgv.SelectedCells[0].RowIndex].Selected = true;
+            string CMND = "";
+            foreach (DataGridViewRow i in dgv.SelectedRows)
+            {
+                CMND = i.Cells["CMND_CCCD"].Value.ToString();
+            }
+            if (MessageBox.Show("This will permanently remove selected citizen's data, but not remove this citizen's account!\n This citizen has " + Provider.Instance.GetRegistration_By_CMND(CMND).Count.ToString() + " registration(s).", "NOTICE", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 if (dgv.SelectedCells.Count > 0)
                 {
-                    dgv.Rows[dgv.SelectedCells[0].RowIndex].Selected = true;
-                    string CMND = "";
-                    foreach (DataGridViewRow i in dgv.SelectedRows)
-                    {
-                        CMND = i.Cells["CMND_CCCD"].Value.ToString();
-                    }
+                    
+                    //Xoá tất cả dữ liệu công dân và dữ liệu đăng ký, giữ lại tài khoản.
                     Provider.Instance.DeleteCitizen_BLL(CMND);
+                    Provider.Instance.DeleteAllRegistration_BLL(CMND);
                 }
                 ShowDGV(txtSearch.Text, cbbAddress.SelectedItem.ToString(), cbbDoes.SelectedItem.ToString());
             }
