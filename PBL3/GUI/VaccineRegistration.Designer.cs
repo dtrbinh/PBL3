@@ -65,7 +65,7 @@ namespace PBL3
             this.cbbVaccineType.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbbVaccineType.FormattingEnabled = true;
             this.cbbVaccineType.Location = new System.Drawing.Point(62, 320);
-            this.cbbVaccineType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbVaccineType.Margin = new System.Windows.Forms.Padding(2);
             this.cbbVaccineType.Name = "cbbVaccineType";
             this.cbbVaccineType.Size = new System.Drawing.Size(239, 25);
             this.cbbVaccineType.TabIndex = 80;
@@ -89,7 +89,7 @@ namespace PBL3
             this.txtDose.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDose.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.txtDose.Location = new System.Drawing.Point(62, 188);
-            this.txtDose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDose.Margin = new System.Windows.Forms.Padding(2);
             this.txtDose.Multiline = true;
             this.txtDose.Name = "txtDose";
             this.txtDose.Size = new System.Drawing.Size(239, 25);
@@ -117,7 +117,7 @@ namespace PBL3
             this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.btnRegister.ForeColor = System.Drawing.Color.White;
             this.btnRegister.Location = new System.Drawing.Point(62, 374);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(239, 25);
             this.btnRegister.TabIndex = 113;
@@ -157,7 +157,7 @@ namespace PBL3
             this.txtDosesInjected.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDosesInjected.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.txtDosesInjected.Location = new System.Drawing.Point(62, 123);
-            this.txtDosesInjected.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDosesInjected.Margin = new System.Windows.Forms.Padding(2);
             this.txtDosesInjected.Multiline = true;
             this.txtDosesInjected.Name = "txtDosesInjected";
             this.txtDosesInjected.Size = new System.Drawing.Size(239, 25);
@@ -169,7 +169,7 @@ namespace PBL3
             this.txtPreDay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPreDay.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.txtPreDay.Location = new System.Drawing.Point(62, 252);
-            this.txtPreDay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPreDay.Margin = new System.Windows.Forms.Padding(2);
             this.txtPreDay.Multiline = true;
             this.txtPreDay.Name = "txtPreDay";
             this.txtPreDay.Size = new System.Drawing.Size(239, 25);
@@ -224,11 +224,10 @@ namespace PBL3
             this.Controls.Add(this.cbbVaccineType);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VaccineRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VaccineRegistration";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

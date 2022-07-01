@@ -767,5 +767,21 @@ namespace PBL3.BLL
             }
             return a.vaccineName;
         }
+        public bool CheckRegistration(string cmnd)
+        {
+            foreach (Registration r in GetAll_Registration())
+            {
+                if (r.CMND_CCCD == cmnd)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public string GetPreviousRegistrationDate(string cmnd)
+        {
+            Registration r = database.Registrations.Where(p => p.CMND_CCCD == cmnd).OrderByDescending(p => p.regisDay).FirstOrDefault();
+            return r.regisDay.ToString();
+        }
     }
 }
