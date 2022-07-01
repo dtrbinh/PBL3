@@ -304,7 +304,6 @@ namespace PBL3.BLL
                     //if (_dose != "All")
                     //{
                     //    if (i.Dose == k) data.Add(i);
-
                     //}
                 }
             }

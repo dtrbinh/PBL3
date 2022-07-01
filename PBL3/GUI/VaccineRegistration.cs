@@ -99,6 +99,7 @@ namespace PBL3
         }
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            string _vaccinename;
             Citizen a = Provider.Instance.GetCitizen_By_CMND(Provider.Instance.currentUser.CMND_CCCD);
             if (a.fullName == "" || a.phone == "" || a.address == "")
             {
@@ -106,7 +107,15 @@ namespace PBL3
             }
             else
             {
-                string _vaccinename = cbbVaccineType.SelectedItem.ToString();
+                try
+                {
+                    _vaccinename = cbbVaccineType.SelectedItem.ToString();
+                }
+                catch (Exception e1)
+                {
+                    _vaccinename = "VeroCell";
+                    MessageBox.Show(e1.ToString(), "NOTICE");
+                }
                 if (Provider.Instance.GetVaccine_By_Name(_vaccinename).quantity >= 1)
                 {
                     string cmnd = Provider.Instance.currentUser.CMND_CCCD;
