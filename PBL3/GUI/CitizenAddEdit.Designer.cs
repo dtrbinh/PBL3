@@ -58,10 +58,10 @@ namespace PBL3
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(188, 427);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Location = new System.Drawing.Point(251, 526);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(88, 25);
+            this.btnCancel.Size = new System.Drawing.Size(117, 31);
             this.btnCancel.TabIndex = 45;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -72,12 +72,13 @@ namespace PBL3
             this.txtCMND.BackColor = System.Drawing.SystemColors.Window;
             this.txtCMND.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCMND.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMND.Location = new System.Drawing.Point(37, 98);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCMND.Location = new System.Drawing.Point(49, 121);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCMND.Multiline = true;
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(239, 25);
+            this.txtCMND.Size = new System.Drawing.Size(319, 31);
             this.txtCMND.TabIndex = 42;
+            this.txtCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
             // label8CMND
             // 
@@ -85,10 +86,9 @@ namespace PBL3
             this.label8CMND.BackColor = System.Drawing.Color.Transparent;
             this.label8CMND.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label8CMND.ForeColor = System.Drawing.Color.White;
-            this.label8CMND.Location = new System.Drawing.Point(33, 75);
-            this.label8CMND.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8CMND.Location = new System.Drawing.Point(44, 92);
             this.label8CMND.Name = "label8CMND";
-            this.label8CMND.Size = new System.Drawing.Size(102, 19);
+            this.label8CMND.Size = new System.Drawing.Size(129, 21);
             this.label8CMND.TabIndex = 48;
             this.label8CMND.Text = "CMND/CCCD";
             // 
@@ -97,11 +97,11 @@ namespace PBL3
             this.txtFullname.BackColor = System.Drawing.SystemColors.Window;
             this.txtFullname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFullname.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFullname.Location = new System.Drawing.Point(37, 41);
-            this.txtFullname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFullname.Location = new System.Drawing.Point(49, 50);
+            this.txtFullname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFullname.Multiline = true;
             this.txtFullname.Name = "txtFullname";
-            this.txtFullname.Size = new System.Drawing.Size(239, 25);
+            this.txtFullname.Size = new System.Drawing.Size(319, 31);
             this.txtFullname.TabIndex = 41;
             // 
             // label2
@@ -110,10 +110,9 @@ namespace PBL3
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(33, 20);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(44, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 19);
+            this.label2.Size = new System.Drawing.Size(90, 21);
             this.label2.TabIndex = 47;
             this.label2.Text = "Full Name";
             // 
@@ -125,10 +124,10 @@ namespace PBL3
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(37, 427);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOK.Location = new System.Drawing.Point(49, 526);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(88, 25);
+            this.btnOK.Size = new System.Drawing.Size(117, 31);
             this.btnOK.TabIndex = 55;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -140,10 +139,9 @@ namespace PBL3
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(33, 184);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(44, 226);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 19);
+            this.label1.Size = new System.Drawing.Size(116, 21);
             this.label1.TabIndex = 59;
             this.label1.Text = "Date of birth";
             // 
@@ -153,10 +151,9 @@ namespace PBL3
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(33, 130);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(44, 160);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 19);
+            this.label3.Size = new System.Drawing.Size(74, 21);
             this.label3.TabIndex = 58;
             this.label3.Text = "Gender";
             // 
@@ -165,11 +162,11 @@ namespace PBL3
             this.txtAddress.BackColor = System.Drawing.SystemColors.Window;
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAddress.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(37, 317);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAddress.Location = new System.Drawing.Point(49, 390);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(239, 25);
+            this.txtAddress.Size = new System.Drawing.Size(319, 31);
             this.txtAddress.TabIndex = 61;
             // 
             // label4
@@ -178,10 +175,9 @@ namespace PBL3
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(33, 294);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(44, 362);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 19);
+            this.label4.Size = new System.Drawing.Size(77, 21);
             this.label4.TabIndex = 63;
             this.label4.Text = "Address";
             // 
@@ -190,11 +186,11 @@ namespace PBL3
             this.txtPhone.BackColor = System.Drawing.SystemColors.Window;
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(37, 262);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhone.Location = new System.Drawing.Point(49, 322);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(239, 25);
+            this.txtPhone.Size = new System.Drawing.Size(319, 31);
             this.txtPhone.TabIndex = 60;
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
@@ -204,10 +200,9 @@ namespace PBL3
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(33, 239);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(44, 294);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 19);
+            this.label5.Size = new System.Drawing.Size(62, 21);
             this.label5.TabIndex = 62;
             this.label5.Text = "Phone";
             // 
@@ -217,19 +212,20 @@ namespace PBL3
             this.cbbGender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbGender.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbbGender.FormattingEnabled = true;
-            this.cbbGender.Location = new System.Drawing.Point(37, 151);
-            this.cbbGender.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbGender.Location = new System.Drawing.Point(49, 186);
+            this.cbbGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbGender.Name = "cbbGender";
-            this.cbbGender.Size = new System.Drawing.Size(239, 25);
+            this.cbbGender.Size = new System.Drawing.Size(317, 29);
             this.cbbGender.TabIndex = 64;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(37, 206);
+            this.dateTimePicker1.Location = new System.Drawing.Point(49, 254);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(235, 25);
+            this.dateTimePicker1.Size = new System.Drawing.Size(312, 29);
             this.dateTimePicker1.TabIndex = 65;
             // 
             // cbbDoes
@@ -238,10 +234,10 @@ namespace PBL3
             this.cbbDoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbDoes.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbbDoes.FormattingEnabled = true;
-            this.cbbDoes.Location = new System.Drawing.Point(37, 375);
-            this.cbbDoes.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbDoes.Location = new System.Drawing.Point(49, 462);
+            this.cbbDoes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbDoes.Name = "cbbDoes";
-            this.cbbDoes.Size = new System.Drawing.Size(239, 25);
+            this.cbbDoes.Size = new System.Drawing.Size(317, 29);
             this.cbbDoes.TabIndex = 69;
             // 
             // label7
@@ -250,10 +246,9 @@ namespace PBL3
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(33, 354);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(44, 436);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(184, 19);
+            this.label7.Size = new System.Drawing.Size(223, 21);
             this.label7.TabIndex = 68;
             this.label7.Text = "Number of doses injected";
             // 
@@ -264,10 +259,10 @@ namespace PBL3
             this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMin.Image")));
-            this.btnMin.Location = new System.Drawing.Point(245, -1);
-            this.btnMin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMin.Location = new System.Drawing.Point(327, -1);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(32, 29);
+            this.btnMin.Size = new System.Drawing.Size(43, 36);
             this.btnMin.TabIndex = 113;
             this.btnMin.UseVisualStyleBackColor = false;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
@@ -279,20 +274,20 @@ namespace PBL3
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(281, -1);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(375, -1);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(32, 29);
+            this.btnClose.Size = new System.Drawing.Size(43, 36);
             this.btnClose.TabIndex = 112;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // CitizenAddEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
-            this.ClientSize = new System.Drawing.Size(313, 476);
+            this.ClientSize = new System.Drawing.Size(417, 586);
             this.Controls.Add(this.btnMin);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.cbbDoes);
@@ -312,7 +307,7 @@ namespace PBL3
             this.Controls.Add(this.txtFullname);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CitizenAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CitizenAddEdit";

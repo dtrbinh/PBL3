@@ -75,7 +75,7 @@ namespace PBL3.GUI
             }
             catch (Exception e1)
             {
-
+                MessageBox.Show(e1.ToString(), "NOTICE");
             }
 
         }

@@ -58,19 +58,19 @@ namespace PBL3
 
         private void cbbType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbType.SelectedItem == "Age")
+            if (cbbType.SelectedItem.ToString() == "Age")
             {
                 chartAge.Visible = true;
                 chartDose.Visible = false;
                 chartGender.Visible = false;
             }
-            if (cbbType.SelectedItem == "Dose")
+            if (cbbType.SelectedItem.ToString() == "Dose")
             {
                 chartAge.Visible = false;
                 chartDose.Visible = true;
                 chartGender.Visible = false;
             }
-            if(cbbType.SelectedItem == "Gender")
+            if(cbbType.SelectedItem.ToString() == "Gender")
             {
                 chartAge.Visible = false;
                 chartDose.Visible = false;

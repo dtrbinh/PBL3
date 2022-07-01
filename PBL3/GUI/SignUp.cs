@@ -34,9 +34,7 @@ namespace PBL3
                 default:
                     break;
             }
-
         }
-
         private void btn_showPassword_MouseUp(object sender, MouseEventArgs e)
         {
             Button B = (Button)sender;
@@ -88,15 +86,25 @@ namespace PBL3
                     }
                     if (flag)
                     {
-                        Account newAccount = new Account(cmnd, "Người dùng", username, password, false);
-                        Citizen newCitizen = new Citizen(cmnd, "", "", true, "", DateTime.Now, 0);
-                        Provider.Instance.database.Citizens.Add(newCitizen);
-                        Provider.Instance.database.Accounts.Add(newAccount);
-                        Provider.Instance.database.SaveChangesAsync();
-                        MessageBox.Show("Create account successfully.", "NOTICE");
-                        this.Close();
+                        if (cmnd.Length >= 9)
+                        {
+                            if (username.Length >= 5 && password.Length >= 5)
+                            {
+                                Account newAccount = new Account(cmnd, "Người dùng", username, password, false);
+                                Citizen newCitizen = new Citizen(cmnd, "", "", true, "", DateTime.Now, 0);
+                                Provider.Instance.database.Citizens.Add(newCitizen);
+                                Provider.Instance.database.Accounts.Add(newAccount);
+                                Provider.Instance.database.SaveChanges();
+                                MessageBox.Show("Create account successfully.", "NOTICE");
+                                this.Close();
+                            }
+                            else { MessageBox.Show("Username or password too short.", "NOTICE"); }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Minimum length of CMND is 9.\nMinimum length of CCCD is 12.", "NOTICE");
+                        }
                     }
-
                 }
                 else
                 {
@@ -107,7 +115,6 @@ namespace PBL3
             {
                 MessageBox.Show("CMND/CCCD or Username can not blank!", "NOTICE");
             }
-
         }
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HTCAPTION = 0x2;

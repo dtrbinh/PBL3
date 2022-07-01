@@ -260,7 +260,6 @@ namespace PBL3.BLL
         //Registration Alternative View
         public List<Registration> RegistrationFilterViews(string _cmnd, string _vaccineName, string _state, string _dose)
         {
-            int k = 0;
             //if (_cmnd == "All") _cmnd = "";
             if (_vaccineName == "All") _vaccineName = "";
             if (_state == "All") _state = "";
@@ -332,7 +331,7 @@ namespace PBL3.BLL
 
             foreach (Account i in GettAll_Accounts())
             {
-                if (i.Permission.ToString().Contains(_permission) && i.Username.Contains(_username))
+                if (i.Permission.ToString().Contains(_permission) && ( i.Username.Contains(_username) || i.CMND_CCCD.Contains(_username) || i.Fullname.Contains(_username)))
                 {
                     data.Add(new AccountDataAltView
                     {
